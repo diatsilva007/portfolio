@@ -64,7 +64,7 @@ section {
 }
 
 span {
-    
+    color: var(--main-color);
 }
 
 /* Configurações de cores */
