@@ -34,6 +34,39 @@ header {
     border: 1px solid var(--color-02); /* Test */
 }
 
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.nav a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+
+    border: 1px solid var(--color-02); /* Test */
+}
+
+.nav a:hover {
+    //background-color: var(--color-02);
+    //color: var(--text-color);
+    color: var(--main-color);
+}
+
+section {
+    min-heigh: 100vh;
+    padding: 6rem 6rem 2rem;
+
+    border: 1px solid var(--color-02); /* Test */
+}
+
+span {
+    
+}
+
 /* Configurações de cores */
 :root {
   --main-color: #00eeff;
