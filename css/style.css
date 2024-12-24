@@ -67,6 +67,13 @@ span {
     color: var(--main-color);
 }
 
+.home, .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 /* Configurações de cores */
 :root {
   --main-color: #00eeff;
