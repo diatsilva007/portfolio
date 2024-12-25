@@ -1,3 +1,56 @@
+/* Configurações de cores */
+:root {
+  --main-color: #00eeff;
+  --text-color: #ffffff;
+  --bg-color-01: #1f242d;
+  --bg-color-02: #323946;
+  --color-00: #0000001a;
+
+  /* Extra colors */
+  --color-01: #999999;
+  --color-02: #009539;
+  --color-03: #7950f2;
+  --color-04: #c00000;
+  --color-05: #232323;
+}
+
+/* Estilo do ícone olá (hero) */
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%; /* Define o ponto de rotação da mão */
+  animation: wave-animation 2s infinite; /* Animação infinita */
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Imports the Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /*Configurações padrão do navegador*/
 * {
   margin: 0px;
@@ -20,64 +73,59 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.1rem;
-    background-color: var(--bg-color-01);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-
-    border: 1px solid var(--color-02); /* Test */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.1rem;
+  background-color: var(--bg-color-01);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
 .logo {
-    font-size: 1.7rem;
-    color: var(--text-color);
-    font-weight: 600;
-    cursor: default;
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
 }
 
 .nav a {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    transition: 0.4s;
-
-    border: 1px solid var(--color-02); /* Test */
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  transition: 0.4s;
 }
 
 .nav a:hover {
-    //background-color: var(--color-02);
-    //color: var(--text-color);
-    color: var(--main-color);
+  //background-color: var(--color-02);
+  //color: var(--text-color);
+  color: var(--main-color);
 }
 
 section {
-    min-heigh: 100vh;
-    padding: 6rem 6rem 2rem;
-
-    border: 1px solid var(--color-02); /* Test */
+  min-heigh: 100vh;
+  padding: 6rem 6rem 2rem;
 }
 
 span {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
-.home, .about {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+.home,
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .home-img {
-    border-right: solid 0.6rem var(--main-color);
-    border-bottom: solid 0.6rem var(--main-color);
-    border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
+  border-right: solid 0.6rem var(--main-color);
+  border-bottom: solid 0.6rem var(--main-color);
+  border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
 }
 
 .about-img {
@@ -86,32 +134,36 @@ span {
   border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 1;
 }
 
-.home-img img, .about-img img {
-    width: 100%;
+.home-img img,
+.about-img img {
+  width: 100%;
 }
 
 .about {
   background-color: var(--bg-color-02);
 }
 
-.home-content, .about-content {
+.home-content,
+.about-content {
   width: 45%;
 }
 
-.home-content h1, .about-content h1 {
+.home-content h1,
+.about-content h1 {
   font-weight: 700;
   line-heigh: 1.3;
 
   font-size: 2.7rem; /* Test */
-  
 }
 
-.home-content h3, .about-content h3 {
+.home-content h3,
+.about-content h3 {
   font-weight: 700;
   font-size: 1.6rem;
 }
 
-.home-content p, .about-content p {
+.home-content p,
+.about-content p {
   margin-top: 1.2rem;
   text-align: justify;
 }
@@ -219,15 +271,15 @@ span {
   transform: translateY(0);
 }
 
-.potfolio-layer h4 {
+.portfolio-layer h4 {
   font-size: 1.8rem;
 }
 
-.potfolio-layer p {
+.portfolio-layer p {
   margin: 0.2rem 0 0.5rem;
 }
 
-.potfolio-layer a {
+.portfolio-layer a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -237,9 +289,73 @@ span {
   border-radius: 50%;
 }
 
-.potfolio-layer a i {
+.portfolio-layer a i {
   font-size: 1.2rem;
   color: var(--bg-color-02);
+}
+
+/* Form */
+form {
+  max-width: 45rem;
+  margin: 0.6rem auto;
+  text-align: center;
+}
+
+form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+form .input-box input,
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--bg-color-02);
+  border-radius: 0.5rem;
+  margin: 0.4rem 0;
+}
+
+form textarea {
+  resize: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: var(--bg-color-01);
+  color: var(--main-color);
+}
+
+/* Social media */
+.social-media img {
+  width: 3.5rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: solid 0.15rem var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 1.8rem 0.5rem;
+  transition: 0.5s ease;
+}
+
+.social-media a:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color-02);
+  box-shadow: 0 0 0.3rem var(--main-color);
 }
 
 /* Cor dos links */
@@ -267,55 +383,115 @@ a {
   cursor: pointer;
 }
 
-/* Configurações de cores */
-:root {
-  --main-color: #00eeff;
-  --text-color: #ffffff;
-  --bg-color-01: #1f242d;
-  --bg-color-02: #323946;
-  --color-00: #0000001a;
-
-  /* Extra colors */
-  --color-01: #999999;
-  --color-02: #009539;
-  --color-03: #7950f2;
-  --color-04: #c00000;
-  --color-05: #232323;
+/* Botão menu hamburguer */
+.menu-hamburguer {
+  display: none;
+  cursor: pointer;
 }
 
-/* Estilo do ícone olá (hero) */
-.wave {
-  display: inline-block;
-  transform-origin: 70% 70%; /* Define o ponto de rotação da mão */
-  animation: wave-animation 2s infinite; /* Animação infinita */
+.bar1, .bar2, .bar3 {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: var(--text-color);
+  margin: 0.4rem 0;
+  transition: 0.3s ease;
 }
 
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
+.change .bar1 {
+  transform: translate(0, 0.65rem) rotate(-45deg);  
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -0.65rem) rotate(45deg);  
+}
+
+/* Media queries */
+
+/* Extra small (xs): Smartphone (portrait) */
+@media (min-width: 0px) {
+  .menu-hamburguer {
+    display: block;
   }
-  10% {
-    transform: rotate(14deg);
+
+  .nav {
+    display: none;
   }
-  20% {
-    transform: rotate(-8deg);
+
+  .nav-responsive {
+    display: block;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
   }
-  30% {
-    transform: rotate(14deg);
+
+  section {
+    padding: 6rem 2.5rem;
   }
-  40% {
-    transform: rotate(-4deg);
+
+  .home, .about {
+    flex-direction: column;
+    gap: 1.2rem;
   }
-  50% {
-    transform: rotate(10deg);
+
+  .home-img, .about-img {
+    width: 80%;
+    max-width: 80%;
   }
-  60% {
-    transform: rotate(0deg);
+
+  .home-content, .about-content {
+    width: 100%;
   }
-  100% {
-    transform: rotate(0deg);
+
+  .home-content div {
+    text-align: center;
+  }
+
+  .home-content h1, .about-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-heigh: 1.3;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-box {
+    width: 100%;
   }
 }
 
-/* Imports the Poppins font from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Extra small (sm): Smartphone (landscape) */
+@media (min-width: 576px) {
+  .home-img, .about-img {
+    width: 65%;
+    max-width: 65%;
+  }
+
+  .services-box {
+    width: 70%;
+  }
+}
+
+/* Medium (md): Tablet */
+@media (min-width: 768px) {
+  
+}
+
+/* Large (lg): Notebook */
+@media (min-width: 992px) {
+  
+}
+
+/* Extra large (xl): Desktop */
+@media (min-width: 1200px) {
+  
+
+
+/* /Media queries */
+
+
