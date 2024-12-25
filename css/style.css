@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    Position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -172,13 +172,100 @@ span {
   text-overflow: ellipsis;
 }
 
+.portfolio {
+  background-color: var(--bg-color-02);
+}
+
+.portfolio-container {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 0.6rem var(--bg-color-01);
+  overflow: hidden;
+  display: flex;
+}
+
+.portfolio-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.portfolio-box img:hover {
+  transform: scale(1.01);
+}
+
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, var(--main-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(30rem);
+  transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0);
+}
+
+.potfolio-layer h4 {
+  font-size: 1.8rem;
+}
+
+.potfolio-layer p {
+  margin: 0.2rem 0 0.5rem;
+}
+
+.potfolio-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+.potfolio-layer a i {
+  font-size: 1.2rem;
+  color: var(--bg-color-02);
+}
+
 /* Cor dos links */
 a {
   color: var(--main-color);
 }
 
 /* Botão */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--main-color);
+  border-radius: 2rem;
+  color: var(--bg-color-02);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  transition: 0.3s ease;
+  margin-top: 1.2rem;
+}
 
+.btn:hover {
+  box-shadow: 0 0 0.3rem var(--main-color);
+  background-color: inherit;
+  color: var(--main-color);
+  cursor: pointer;
+}
 
 /* Configurações de cores */
 :root {
