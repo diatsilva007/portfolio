@@ -38,3 +38,18 @@ toggleButton.addEventListener('click', () => {
         localStorage.setItem('theme', '');
     }
 });
+
+/* Código para telfone de formulário */
+function mascaraTelefone(input) {
+    // Remove tudo o que não for número
+    let telefone = input.value.replace(/\D/g, '');
+
+    // Formatação (XX) XXXXX-XXXX
+    if (telefone.length <= 10) {
+        telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // Formato (XX) XXXXX-XXXX
+    } else {
+        telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3'); // Mantém o formato
+    }
+
+    input.value = telefone;
+}
