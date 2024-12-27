@@ -17,29 +17,7 @@ function toggleMenu() {
   }
 }
 
-/* Verifica se o usuário já tem uma preferência de tema salva*/
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    document.body.classList.add(savedTheme);
-}
-
-/* Seleciona o botão para alternar o tema */
-const toggleButton = document.getElementById('toggle-theme');
-
-/* Adiciona um ouvinte de evento para trocar os temas ao clicar no botão */
-toggleButton.addEventListener('click', () => {
-    /* Alterna a classe "dark-mode" no body */
-    document.body.classList.toggle('dark-mode');
-
-    /* Salva a preferência do tema no localStorage */
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark-mode');
-    } else {
-        localStorage.setItem('theme', '');
-    }
-});
-
-/* Código para telfone de formulário */
+/* Código para telefone de formulário */
 function mascaraTelefone(input) {
     // Remove tudo o que não for número
     let telefone = input.value.replace(/\D/g, '');
