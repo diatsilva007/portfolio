@@ -571,9 +571,9 @@ a {
   }
 
   .portfolio-container {
-    grid-template-columns: auto auto auto;
-    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;*/
+    /*grid-template-columns: auto auto auto;*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
   }
 
   form .input-box input {
@@ -611,9 +611,9 @@ a {
   }
 
   .portfolio-container {
-    grid-template-columns: auto auto auto auto;
-    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;*/
+    /*grid-template-columns: auto auto auto auto;*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
   }
 }
 /* /Media queries */
