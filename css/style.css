@@ -413,6 +413,14 @@ footer {
   box-shadow: 0 0 0.3rem var(--main-color);
 }
 
+/* Botão currículo */
+.btn-cv {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 /* Cor dos links */
 a {
   color: var(--main-color);
@@ -494,6 +502,13 @@ a {
     gap: 1.2rem;
   }
 
+  .btn-cv {
+    display: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
   .home-img,
   .about-img {
     width: 80%;
@@ -537,12 +552,26 @@ a {
   .services-box {
     width: 70%;
   }
+
+  .btn-cv {
+    display: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
 /* Medium (md): Tablet */
 @media (min-width: 768px) {
   .menu-hamburguer {
     display: none;
+  }
+
+  .btn-cv {
+    display: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
   .nav {
@@ -603,6 +632,14 @@ a {
     align-items: center;
     justify-content: space-around;
   }
+
+  .btn-cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
 }
 
 /* Extra large (xl): Desktop */
@@ -625,5 +662,13 @@ a {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
   }
+
+  .btn-cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
 }
 /* /Media queries */
