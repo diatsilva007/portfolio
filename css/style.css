@@ -70,7 +70,7 @@
   overflow: hidden;
   border-right: 1px solid black;
   width: fit-content;
-  animation: blink-cursor 0.6s steps(3) infinite;
+  animation: blink-cursor 1s steps(3) infinite;
 }
 
 @keyframes blink-cursor {
