@@ -59,19 +59,29 @@
   --text-dark: #ffffff;
 }
 
-/* Estilos para o Tema Claro */
-body {
-  background-color: var(--background-light);
-  color: var(--text-light);
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+/* Estilo para o typing effect */
+
+#typing-effect {
+  font-family: "Poppins", monospace;  
+  font-size: 33px;
+  color: var(--main-color);
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  width: fit-content;
+  animation: blink-cursor 0.7s steps(1) infinite;
 }
 
-/* Estilos para o Tema Escuro */
-body.dark-mode {
-  background-color: var(--background-dark);
-  color: var(--text-dark);
+@keyframes blink-cursor {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
+
 
 /* Estilos adicionais */
 .container {
