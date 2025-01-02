@@ -506,7 +506,7 @@ a {
     display: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
   }
 
   .home-img,
@@ -557,7 +557,7 @@ a {
     display: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
   }
 }
 
