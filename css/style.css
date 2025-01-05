@@ -157,9 +157,9 @@ header {
 
 .nav a:hover,
 .nav-responsive a:hover {
-  background-color: var(--main-color);
-  color: var(--bg-color-01);
-  //color: var(--main-color);
+  //background-color: var(--main-color);
+  //color: var(--bg-color-01);
+  color: var(--main-color);
 }
 
 section {
