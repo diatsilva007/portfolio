@@ -1,0 +1,127 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+  }
+/* Definições para a página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1f1f1f;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .brand {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    font-weight: 600;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Seção Principal */
+.main-section {
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+.main-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.main-section .intro {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.main-section .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-section .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Conteúdo oculto */
+.hidden-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.visible-content {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+}
+
+footer p {
+    font-size: 0.875rem;
+}
