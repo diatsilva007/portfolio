@@ -32,9 +32,10 @@ html {
 
 /* Definições para a página */
 body {
-  background-color: var(--bg-color-01);
+  background-color: var(--bg-color-02);
   color: var(--text-color);
   line-height: 1.6;
+  height: 2000px; /* Apenas para ter uma página com rolagem */
 }
 
 h3 {
@@ -47,7 +48,7 @@ span {
 
 /* Navbar */
 .navbar {
-  background-color: #1f1f1f;
+  background-color: var(--bg-color-01);
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -90,7 +91,7 @@ span {
 /* Seção Principal */
 .main-section {
   padding: 50px 20px;
-  background-color: #1e1e1e;
+  background-color: var(--bg-color-01);
   text-align: center;
 }
 
@@ -154,6 +155,24 @@ span {
   }
 }
 
+.footer {
+    background-color: var(--bg-color-01);
+    color: var(--main-color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: -100px; /* Inicialmente fora da tela */
+    left: 0;
+    width: 100%;
+    transition: bottom 0.5s ease-in-out;
+}
+
+/* Quando o footer for visível, ele vem para o lugar correto */
+body.scrolled .footer {
+    bottom: 0;
+}
+
+/*
 footer {
   display: flex;
   flex-direction: row;
@@ -162,4 +181,4 @@ footer {
   padding: 1.2rem;
   background-color: var(--bg-color-01);
   color: var(--main-color);
-}
+}*/
