@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My services - Web Development</title>
-    <link rel="stylesheet" href="/css/web-development-my-services.css">
+    <link rel="stylesheet" href="/css/my_services_web_development.css">
 </head>
 
 <body>
@@ -81,33 +81,7 @@
     </footer>
     <!-- /Footer section -->
 
-    <script>
-        // Script para alternar visibilidade do conteúdo "Leia Mais"
-        document.getElementById('leiaMaisBtn').addEventListener('click', function () {
-            var content = document.getElementById('leiaMais');
-            if (content.classList.contains('hidden-content')) {
-                content.classList.remove('hidden-content');
-                content.classList.add('visible-content');
-            } else {
-                content.classList.remove('visible-content');
-                content.classList.add('hidden-content');
-            }
-        });
-    </script>
-
-    <script>
-
-        // JavaScript (para adicionar a classe quando o usuário rolar para baixo)
-        window.onscroll = function () {
-            const footer = document.querySelector('footer');
-            if (window.scrollY > 100) {  // Muda a classe após o scroll de 100px
-                document.body.classList.add('scrolled');
-            } else {
-                document.body.classList.remove('scrolled');
-            }
-        };
-
-    </script>
+    <script src="/js/my_services_web_development.js"></script>
 
 </body>
 
