@@ -74,12 +74,12 @@
     </section>
 
     <!-- Footer section -->
-    <footer>
+    <footer class="footer">
         <p>
             Copyright &copy; 2025 by &lt;/Diogo Ataide Silva&gt;. All rights reserved.
         </p>
     </footer>
-    <!-- /Footer section -->    
+    <!-- /Footer section -->
 
     <script>
         // Script para alternar visibilidade do conteúdo "Leia Mais"
@@ -93,6 +93,19 @@
                 content.classList.add('hidden-content');
             }
         });
+    </script>
+
+    <script>
+
+        window.onscroll = function () {
+            const footer = document.querySelector('footer');
+            if (window.scrollY > 100) {  // Muda a classe após o scroll de 100px
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        };
+
     </script>
 
 </body>
