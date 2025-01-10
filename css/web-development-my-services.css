@@ -1,127 +1,165 @@
+/* Configurações de cores */
+:root {
+  --main-color: #00eeff;
+  --text-color: #ffffff;
+  --bg-color-01: #1f242d;
+  --bg-color-02: #323946;
+  --color-00: #0000001a;
+
+  /* Extra colors */
+  --color-01: #999999;
+  --color-02: #009539;
+  --color-03: #7950f2;
+  --color-04: #c00000;
+  --color-05: #232323;
+}
+
 /* Reset de estilos básicos */
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-  }
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
 /* Definições para a página */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #121212;
-    color: #f1f1f1;
-    line-height: 1.6;
+  background-color: var(--bg-color-01);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h3 {
+  padding-top: 1em;
+}
+
+span {
+  color: var(--main-color);
 }
 
 /* Navbar */
 .navbar {
-    background-color: #1f1f1f;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #1f1f1f;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .navbar .brand {
-    font-size: 1.5rem;
-    color: #f1f1f1;
-    font-weight: 600;
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  font-weight: 600;
 }
 
 .navbar nav ul {
-    display: flex;
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
 .navbar nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .navbar nav ul li a {
-    text-decoration: none;
-    color: #f1f1f1;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .navbar nav ul li a:hover {
-    color: #007BFF;
+  color: var(--main-color);
 }
 
 /* Seção Principal */
 .main-section {
-    padding: 50px 20px;
-    background-color: #1e1e1e;
-    text-align: center;
+  padding: 50px 20px;
+  background-color: #1e1e1e;
+  text-align: center;
 }
 
 .main-section .content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .main-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
 .main-section .intro {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    color: #bbb;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #bbb;
 }
 
 .main-section .btn {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--main-color);
+  border-radius: 2rem;
+  color: var(--bg-color-02);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  transition: 0.3s ease;
+  margin-top: 1.2rem;
 }
 
 .main-section .btn:hover {
-    background-color: #0056b3;
+  box-shadow: 0 0 0.3rem var(--main-color);
+  background-color: inherit;
+  color: var(--main-color);
+  cursor: pointer;
 }
 
 /* Conteúdo oculto */
 .hidden-content {
-    display: none;
-    margin-top: 20px;
+  display: none;
+  margin-top: 20px;
+  
 }
 
 .visible-content {
-    display: block;
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
+  display: block;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  text-align: justify;
+  color: #bbb;
+  font-size: 1.25rem;
+  
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Rodapé */
 footer {
-    background-color: #1f1f1f;
-    padding: 20px;
-    text-align: center;
-    color: #888;
-}
-
-footer p {
-    font-size: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: var(--bg-color-01);
+  color: var(--main-color);
 }
