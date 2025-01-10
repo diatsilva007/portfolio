@@ -155,22 +155,71 @@ span {
   }
 }
 
+/* Rodapé - Animação de Deslizar para Cima (Slide In) 
 .footer {
     background-color: var(--bg-color-01);
     color: var(--main-color);
     text-align: center;
     padding: 20px;
     position: fixed;
-    bottom: -100px; /* Inicialmente fora da tela */
+    bottom: -100px; /* Inicialmente fora da tela 
     left: 0;
     width: 100%;
     transition: bottom 0.5s ease-in-out;
-}
+}*/
 
-/* Quando o footer for visível, ele vem para o lugar correto */
+/* Quando o footer for visível, ele vem para o lugar correto
 body.scrolled .footer {
     bottom: 0;
+}*/
+
+/* Rodapé Animação de Fade In no Footer */
+.footer {
+    background-color: var(--bg-color-01);
+    color: var(--main-color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease-in-out; /* Efeito de transição */
 }
+
+/* Quando o footer aparecer, ele terá opacidade 1 */
+body.scrolled .footer {
+    opacity: 1;
+}
+
+/* Animação de "Bouncing" (Pular) no Footer
+.footer {
+    background-color: var(--bg-color-01);   
+    color: var(--main-color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: -100px; /* Inicialmente fora da tela 
+    left: 0;
+    width: 100%;
+    animation: bounce 1s ease-out forwards; /* Aplica a animação 
+}
+
+/* Animação de "bounce" 
+@keyframes bounce {
+    0% {
+        bottom: -100px;
+    }
+    50% {
+        bottom: 10px;
+    }
+    70% {
+        bottom: -5px;
+    }
+    100% {
+        bottom: 0;
+    }
+}*/
 
 /*
 footer {
