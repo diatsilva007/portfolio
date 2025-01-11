@@ -1,5 +1,15 @@
 /* Script.js here... */
 
+// JavaScript (para adicionar a classe quando o usuário rolar para baixo e aparecer rodapé)
+window.onscroll = function () {
+  const footer = document.querySelector('footer');
+  if (window.scrollY > 100) {  // Muda a classe após o scroll de 100px
+      document.body.classList.add('scrolled');
+  } else {
+      document.body.classList.remove('scrolled');
+  }
+};
+
 /* Transformar menu hamburguer em um x */
 const menuHamburguer = document.querySelector(".menu-hamburguer");
 menuHamburguer.addEventListener("click", () => {
