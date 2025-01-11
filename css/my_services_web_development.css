@@ -42,7 +42,8 @@ h3 {
   padding-top: 1em;
 }
 
-h3, span {
+h3,
+span {
   color: var(--main-color);
   padding: 1.3em;
   text-align: justify;
@@ -138,7 +139,6 @@ h3, span {
 .hidden-content {
   display: none;
   margin-top: 20px;
-  
 }
 
 .visible-content {
@@ -148,7 +148,6 @@ h3, span {
   text-align: justify;
   color: #bbb;
   font-size: 1.25rem;
-  
 }
 
 @keyframes fadeIn {
@@ -177,21 +176,21 @@ body.scrolled .footer {
 
 /* Rodapé Animação de Fade In no Footer */
 .footer {
-    background-color: var(--bg-color-01);
-    color: var(--main-color);
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0; /* Começa invisível */
-    transition: opacity 1s ease-in-out; /* Efeito de transição */
+  background-color: var(--bg-color-01);
+  color: var(--main-color);
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0; /* Começa invisível */
+  transition: opacity 1s ease-in-out; /* Efeito de transição */
 }
 
 /* Quando o footer aparecer, ele terá opacidade 1 */
 body.scrolled .footer {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Animação de "Bouncing" (Pular) no Footer
