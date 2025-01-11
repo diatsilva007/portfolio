@@ -1,0 +1,235 @@
+/* Configurações de cores */
+:root {
+    --main-color: #00eeff;
+    --text-color: #ffffff;
+    --bg-color-01: #1f242d;
+    --bg-color-02: #323946;
+    --color-00: #0000001a;
+  
+    /* Extra colors */
+    --color-01: #999999;
+    --color-02: #009539;
+    --color-03: #7950f2;
+    --color-04: #c00000;
+    --color-05: #232323;
+  }
+  
+  /* Reset de estilos básicos */
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Definições para a página */
+  body {
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+    line-height: 1.6;
+    height: 2000px; /* Apenas para ter uma página com rolagem */
+  }
+  
+  h3 {
+    padding-top: 1em;
+  }
+  
+  h3,
+  span {
+    color: var(--main-color);
+    padding: 1.3em;
+    text-align: justify;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--bg-color-01);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar .brand {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    font-weight: 600;
+  }
+  
+  .navbar nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .navbar nav ul li {
+    margin-left: 20px;
+  }
+  
+  .navbar nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar nav ul li a:hover {
+    color: var(--main-color);
+  }
+  
+  /* Seção Principal */
+  .main-section {
+    padding: 50px 20px;
+    background-color: var(--bg-color-01);
+    text-align: center;
+  }
+  
+  .main-section .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .main-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .main-section .intro {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #bbb;
+  }
+  
+  .main-section .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    color: var(--bg-color-02);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin-top: 1.2rem;
+  }
+  
+  .main-section .btn:hover {
+    box-shadow: 0 0 0.3rem var(--main-color);
+    background-color: inherit;
+    color: var(--main-color);
+    cursor: pointer;
+  }
+  
+  /* Conteúdo oculto */
+  .hidden-content {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .visible-content {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    text-align: justify;
+    color: #bbb;
+    font-size: 1.25rem;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Rodapé - Animação de Deslizar para Cima (Slide In) 
+  .footer {
+      background-color: var(--bg-color-01);
+      color: var(--main-color);
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: -100px; /* Inicialmente fora da tela 
+      left: 0;
+      width: 100%;
+      transition: bottom 0.5s ease-in-out;
+  }*/
+  
+  /* Quando o footer for visível, ele vem para o lugar correto
+  body.scrolled .footer {
+      bottom: 0;
+  }*/
+  
+  /* Rodapé Animação de Fade In no Footer */
+  .footer {
+    background-color: var(--bg-color-01);
+    color: var(--main-color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease-in-out; /* Efeito de transição */
+  }
+  
+  /* Quando o footer aparecer, ele terá opacidade 1 */
+  body.scrolled .footer {
+    opacity: 1;
+  }
+  
+  /* Animação de "Bouncing" (Pular) no Footer
+  .footer {
+      background-color: var(--bg-color-01);   
+      color: var(--main-color);
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: -100px; /* Inicialmente fora da tela 
+      left: 0;
+      width: 100%;
+      animation: bounce 1s ease-out forwards; /* Aplica a animação 
+  }
+  
+  /* Animação de "bounce" 
+  @keyframes bounce {
+      0% {
+          bottom: -100px;
+      }
+      50% {
+          bottom: 10px;
+      }
+      70% {
+          bottom: -5px;
+      }
+      100% {
+          bottom: 0;
+      }
+  }*/
+  
+  /*
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--bg-color-01);
+    color: var(--main-color);
+  }*/
+  
