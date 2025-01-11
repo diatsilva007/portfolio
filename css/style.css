@@ -62,7 +62,7 @@
 /* Estilo para o typing effect */
 
 #typing-effect {
-  font-family: "Poppins", monospace;  
+  font-family: "Poppins", monospace;
   font-size: 33px;
   color: var(--main-color);
   padding: 15px;
@@ -113,6 +113,8 @@ html {
 body {
   background-color: var(--bg-color-01);
   color: var(--text-color);
+  line-height: 1.6;
+  height: 2000px; /* Apenas para ter uma página com rolagem */
 }
 
 header {
@@ -376,7 +378,26 @@ form textarea {
   resize: none;
 }
 
-footer {
+/* Rodapé Animação de Fade In no Footer */
+.footer {
+  background-color: var(--bg-color-01);
+  color: var(--main-color);
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0; /* Começa invisível */
+  transition: opacity 1s ease-in-out; /* Efeito de transição */
+}
+
+/* Quando o footer aparecer, ele terá opacidade 1 */
+body.scrolled .footer {
+  opacity: 1;
+}
+
+/*footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -384,7 +405,7 @@ footer {
   padding: 1.2rem;
   background-color: var(--bg-color-01);
   color: var(--main-color);
-}
+}*/
 
 /* Social media */
 .social-media img {
@@ -638,7 +659,6 @@ a {
     justify-content: center;
     gap: 10px;
   }
-
 }
 
 /* Extra large (xl): Desktop */
@@ -668,6 +688,5 @@ a {
     justify-content: center;
     gap: 10px;
   }
-
 }
 /* /Media queries */
