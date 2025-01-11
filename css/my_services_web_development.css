@@ -42,8 +42,10 @@ h3 {
   padding-top: 1em;
 }
 
-span {
+h3, span {
   color: var(--main-color);
+  padding: 1.3em;
+  text-align: justify;
 }
 
 /* Navbar */
