@@ -115,6 +115,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   height: 2000px; /* Apenas para ter uma página com rolagem */
+  margin: 0;
 }
 
 header {
@@ -236,7 +237,7 @@ span {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  text-align: center;  
+  text-align: center;
 }
 
 .services-box {
@@ -400,7 +401,8 @@ form textarea {
   transition: opacity 1s ease-in-out; /* Efeito de transição */
 }
 
-.footer, p {
+.footer,
+p {
   text-align: center;
 }
 
@@ -527,6 +529,17 @@ a {
   section {
     padding: 6rem 2.5rem;
   }
+
+  /* Efeito partículas */
+  #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Fica atrás dos outros elementos */
+  }
+  /* /Efeito partículas */
 
   .home,
   .about {
