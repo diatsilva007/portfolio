@@ -236,6 +236,7 @@ span {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  text-align: center;  
 }
 
 .services-box {
@@ -244,6 +245,11 @@ span {
   justify-content: space-between;
   min-height: 25rem;
   margin-left: 1rem;
+  text-align: center;
+}
+
+.services-box .texto-paragrafo {
+  text-align: justify;
 }
 
 .services-container .services-box {
@@ -329,10 +335,12 @@ span {
 
 .portfolio-layer h4 {
   font-size: 1.8rem;
+  padding: 0.2rem;
 }
 
 .portfolio-layer p {
-  margin: 0.2rem 0 0.5rem;
+  text-align: justify;
+  padding-top: 0.2rem;
 }
 
 .portfolio-layer a {
@@ -390,6 +398,10 @@ form textarea {
   width: 100%;
   opacity: 0; /* Começa invisível */
   transition: opacity 1s ease-in-out; /* Efeito de transição */
+}
+
+.footer, p {
+  text-align: center;
 }
 
 /* Quando o footer aparecer, ele terá opacidade 1 */
