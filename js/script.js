@@ -83,7 +83,7 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
-
+  
 /* Transformar menu hamburguer em um x */
 const menuHamburguer = document.querySelector(".menu-hamburguer");
 menuHamburguer.addEventListener("click", () => {
