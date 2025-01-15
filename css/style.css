@@ -225,6 +225,126 @@ span {
   text-align: justify;
 }
 
+h1 {
+  font-size: 100px;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* Efeito glitch 
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: #000;
+  overflow: hidden;
+  clip-path: inset(0 0 50% 0);
+}
+
+.glitch::before {
+  color: var(--text-color);
+  z-index: -1;
+  animation: glitch-top 2s infinite;
+}
+
+.glitch::after {
+  color: var(--text-color);
+  z-index: -2;
+  animation: glitch-bottom 2s infinite;
+}*/
+
+/* Animações 
+@keyframes glitch-top {
+  0% {
+      transform: translate(0, 0);
+  }
+  20% {
+      transform: translate(-5px, -5px);
+  }
+  40% {
+      transform: translate(5px, 5px);
+  }
+  60% {
+      transform: translate(-5px, 5px);
+  }
+  80% {
+      transform: translate(5px, -5px);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
+
+@keyframes glitch-bottom {
+  0% {
+      transform: translate(0, 0);
+  }
+  20% {
+      transform: translate(5px, 5px);
+  }
+  40% {
+      transform: translate(-5px, -5px);
+  }
+  60% {
+      transform: translate(5px, -5px);
+  }
+  80% {
+      transform: translate(-5px, 5px);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}*/
+
+/* Texto com Gradiente Animado (Colorido) */
+/*h1 {
+  font-size: 80px;
+  text-transform: uppercase;
+  background-image: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffe5, #2b65ff, #fff, #8000ff);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-animation 6s infinite linear;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}*/
+
+
+/* Efeito Neon (Texto Brilhante) 
+.about-content, h1 {
+  font-size: 80px;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+@keyframes neon-glow {
+  from {
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
+  }
+  to {
+      text-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 160px #0ff;
+  }
+}*/
+
 .services h2,
 .portfolio h2,
 .contact h2 {
