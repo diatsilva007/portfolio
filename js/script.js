@@ -11,6 +11,17 @@ window.onscroll = function () {
   }
 };
 
+
+ /* Efeito glitch em js 
+const glitchElements = document.querySelectorAll('.glitch');
+
+setInterval(() => {
+    glitchElements.forEach(el => {
+        const glitchAmount = Math.random() * 10 - 5;
+        el.style.transform = `translate(${glitchAmount}px, ${glitchAmount}px)`;
+    });
+}, 200); */
+
 // Efeito particle em js
 particlesJS("particles-js", {
   particles: {
@@ -83,7 +94,7 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
-  
+
 /* Transformar menu hamburguer em um x */
 const menuHamburguer = document.querySelector(".menu-hamburguer");
 menuHamburguer.addEventListener("click", () => {
