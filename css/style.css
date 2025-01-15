@@ -173,6 +173,17 @@ span {
   color: var(--main-color);
 }
 
+/* Efeito partículas */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Fica atrás dos outros elementos */
+}
+/* /Efeito partículas */
+
 .home,
 .about {
   display: flex;
@@ -326,7 +337,6 @@ h1 {
       background-position: 100% 50%;
   }
 }*/
-
 
 /* Efeito Neon (Texto Brilhante) 
 .about-content, h1 {
@@ -649,17 +659,6 @@ a {
   section {
     padding: 6rem 2.5rem;
   }
-
-  /* Efeito partículas */
-  #particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Fica atrás dos outros elementos */
-  }
-  /* /Efeito partículas */
 
   .home,
   .about {
