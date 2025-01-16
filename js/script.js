@@ -11,8 +11,7 @@ window.onscroll = function () {
   }
 };
 
-
- /* Efeito glitch em js 
+/* Efeito glitch em js 
 const glitchElements = document.querySelectorAll('.glitch');
 
 setInterval(() => {
