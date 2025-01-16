@@ -180,7 +180,7 @@ span {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Fica atrás dos outros elementos */
+  /* z-index: -1; /* Fica atrás dos outros elementos */
 }
 /* /Efeito partículas */
 
@@ -211,6 +211,12 @@ span {
 
 .about {
   background-color: var(--bg-color-02);
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .home-content,
@@ -570,6 +576,7 @@ body.scrolled .footer {
   color: var(--main-color);
   margin: 1.8rem 0.5rem;
   transition: 0.5s ease;
+  pointer-events: auto;
 }
 
 .social-media a:hover {
@@ -584,6 +591,7 @@ body.scrolled .footer {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  pointer-events: auto;
 }
 
 /* Cor dos links */
