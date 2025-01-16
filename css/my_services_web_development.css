@@ -146,8 +146,12 @@ span {
   opacity: 0;
   animation: fadeIn 0.5s forwards;
   text-align: justify;
-  color: #bbb;
+  color: var(--tela-color);
   font-size: 1.25rem;
+}
+
+li {
+  padding: 0.5rem;
 }
 
 @keyframes fadeIn {
