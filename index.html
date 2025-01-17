@@ -31,7 +31,7 @@
         content="heck out my portfolio with incredible projects in full-stack and mobile development..">
     <meta name="twitter:image" content="img\profile.png">
     <meta name="robots" content="index, follow"> <!-- Permite indexação e segue links -->
-    <meta http-equiv="refresh" content="30"> <!-- Atualiza a página após 30 segundos -->
+    <!-- <meta http-equiv="refresh" content="30"> --> <!-- Atualiza a página após 30 segundos -->
     <link rel="shortcut icon" href="" type="image/x-icon">
     <!--Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -324,22 +324,57 @@
     <section class="contact" id="contact">
         <h2>Contact <span>Me!</span></h2>
 
-        <form action="">
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form id="contactForm" action="https://formspree.io/f/mzzzqwpb" method="POST"
+            data-redirect="https://portfolio-diogoataide.vercel.app/" onsubmit="setTimeout(() => this.reset(), 1000);">
+
+            <label class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="youremail@example.com" required>
+            </label>
+
+            <label for="phone" class="input-box">
+                <input type="tel" id="phone" name="phone" oninput="mascaraTelefone(this)"
+                    placeholder="Phone: (XX) XXXXX-XXXX"
+                    pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}" required>
+                <input type="text" placeholder="Subject" required>
+            </label>
+
+            <label>
+                <textarea name="message" placeholder="Message..." cols="30" rows="8" required></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <script>
+            const form = document.getElementById('contactForm');
+
+            form.addEventListener('submit', function (event) {
+                // Aguarde o envio antes de resetar o formulário
+                setTimeout(() => {
+                    form.reset(); // Reseta os campos do formulário
+                }, 1000); // Ajuste o tempo se necessário (aqui, 1 segundo)
+            });
+        </script>
+
+        <!-- <form action="https://formspree.io/f/mzzzqwpb" method="POST" data-redirect="http://127.0.0.1:5500/index.html">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="E-mail">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="E-mail" required>
             </div>
 
             <div class="input-box">
                 <input type="tel" id="telefone" name="telefone" oninput="mascaraTelefone(this)"
-                    placeholder="Phone: (XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}">
-                <input type="text" placeholder="Subject">
+                    placeholder="Phone: (XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
+                <input type="text" placeholder="Subject" required>
             </div>
 
-            <textarea cols="30" rows="8" placeholder="Message..."></textarea>
+            <textarea cols="30" rows="8" placeholder="Message..." required></textarea>
 
-            <a href="" class="btn">Send Message</a>
-        </form>
+            <a href="" class="btn" type="submit">Send Message</a>
+        </form> -->
+
     </section>
     <!-- /Contact section -->
 
