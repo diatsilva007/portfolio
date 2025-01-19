@@ -279,7 +279,7 @@ h1 {
   animation: glitch-animation 3s infinite linear;
 }
 
-.glitch::after {    
+.glitch::after {
   left: -2px;
   text-shadow: -2px 0 #ff00ff;
   clip: rect(0, 900px, 55px, 0);
@@ -289,48 +289,48 @@ h1 {
 /* Keyframes for Glitch Animation */
 @keyframes glitch-animation {
   0% {
-      clip: rect(0, 900px, 45px, 0);
-      transform: translate(0);
+    clip: rect(0, 900px, 45px, 0);
+    transform: translate(0);
   }
   10% {
-      clip: rect(10px, 900px, 85px, 0);
-      transform: translate(-10px, -10px);
+    clip: rect(10px, 900px, 85px, 0);
+    transform: translate(-10px, -10px);
   }
   20% {
-      clip: rect(20px, 900px, 65px, 0);
-      transform: translate(10px, 10px);
+    clip: rect(20px, 900px, 65px, 0);
+    transform: translate(10px, 10px);
   }
   30% {
-      clip: rect(30px, 900px, 25px, 0);
-      transform: translate(-10px, 0);
+    clip: rect(30px, 900px, 25px, 0);
+    transform: translate(-10px, 0);
   }
   40% {
-      clip: rect(40px, 900px, 75px, 0);
-      transform: translate(10px, -10px);
+    clip: rect(40px, 900px, 75px, 0);
+    transform: translate(10px, -10px);
   }
   50% {
-      clip: rect(50px, 900px, 35px, 0);
-      transform: translate(-10px, 10px);
+    clip: rect(50px, 900px, 35px, 0);
+    transform: translate(-10px, 10px);
   }
   60% {
-      clip: rect(60px, 900px, 55px, 0);
-      transform: translate(10px, 0);
+    clip: rect(60px, 900px, 55px, 0);
+    transform: translate(10px, 0);
   }
   70% {
-      clip: rect(70px, 900px, 65px, 0);
-      transform: translate(-10px, -10px);
+    clip: rect(70px, 900px, 65px, 0);
+    transform: translate(-10px, -10px);
   }
   80% {
-      clip: rect(80px, 900px, 85px, 0);
-      transform: translate(0, 10px);
+    clip: rect(80px, 900px, 85px, 0);
+    transform: translate(0, 10px);
   }
   90% {
-      clip: rect(90px, 900px, 45px, 0);
-      transform: translate(10px, -10px);
+    clip: rect(90px, 900px, 45px, 0);
+    transform: translate(10px, -10px);
   }
   100% {
-      clip: rect(0, 900px, 45px, 0);
-      transform: translate(0);
+    clip: rect(0, 900px, 45px, 0);
+    transform: translate(0);
   }
 }
 
@@ -748,6 +748,14 @@ a {
     margin: 0.5rem 0;
   }
 
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #typing-effect {
+    font-size: 1.4rem;
+  }
+
   section {
     padding: 6rem 2.5rem;
   }
@@ -805,6 +813,14 @@ a {
     max-width: 65%;
   }
 
+  h1 {
+    font-size: 2rem;
+  }
+
+  #typing-effect {
+    font-size: 2rem;
+  }
+
   .services-box {
     width: 70%;
   }
@@ -821,6 +837,14 @@ a {
 @media (min-width: 768px) {
   .menu-hamburguer {
     display: none;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  #typing-effect {
+    font-size: 2.4rem;
   }
 
   .btn-cv {
@@ -895,6 +919,14 @@ a {
     justify-content: center;
     gap: 10px;
   }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  #typing-effect {
+    font-size: 2.8rem;
+  }
 }
 
 /* Extra large (xl): Desktop */
@@ -923,6 +955,14 @@ a {
     align-items: center;
     justify-content: center;
     gap: 10px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  #typing-effect {
+    font-size: 3.2rem;
   }
 }
 /* /Media queries */
