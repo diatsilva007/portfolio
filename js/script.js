@@ -140,7 +140,7 @@ function mascaraTelefone(input) {
 const texts = [
   "Front-End Developer",
   "Full-Stack Developer",
-  "Jr. Software Engineer",
+  "Software Engineer",
 ];
 const typingEffect = document.getElementById("typing-effect");
 
