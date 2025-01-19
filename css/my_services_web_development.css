@@ -184,7 +184,8 @@ body.scrolled .footer {
   color: var(--main-color);
   text-align: center;
   padding: 20px;
-  position: fixed;
+  position: relative; /* Footer fixo na página */
+  /* position: fixed; /* Para footer animado */
   bottom: 0;
   left: 0;
   width: 100%;
