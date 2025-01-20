@@ -752,6 +752,10 @@ a {
     font-size: 1.4rem;
   } 
 
+  #introduction-name {
+    font-size: 1.2rem;
+  }
+
   #typing-effect {
     font-size: 1.4rem;
   }
@@ -803,6 +807,10 @@ a {
   .services-box {
     width: 100%;
   }
+
+  #footer {
+    font-size: 0.5rem;
+  }
 }
 
 /* Extra small (sm): Smartphone (landscape) */
@@ -815,6 +823,10 @@ a {
 
   h1 {
     font-size: 2rem;
+  }
+
+  #introduction-name {
+    font-size: 1.5rem;
   }
 
   #typing-effect {
@@ -831,6 +843,10 @@ a {
     justify-content: center;
     gap: 5px;
   }
+
+  #footer {
+    font-size: 0.8rem;
+  }
 }
 
 /* Medium (md): Tablet */
@@ -841,6 +857,10 @@ a {
 
   h1 {
     font-size: 2.4rem;
+  }
+
+  #introduction-name {
+    font-size: 1.5rem;
   }
 
   #typing-effect {
@@ -895,6 +915,10 @@ a {
     gap: 2rem;
   }
 
+  #footer {
+    font-size: 1rem;
+  }
+
   form .input-box input {
     width: 49%;
   }
@@ -924,8 +948,16 @@ a {
     font-size: 2.8rem;
   }
 
+  #introduction-name {
+    font-size: 1.8rem;
+  } 
+
   #typing-effect {
     font-size: 2.8rem;
+  }
+
+  #footer {
+    font-size: 1.2rem;
   }
 }
 
@@ -961,8 +993,16 @@ a {
     font-size: 3.2rem;
   }
 
+  #introduction-name {
+    font-size: 2.5rem;
+  }
+
   #typing-effect {
     font-size: 3.2rem;
+  }
+
+  #footer {
+    font-size: 1.4rem;
   }
 }
 /* /Media queries */
