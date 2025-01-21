@@ -113,7 +113,7 @@ span {
   font-size: 1.25rem;
   margin-bottom: 20px;
   text-align: justify;
-  color: #bbb;
+  color: var(--text-color);
 }
 
 .main-section .btn {
