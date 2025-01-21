@@ -750,7 +750,7 @@ a {
 
   h1 {
     font-size: 1.4rem;
-  } 
+  }
 
   #introduction-name {
     font-size: 1.2rem;
@@ -855,6 +855,15 @@ a {
     display: none;
   }
 
+  .nav {
+    display: block;
+  }
+
+  .nav-responsive,
+  .nav-responsive a {
+    display: none;
+  }
+
   h1 {
     font-size: 2.4rem;
   }
@@ -872,15 +881,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
-
-  .nav {
-    display: block;
-  }
-
-  .nav-responsive,
-  .nav-responsive a {
-    display: none;
   }
 
   .home,
@@ -950,7 +950,7 @@ a {
 
   #introduction-name {
     font-size: 1.8rem;
-  } 
+  }
 
   #typing-effect {
     font-size: 2.8rem;
