@@ -113,7 +113,7 @@ span {
   font-size: 1.25rem;
   margin-bottom: 20px;
   text-align: justify;
-  color: #bbb;
+  color: var(--text-color);
 }
 
 .main-section .btn {
@@ -237,3 +237,161 @@ footer {
   background-color: var(--bg-color-01);
   color: var(--main-color);
 }*/
+
+/* Media queries */
+
+/* Extra small (xs): Smartphone (portrait) */
+@media (min-width: 0px) {
+  .container .brand {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .main-section .intro,
+  p {
+    font-size: 1rem;
+  }
+
+  .hidden-content,
+  li {
+    font-size: 1rem;
+  }
+
+  #title {
+    font-size: 1.8rem;
+  }
+
+  #title-h3 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .footer {
+    font-size: 0.5rem;
+  }
+}
+
+/* Extra small (sm): Smartphone (landscape) */
+@media (min-width: 576px) {
+  .container .brand {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .main-section .intro,
+  p {
+    font-size: 1.2rem;
+  }
+
+  .hidden-content,
+  li {
+    font-size: 1.2rem;
+  }
+
+  #title {
+    font-size: 2rem;
+  }
+
+  #title-h3 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* Medium (md): Tablet */
+@media (min-width: 768px) {
+  .container .brand {
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+
+  .main-section .intro,
+  p {
+    font-size: 1.4rem;
+  }
+
+  .hidden-content,
+  li {
+    font-size: 1.4rem;
+  }
+
+  #title {
+    font-size: 2.5rem;
+  }
+
+  #title-h3 {
+    font-size: 1.8rem;
+    white-space: nowrap;
+  }
+
+  .footer {
+    font-size: 1rem;
+  }
+}
+
+/* Large (lg): Notebook */
+@media (min-width: 992px) {
+  .container .brand {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+
+  .main-section .intro,
+  p {
+    font-size: 1.6rem;
+  }
+
+  .hidden-content,
+  li {
+    font-size: 1.6rem;
+  }
+
+  #title {
+    font-size: 3rem;
+  }
+
+  #title-h3 {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+
+  .footer {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra large (xl): Desktop */
+@media (min-width: 1200px) {
+  .container .brand {
+    font-size: 2.2rem;
+    white-space: nowrap;
+  }
+
+  .main-section .intro,
+  p {
+    font-size: 1.8rem;
+  }
+
+  .hidden-content,
+  li {
+    font-size: 1.8rem;
+  }
+
+  #title {
+    font-size: 3.2rem;
+  }
+
+  #title-h3 {
+    font-size: 2.2rem;
+    white-space: nowrap;
+  }
+
+  .footer {
+    font-size: 1.4rem;
+  }
+}
+/* /Media queries */

@@ -101,13 +101,12 @@ span {
 .main-section .content {
   max-width: 800px;
   margin: 0 auto;
-  text-color: var(--text-color);
 }
 
 .main-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: var(--text-color);
+  color: #fff;
 }
 
 .main-section .intro {
@@ -136,39 +135,6 @@ span {
   cursor: pointer;
 }
 
-.wave {
-  display: inline-block;
-  transform-origin: 70% 70%; /* Define o ponto de rotação da mão */
-  animation: wave-animation 2s infinite; /* Animação infinita */
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 /* Conteúdo oculto */
 .hidden-content {
   display: none;
@@ -180,7 +146,7 @@ span {
   opacity: 0;
   animation: fadeIn 0.5s forwards;
   text-align: justify;
-  color: var(--text-color);
+  color: var(--tela-color);
   font-size: 1.25rem;
 }
 
