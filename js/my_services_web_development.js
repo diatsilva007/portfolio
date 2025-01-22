@@ -22,18 +22,6 @@ window.onscroll = function () {
 };
 
 function toggleMenu() {
-  var menu = document.getElementById("menu");
-  var ul = menu.querySelector("ul");
-  if (ul.style.display === "block") {
-    ul.style.display = "none";
-  } else {
-    ul.style.display = "block";
-  }
-}
-
-
-
-function toggleMenu() {
   const nav = document.querySelector(".nav-responsive");
   menuHamburguer.classList.toggle("change");
 
