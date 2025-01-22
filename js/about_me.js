@@ -20,3 +20,31 @@ window.onscroll = function () {
     document.body.classList.remove("scrolled");
   }
 };
+
+function toggleMenu() {
+  const nav = document.querySelector(".nav-responsive");
+  menuHamburguer.classList.toggle("change");
+
+  if (menuHamburguer.classList.contains("change")) {
+    nav.style.display = "block";
+  } else {
+    nav.style.display = "none";
+  }
+}
+
+// Adiciona evento de clique ao menu hambúrguer
+const menuHamburguer = document.querySelector(".menu-hamburguer");
+menuHamburguer.addEventListener("click", (event) => {
+  event.stopPropagation(); // Impede que o clique se propague para o documento
+  toggleMenu();
+});
+
+// Adiciona evento de clique ao documento
+document.addEventListener("click", (event) => {
+  const nav = document.querySelector(".nav-responsive");
+  if (menuHamburguer.classList.contains("change")) {
+    if (!nav.contains(event.target) && !menuHamburguer.contains(event.target)) {
+      toggleMenu();
+    }
+  }
+});
