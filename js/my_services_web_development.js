@@ -31,11 +31,7 @@ function toggleMenu() {
   }
 }
 
-/* Transformar menu hamburguer em um x */
-const menuHamburguer = document.querySelector(".menu-hamburguer");
-menuHamburguer.addEventListener("click", () => {
-  toggleMenu();
-});
+
 
 function toggleMenu() {
   const nav = document.querySelector(".nav-responsive");
@@ -47,3 +43,20 @@ function toggleMenu() {
     nav.style.display = "none";
   }
 }
+
+// Adiciona evento de clique ao menu hambúrguer
+const menuHamburguer = document.querySelector(".menu-hamburguer");
+menuHamburguer.addEventListener("click", (event) => {
+  event.stopPropagation(); // Impede que o clique se propague para o documento
+  toggleMenu();
+});
+
+// Adiciona evento de clique ao documento
+document.addEventListener("click", (event) => {
+  const nav = document.querySelector(".nav-responsive");
+  if (menuHamburguer.classList.contains("change")) {
+    if (!nav.contains(event.target) && !menuHamburguer.contains(event.target)) {
+      toggleMenu();
+    }
+  }
+});
