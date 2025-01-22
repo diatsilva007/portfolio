@@ -180,7 +180,7 @@ header {
   opacity: 0;
   animation: fadeIn 0.5s forwards;
   text-align: justify;
-  color: var(--tela-color);
+  color: var(--text-color);
   font-size: 1.25rem;
 }
 
