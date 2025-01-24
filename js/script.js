@@ -194,3 +194,19 @@ document.getElementById("leiaMaisBtn").addEventListener("click", function () {
     content.classList.add("hidden-content");
   }
 });
+
+// Script para traduzir o site
+function setLanguage(language) {
+  fetch(`/translations/${language}.json`)
+    .then((response) => response.json())
+    .then((translations) => {
+      document.querySelectorAll("[data-translate]").forEach((element) => {
+        const key = element.getAttribute("data-translate");
+        element.textContent = translations[key];
+      });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setLanguage("pt"); // Define o idioma padrão como portugûes
+});
