@@ -1,8 +1,14 @@
 {
-    "home": "Home",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "contact": "Contact",
-    "about": "About",
-    "portfolio-title": "Portfolio"
+  "portfolio-title": "Portfolio",
+  "home": "Home",
+  "services": "Services",
+  "portfolio": "Portfolio",
+  "contact": "Contact",
+  "about": "About",
+  "name-introduction": "Hi, I'm",
+  "CV-button": "Download CV",
+  "My-services": "My Services",
+  "Web-Development": "Web Development",
+  "Full-Stack-Development": "Full-Stack Development",
+  "Mobile-Development": "Mobile Development"
 }

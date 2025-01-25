@@ -1,8 +1,15 @@
 {
+    "portfolio-title": "Portfólio",
     "home": "Início",
     "services": "Serviços",
     "portfolio": "Portfólio",
     "contact": "Contato",
     "about": "Sobre",
-    "portfolio-title": "Portfólio"
+    "name-introduction": "Olá, eu sou",
+    "CV-button": "Baixar CV",
+    "My-services": "Meus Serviços",
+    "Web-Development": "Desenvolvimento Web",
+    "Full-Stack-Development": "Desenvolvimento Full-Stack",
+    "Mobile-Development": "Desenvolvimento Mobile"
+
 }
