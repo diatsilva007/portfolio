@@ -155,7 +155,6 @@ header {
   color: var(--text-color);
   padding: 0.5rem 1rem;
   transition: 0.4s;
-  
 }
 
 .nav a:hover,
@@ -166,10 +165,10 @@ header {
 }
 
 .flag-spacing {
-    margin-left: 10px; /* Ajuste o valor conforme necessário */
-    cursor: pointer;
+  cursor: pointer;
+  margin-left: 3px;
+  margin-right: 3px;
 }
-
 section {
   min-heigh: 100vh;
   padding: 6rem 6rem 2rem;
