@@ -95,6 +95,12 @@ header {
   color: var(--main-color);
 }
 
+.flag-spacing {
+  cursor: pointer;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 /* Botão menu hamburguer */
 .menu-hamburguer {
   display: none;
