@@ -36,5 +36,17 @@
   "send-message": "Enviar Mensagem",
   "about-me": "Sobre Mim",
   "texto-paragrafo-contact-section": "Olá, eu sou o Diogo. Engenheiro de software, apaixonado por desenvolver soluções inovadoras que resolvam problemas complexos e aprimorem a experiência do usuário. Tenho sólidos conhecimentos em desenvolvimento de software, com foco em:",
-  "footer": "Direitos autorais 2025 por </Diogo Ataide Silva>. Todos os direitos reservados."
+  "footer": "Direitos autorais 2025 por </Diogo Ataide Silva>. Todos os direitos reservados.",
+  "texto-paragrafo-web-development": "Como desenvolvedor web, ofereço soluções completas e personalizadas para atender às suas necessidades on-line, desde a criação de sites institucionais até sistemas complexos. Combinando habilidades em design, programação e otimização, sempre busco oferecer produtos funcionais e responsivos com uma ótima experiência para o usuário. Meus serviços incluem:",
+  "what-do-i-do": "O que eu faço?",
+  "what-do-i-do-paragrafo1": "Desenvolvimento de Sites e Blogs: Criação de sites modernos, funcionais e fáceis de navegar, com foco em design responsivo e otimização para diferentes dispositivos.",
+  "what-do-i-do-paragrafo2": "Desenvolvimento de E-commerce: Implementação de lojas virtuais completas, com integração de sistemas de pagamento, gestão de estoque e personalização de layout.",
+  "what-do-i-do-paragrafo3": "Aplicações Web Personalizadas: Desenvolvimento de sistemas sob medida, como plataformas, CRMs ou soluções internas, com funcionalidades específicas para o seu negócio.",
+  "what-do-i-do-paragrafo4": "Desenvolvimento Front-End: Construção de interfaces interativas e intuitivas usando HTML, CSS, JavaScript e frameworks modernos, garantindo uma experiência de usuário envolvente.",
+  "what-do-i-do-paragrafo5": "Desenvolvimento Back-End: Implementação de servidores, APIs e bancos de dados, garantindo segurança, escalabilidade e bom desempenho em suas aplicações.",
+  "what-do-i-do-paragrafo6": "Consultoria em Desenvolvimento Web: Consultoria técnica sobre a melhor abordagem para o seu projeto web, incluindo escolha de tecnologias e melhores práticas.",
+  "what-do-i-do-paragrafo7": "SEO e Otimização de Performance: Melhorar a visibilidade do seu site nos mecanismos de busca e otimização de velocidade para garantir melhor desempenho e experiência do usuário.",
+  "what-do-i-do-paragrafo8": "Manutenção e Suporte Técnico: Atualizações regulares, correção de bugs, ajustes de segurança e monitoramento de desempenho."
+  
+  
 }

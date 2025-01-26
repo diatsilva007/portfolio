@@ -36,5 +36,16 @@
   "send-message": "Send Message",
   "about-me": "About Me",
   "texto-paragrafo-contact-section": "Hello, I'm Diogo. A Software Enginner, with a passion for developing innovative solutions that solve complex problems and enhance user experience. I have solid knowledge in software development, with a focus on:",
-  "footer": "Copyright 2025 by </Diogo Ataide Silva>. All rights reserved."
+  "footer": "Copyright 2025 by </Diogo Ataide Silva>. All rights reserved.",
+  "texto-paragrafo-web-development": "As a web developer, I offer complete and customized solutions to meet your online needs,from creating institutional websites to complex systems. Combining skills in design, programming and optimization, I always aim to deliver functional, responsive products with a great user experience. My services include:",
+  "what-do-i-do": "What do I do?",
+  "what-do-i-do-paragrafo1": "Website and Blog Development: Creation of modern, functional and easy-to-navigate websites, with a focus on responsive design and optimization for different devices.",
+  "what-do-i-do-paragrafo2": "E-commerce development: Implementation of complete online stores, with integration of payment systems, stock management and layout customization",
+  "what-do-i-do-paragrafo3": "Customized Web Applications: Development of tailor-made systems, such as platforms, CRMs or internal solutions, with specific functionalities for your business.",
+  "what-do-i-do-paragrafo4": "Front-End Development: Building interactive and intuitive interfaces using HTML, CSS, JavaScript and modern frameworks, ensuring an engaging user experience.",
+  "what-do-i-do-paragrafo5": "Back-End Development: Implementation of servers, APIs and databases, guaranteeing security, scalability and good performance in your applications.",
+  "what-do-i-do-paragrafo6": "Web Development Consulting: Technical advice on the best approach for your web project, including choice of technologies and best practices.",
+  "what-do-i-do-paragrafo7": "SEO and Performance Optimization: Improving your site's visibility in search engines and speed optimization to ensure better performance and user experience.",
+  "what-do-i-do-paragrafo8": "Maintenance and Technical Support: Regular updates, bug fixes, security adjustments and performance monitoring."
+  
 }
