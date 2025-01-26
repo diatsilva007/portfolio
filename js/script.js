@@ -208,5 +208,5 @@ function setLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  setLanguage("pt"); // Define o idioma padrão como portugûes
+  setLanguage("en"); // Define o idioma padrão como inglês
 });
