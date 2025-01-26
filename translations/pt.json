@@ -46,7 +46,27 @@
   "what-do-i-do-paragrafo5": "Desenvolvimento Back-End: Implementação de servidores, APIs e bancos de dados, garantindo segurança, escalabilidade e bom desempenho em suas aplicações.",
   "what-do-i-do-paragrafo6": "Consultoria em Desenvolvimento Web: Consultoria técnica sobre a melhor abordagem para o seu projeto web, incluindo escolha de tecnologias e melhores práticas.",
   "what-do-i-do-paragrafo7": "SEO e Otimização de Performance: Melhorar a visibilidade do seu site nos mecanismos de busca e otimização de velocidade para garantir melhor desempenho e experiência do usuário.",
-  "what-do-i-do-paragrafo8": "Manutenção e Suporte Técnico: Atualizações regulares, correção de bugs, ajustes de segurança e monitoramento de desempenho."
+  "what-do-i-do-paragrafo8": "Manutenção e Suporte Técnico: Atualizações regulares, correção de bugs, ajustes de segurança e monitoramento de desempenho.",
+  "main-technologies": "Principais Tecnologias",
+  "main-technologies-paragrafo1": "Front-end: HTML5, CSS3, JavaScript (ES6+), React, Bootstrap, Tailwind.",
+  "main-technologies-paragrafo2": "Back-end: Node.js, Express.js, MySQL, MongoDB, Firebase, AWS.",
+  "main-technologies-paragrafo3": "Banco de Dados: MySQL, PostgreSQL, MongoDB.",
+  "main-technologies-paragrafo4": "Controle de Versão: Git, GitHub.",
+  "main-technologies-paragrafo5": "Implantação e Cloud: AWS, Netlify, Vercel, DigitalOcean.",
+  "my-work-process": "Meu Processo de Trabalho",
+  "my-work-process-paragrafo1": "Descoberta do Projeto: Entendo as necessidades do cliente, os objetivos do projeto e o público-alvo para definir uma estratégia personalizada.",
+  "my-work-process-paragrafo2": "Design e Prototipagem: Desenvolvo um protótipo inicial, garantindo que o design e a funcionalidade estejam alinhados com as expectativas do cliente.",
+  "my-work-process-paragrafo3": "Desenvolvimento e Testes: Construo o projeto com foco em código limpo, modular e eficiente. Realizo testes para garantir que tudo funcione conforme o esperado.",
+  "my-work-process-paragrafo4": "Entrega e Suporte: Implanto a aplicação e ofereço suporte contínuo para manter o site atualizado, seguro e otimizado.",
+  "why-choose-me": "Por que me escolher?",
+  "why-choose-me-paragrafo1": "Comunicação transparente e compromisso com os prazos.",
+  "why-choose-me-paragrafo2": "Design responsivo e experiência do usuário (UX).",
+  "why-choose-me-paragrafo3": "Desenvolvimento completo de front-end e back-end.",
+  "why-choose-me-paragrafo4": "Uso de tecnologias modernas.",
+  "why-choose-me-paragrafo5": "Foco em desempenho e SEO.",
+  "why-choose-me-paragrafo6": "Segurança e manutenção."
+
+
   
   
 }

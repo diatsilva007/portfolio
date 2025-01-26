@@ -46,6 +46,24 @@
   "what-do-i-do-paragrafo5": "Back-End Development: Implementation of servers, APIs and databases, guaranteeing security, scalability and good performance in your applications.",
   "what-do-i-do-paragrafo6": "Web Development Consulting: Technical advice on the best approach for your web project, including choice of technologies and best practices.",
   "what-do-i-do-paragrafo7": "SEO and Performance Optimization: Improving your site's visibility in search engines and speed optimization to ensure better performance and user experience.",
-  "what-do-i-do-paragrafo8": "Maintenance and Technical Support: Regular updates, bug fixes, security adjustments and performance monitoring."
+  "what-do-i-do-paragrafo8": "Maintenance and Technical Support: Regular updates, bug fixes, security adjustments and performance monitoring.",
+  "main-technologies": "Main Technologies",
+  "main-technologies-paragrafo1": "Front-End: HTML5, CSS3, JavaScript (ES6+), React, Bootstrap, Tailwind.",
+  "main-technologies-paragrafo2": "Back-End: Node.js, Express, MongoDB, Firebase, RESTful APIs.",
+  "main-technologies-paragrafo3": "Database: MySQL, PostgreSQL, MongoDB.",
+  "main-technologies-paragrafo4": "Version Control: Git, GitHub..",
+  "main-technologies-paragrafo5": "Deployment and Cloud: AWS, Netlify, Vercel, DigitalOcean.",
+  "my-work-process": "My Work Process",
+  "my-work-process-paragrafo1": "Project Discovery First: I understand the client's needs, the project's objectives and the target audience in order to define a personalized strategy.",
+  "my-work-process-paragrafo2": "Design and Prototyping: I develop an initial prototype, ensuring that the design and functionality are in line with the client's expectations.",
+  "my-work-process-paragrafo3": "Development and Testing: I build the project with a focus on clean, modular and efficient code. I run tests to ensure that everything works as expected..",
+  "my-work-process-paragrafo4": "Delivery and Support: I deploy the application and offer ongoing support to keep the website updated, secure and optimized.",
+  "why-choose-me": "Why Choose Me?",
+  "why-choose-me-paragrafo1": "Transparent communication and commitment to deadlines.",
+  "why-choose-me-paragrafo2": "Responsive Design and User Experience (UX).",
+  "why-choose-me-paragrafo3": "Complete Front-End and Back-End Development.",
+  "why-choose-me-paragrafo4": "Use of Modern Technologies.",
+  "why-choose-me-paragrafo5": "Focus on Performance and SEO.",
+  "why-choose-me-paragrafo6": "Security and Maintenance."
   
 }
