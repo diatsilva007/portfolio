@@ -172,7 +172,7 @@
                     optimization, I always aim to deliver functional, responsive products with a great user experience.
                 </p>
 
-                <a href="index/my_services_web_development.html" class="btn">Read More</a>
+                <a href="index/my_services_web_development.html" class="btn" data-translate="read-more-btn">Read More</a>
 
             </div>
 
@@ -186,7 +186,7 @@
                     an excellent user experience.
                 </p>
 
-                <a href="/index/my_services_full_stack_development.html" class="btn">Read More</a>
+                <a href="/index/my_services_full_stack_development.html" class="btn" data-translate="read-more-btn">Read More</a>
             </div>
 
             <div class="services-box">
@@ -199,7 +199,7 @@
                     ensuring that the end product is scalable, secure and meets users' needs.
                 </p>
 
-                <a href="/index/my_services_mobile_development.html" class="btn">Read More</a>
+                <a href="/index/my_services_mobile_development.html" class="btn" data-translate="read-more-btn">Read More</a>
             </div>
 
         </div>
@@ -338,29 +338,29 @@
 
     <!-- Contact section -->
     <section class="contact" id="contact">
-        <h2>Contact <span>Me!</span></h2>
+        <h2 data-translate="contact-me">Contact <span>Me!</span></h2>
 
         <!-- modify this form HTML and place wherever you want your form -->
         <form id="contactForm" action="https://formspree.io/f/mzzzqwpb" method="POST"
             data-redirect="https://portfolio-diogoataide.vercel.app/" onsubmit="setTimeout(() => this.reset(), 1000);">
 
             <label class="input-box">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="youremail@example.com" required>
+                <input type="text" name="name" placeholder="Full Name" data-translate="placeholder-name" required>
+                <input type="email" name="email" placeholder="youremail@example.com" data-translate="placeholder-email" required>
             </label>
 
             <label for="phone" class="input-box">
                 <input type="tel" id="phone" name="phone" oninput="mascaraTelefone(this)"
                     placeholder="Phone: (XX) XXXXX-XXXX"
-                    pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}" required>
-                <input type="text" placeholder="Subject" required>
+                    pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}" data-translate="placeholder-phone" required>
+                <input type="text" placeholder="Subject" data-translate="placeholder-subject" required>
             </label>
 
             <label>
-                <textarea name="message" placeholder="Message..." cols="30" rows="8" required></textarea>
+                <textarea name="message" placeholder="Message..." cols="30" rows="8" data-translate="placeholder-message" required></textarea>
             </label>
             <!-- your other form fields go here -->
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" class="btn" data-translate="send-message">Send Message</button>
         </form>
 
         <script>
@@ -401,17 +401,17 @@
         </div>
 
         <div class="about-content">
-            <h3>About Me</h3>
+            <h3 data-translate="about-me">About <span>Me</span></h3>
             <div id="typing-effect"></div>
             
-            <p>
+            <p data-translate="texto-paragrafo-contact-section">
                 Hello, <i class="fas fa-hand-paper wave"></i> I'm Diogo. A recently graduated software engineer with a
                 passion for developing innovative
                 solutions that solve complex problems and enhance user experience. I have solid knowledge in software
                 development, with a focus on:
             </p>
 
-            <a href="/index/about_me.html" class="btn">Read More</a>
+            <a href="/index/about_me.html" class="btn" data-translate="read-more-btn">Read More</a>
 
         </div>
     </section>
@@ -419,7 +419,7 @@
 
     <!-- Footer section -->
     <footer class="footer">
-        <p id="footer">
+        <p id="footer" data-translate="footer">
             Copyright &copy; 2025 by &lt;/Diogo Ataide Silva&gt;. All rights reserved.
         </p>
 
