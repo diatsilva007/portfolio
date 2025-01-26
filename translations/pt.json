@@ -1,15 +1,17 @@
 {
-    "portfolio-title": "Portfólio",
-    "home": "Início",
-    "services": "Serviços",
-    "portfolio": "Portfólio",
-    "contact": "Contato",
-    "about": "Sobre",
-    "name-introduction": "Olá, eu sou",
-    "CV-button": "Baixar CV",
-    "My-services": "Meus Serviços",
-    "Web-Development": "Desenvolvimento Web",
-    "Full-Stack-Development": "Desenvolvimento Full-Stack",
-    "Mobile-Development": "Desenvolvimento Mobile"
-
+  "portfolio-title": "Portfólio",
+  "home": "Início",
+  "services": "Serviços",
+  "portfolio": "Portfólio",
+  "contact": "Contato",
+  "about": "Sobre",
+  "name-introduction": "Olá, eu sou",
+  "CV-button": "Baixar CV",
+  "My-services": "Meus Serviços",
+  "Web-Development": "Desenvolvimento Web",
+  "Full-Stack-Development": "Desenvolvimento Full-Stack",
+  "Mobile-Development": "Desenvolvimento Mobile",
+  "texto-paragrafo1": "Como desenvolvedor web, ofereço soluções completas e personalizadas para atender às suas necessidades on-line, desde a criação de sites institucionais até sistemas complexos. Combinando habilidades em design, programação e otimização, sempre busco oferecer produtos funcionais e responsivos com uma ótima experiência para o usuário.",
+    "texto-paragrafo2": "Como Desenvolvedor Full-Stack, ofereço soluções completas para o desenvolvimento de aplicações web, abrangendo tanto o front-end quanto o back-end. Minha abordagem é voltada para a criação de sistemas robustos, escaláveis e com uma excelente experiência do usuário.",
+    "texto-paragrafo3": "Como Desenvolvedor Mobile, crio aplicativos nativos e híbridos que oferecem uma experiência fluida, intuitiva e de alto desempenho. Meu objetivo é transformar ideias em aplicativos funcionais, garantindo que o produto final seja escalável, seguro e atenda às necessidades dos usuários."
 }
