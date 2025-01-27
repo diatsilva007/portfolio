@@ -64,6 +64,25 @@
   "why-choose-me-paragrafo3": "Complete Front-End and Back-End Development.",
   "why-choose-me-paragrafo4": "Use of Modern Technologies.",
   "why-choose-me-paragrafo5": "Focus on Performance and SEO.",
-  "why-choose-me-paragrafo6": "Security and Maintenance."
+  "why-choose-me-paragrafo6": "Security and Maintenance.",
+  "main-section-paragrafo1": "As a Full-Stack Developer, I offer complete solutions for web application development, covering both the front-end and the back-end. My approach is geared towards creating robust, scalable systems with an excellent user experience. My services include:",
+  "hidden-content-list-item1": "Front-End Development: Creating modern, responsive interfaces using frameworks such as React, Angular or Vue.js. Focus on usability, performance and intuitive design",
+  "hidden-content-list-item2": "Back-End Development: Building secure and scalable APIs, integrating with databases (SQL and NoSQL) and configuring servers using Node.js, Django, Express, among others.",
+  "hidden-content-list-item3": "Integration of Services and APIs: Connecting applications to third-party APIs, payment services, social authentication, email services, among others.",
+  "hidden-content-list-item4": "DevOps and Deployment: Configuring CI/CD pipelines, deploying to cloud servers (AWS, Azure, DigitalOcean), as well as monitoring and maintaining applications.",
+  "hidden-content-list-item5": "Database: Creating and optimizing relational (MySQL, PostgreSQL) and non-relational (MongoDB, Firebase) databases.",
+  "main-technologies-list-items1": "Front-End: HTML, CSS, JavaScript, React, Angular, Vue.js.",
+  "main-technologies-list-items2": "Back-End: Node.js, Express, Django, Flask.",
+  "main-technologies-list-items3": "Database: MySQL, PostgreSQL, MongoDB.",
+  "main-technologies-list-items4": "DevOps: Docker, Kubernetes, Git, CI/CD.",
+  "main-technologies-list-items5": "Cloud Services: AWS, Azure, DigitalOcean.",
+  "my-work-process-list-items1": "Project Understanding: I gather the client's requirements and needs to propose the best technological solution.",
+  "my-work-process-list-items2": "Design and Prototyping: I develop a functional prototype to ensure that the solution meets expectations.",
+  "my-work-process-list-items3": "Development and Testing: I build the code in a modular way and carry out tests to ensure the quality of the software.",
+  "my-work-process-list-items4": "Deployment and Support: I deploy the application in a secure environment and offer ongoing support for improvements and updates.",
+  "why-choose-me-list-items1": "Transparent communication during all stages of the project.",
+  "why-choose-me-list-items2": "Delivery within agreed deadlines.",
+  "why-choose-me-list-items3": "Modern, up-to-date technological solutions.",
+  "why-choose-me-list-items4": "Complete support, from planning to maintenance."
   
 }

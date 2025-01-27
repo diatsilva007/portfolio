@@ -64,9 +64,24 @@
   "why-choose-me-paragrafo3": "Desenvolvimento completo de front-end e back-end.",
   "why-choose-me-paragrafo4": "Uso de tecnologias modernas.",
   "why-choose-me-paragrafo5": "Foco em desempenho e SEO.",
-  "why-choose-me-paragrafo6": "Segurança e manutenção."
-
-
-  
-  
+  "why-choose-me-paragrafo6": "Segurança e manutenção.",
+  "main-section-paragrafo1": "Como Desenvolvedor Full-Stack, ofereço soluções completas para o desenvolvimento de aplicações web, abrangendo tanto o front-end quanto o back-end. Minha abordagem é voltada para a criação de sistemas robustos, escaláveis e com uma excelente experiência do usuário. Meus serviços incluem:",
+  "hidden-content-list-item1": "Desenvolvimento de front-end: Criação de interfaces modernas e responsivas usando estruturas como React, Angular ou Vue.js. Foco em usabilidade, desempenho e design intuitivo.",
+  "hidden-content-list-item2": "Desenvolvimento de back-end: Criação de APIs seguras e escaláveis, integração com bancos de dados (SQL e NoSQL) e configuração de servidores usando Node.js, Django, Express, entre outros.",
+  "hidden-content-list-item3": "Integração de serviços e APIs: Conexão de aplicativos a APIs de terceiros, serviços de pagamento, autenticação social, serviços de e-mail, entre outros.  ",
+  "hidden-content-list-item4": "DevOps e implantação: Configuração de pipelines de CI/CD, implantação em servidores em nuvem (AWS, Azure, DigitalOcean), bem como monitoramento e manutenção de aplicativos.",
+  "hidden-content-list-item5": "Banco de dados: Criação e otimização de bancos de dados relacionais (MySQL, PostgreSQL) e não relacionais (MongoDB, Firebase).",
+  "main-technologies-list-items1": "Front-end: HTML, CSS, JavaScript, React, Angular, Vue.js.",
+  "main-technologies-list-items2": "Back-end: Node.js, Express.js, Django, Flask.",
+  "main-technologies-list-items3": "Banco de Dados: MySQL, PostgreSQL, MongoDB.",
+  "main-technologies-list-items4": "Controle de Versão: Git, GitHub.",
+  "main-technologies-list-items5": "Implantação e Cloud: AWS, Azure, DigitalOcean.",
+  "my-work-process-list-items1": "Compreensão do projeto: Reúno os requisitos e as necessidades do cliente para propor a melhor solução tecnológica.",
+  "my-work-process-list-items2": "Design e prototipagem: Desenvolvo um protótipo funcional para garantir que a solução atenda às expectativas.",
+  "my-work-process-list-items3": "Desenvolvimento e testes: Desenvolvo o código de forma modular e realizo testes para garantir a qualidade do software.",
+  "my-work-process-list-items4": "Implantação e suporte: Implemento o aplicativo em um ambiente seguro e ofereço suporte contínuo para melhorias e atualizações.",
+  "why-choose-me-list-items1": "Comunicação transparente em todas as etapas do projeto.",
+  "why-choose-me-list-items2": "Entrega dentro dos prazos acordados.",
+  "why-choose-me-list-items3": "Soluções tecnológicas modernas e atualizadas.",
+  "why-choose-me-list-items4": "Suporte completo, desde o planejamento até a manutenção."
 }
