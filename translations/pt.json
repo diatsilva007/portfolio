@@ -132,5 +132,11 @@
   "about-me-main-technologies-list-items3": "Banco de dados: Entendimento de bancos de dados relacionais (MySQL, PostgreSQL) e não relacionais (MongoDB, Firebase).",
   "about-me-main-technologies-list-items4": "Metodologias de desenvolvimento: Conhecimento de metodologias como Agile, Scrum ou DevOps.",
   "about-me-main-technologies-list-items5": "Solução de problemas: Capacidade de encontrar soluções criativas e eficientes para problemas técnicos complexos.",
-  "about-me-main-technologies-list-items6": "Comunicação: Capacidade de comunicar ideias e soluções com clareza aos membros da equipe e às partes interessadas."
+  "about-me-main-technologies-list-items6": "Comunicação: Capacidade de comunicar ideias e soluções com clareza aos membros da equipe e às partes interessadas.",
+  "about-me-my-work-process-list-items1": "Implementação de pequenos recursos.",
+  "about-me-my-work-process-list-items2": "Correção de bugs simples.",
+  "about-me-my-work-process-list-items3": "Participação em revisões de código.",
+  "about-me-my-work-process-list-items4": "Colaboração em testes automatizados.",
+  "about-me-my-work-process-list-items5": "Leitura e compreensão de código legado.",
+  "about-me-my-work-process-list-items6": "Realização de implementações em ambientes de desenvolvimento ou de preparação."
 }

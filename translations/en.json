@@ -133,5 +133,11 @@
   "about-me-main-technologies-list-items3": "Database: Understanding of relational (MySQL, PostgreSQL) and non-relational (MongoDB, Firebase) databases.",
   "about-me-main-technologies-list-items4": "Development methodologies: Knowledge of methodologies such as Agile, Scrum or DevOps.",
   "about-me-main-technologies-list-items5": "Problem-solving: Ability to find creative and efficient solutions to complex technical problems.",
-  "about-me-main-technologies-list-items6": "Communication: Ability to communicate ideas and solutions clearly to team members and stakeholders."
+  "about-me-main-technologies-list-items6": "Communication: Ability to communicate ideas and solutions clearly to team members and stakeholders.",
+  "about-me-my-work-process-list-items1": "Implementing small features.",
+  "about-me-my-work-process-list-items2": "Fixing simple bugs.",
+  "about-me-my-work-process-list-items3": "Participation in code reviews",
+  "about-me-my-work-process-list-items4": "Collaborating on automated tests.",
+  "about-me-my-work-process-list-items5": "Reading and understanding legacy code.",
+  "about-me-my-work-process-list-items6": "Performing deploys in development or staging environments."
 }
