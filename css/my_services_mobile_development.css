@@ -96,6 +96,13 @@ header {
   color: var(--main-color);
 }
 
+/* Bandeiras dos idiomas da página */
+.flag-spacing {
+  cursor: pointer;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
 /* Botão menu hamburguer */
 .menu-hamburguer {
   display: none;
