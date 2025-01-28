@@ -95,5 +95,9 @@
   "mobile-development-main-technologies-list-items3": "Back-end para dispositivos móveis: Node.js, Firebase, Django.",
   "mobile-development-main-technologies-list-items4": "Banco de dados: SQLite, Firebase Firestore, MongoDB, PostgreSQL.",
   "mobile-development-main-technologies-list-items5": "Ferramentas: Git, GitHub, Firebase, AWS, Google Cloud.",
-  "mobile-development-main-technologies-list-items6": "Publicação: Google Play Store, Apple App Store."
+  "mobile-development-main-technologies-list-items6": "Publicação: Google Play Store, Apple App Store.",
+  "mobile-development-my-work-process-list-items1": "Descoberta do projeto: Entendo as necessidades do cliente, o público-alvo e as funcionalidades desejadas para o aplicativo.",
+  "mobile-development-my-work-process-list-items2": "Prototipagem e design: Desenvolvo protótipos e wireframes para garantir que a interface do aplicativo esteja de acordo com as expectativas do cliente.",
+  "mobile-development-my-work-process-list-items3": "Desenvolvimento e teste: Crio o aplicativo usando boas práticas de programação, garantindo o desempenho, a segurança e a estabilidade. Realizo testes em diferentes dispositivos para garantir a melhor experiência possível.",
+  "moblie-development-my-work-process-list-items4": "Publicação e suporte: Ajudo a publicar o aplicativo nas lojas (Google Play Store e Apple App Store) e ofereço suporte contínuo para melhorias e atualizações."
 }
