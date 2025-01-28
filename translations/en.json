@@ -103,5 +103,11 @@
   "mobile-development-why-choose-me-list-items1": "Focus on performance and user experience.",
   "mobile-development-why-choose-me-list-items2": "Agile development and on-time delivery.",
   "mobile-development-why-choose-me-list-items3": "Scalable and secure solutions.",
-  "mobile-development-why-choose-me-list-items4": "Ongoing support and constant improvement."
+  "mobile-development-why-choose-me-list-items4": "Ongoing support and constant improvement.",
+  "software-engineer": "Software Engineer",
+  "intro-software-engineer": "I'm Diogo. I'm a software engineer with a passion for developing innovative solutions that solve complex problems and improve the user experience. Professional specialized in the development, implementation, maintenance and optimization of software systems. He applies engineering principles to design, build, test and manage software that meets user needs and technical requirements.",
+  "software-development": "Software Development",
+  "software-development-list-items1": "Requirements Analysis: Understands the needs of customers or end users and translates these needs into functional and technical requirements.",
+  "software-development-list-items2": "Software Architecture: Defines the overall structure of the software system, including the choice of technologies, standards and frameworks to be used.",
+  "software-development-list-items3": "Programming: Writing the software code, developing functionalities and implementing the system's logic. This can involve the use of various programming languages, such as Python, Java, C#, JavaScript, among others."
 }

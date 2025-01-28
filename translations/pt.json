@@ -103,5 +103,10 @@
   "mobile-development-why-choose-me-list-items1": "Concentre-se no desempenho e na experiência do usuário.",
   "mobile-development-why-choose-me-list-items2": "Desenvolvimento ágil e entrega no prazo.",
   "mobile-development-why-choose-me-list-items3": "Soluções escalonáveis e seguras.",
-  "mobile-development-why-choose-me-list-items4": "Suporte contínuo e aprimoramento constante."
+  "mobile-development-why-choose-me-list-items4": "Suporte contínuo e aprimoramento constante.",
+  "software-engineer": "Engenheiro de Software",
+  "intro-software-engineer": "Eu sou o Diogo. Engenheiro de software, apaixonado por desenvolver soluções inovadoras que resolvam problemas complexos e melhorem a experiência do usuário. Profissional especializado no desenvolvimento, implementação, manutenção e otimização de sistemas de software. Aplica princípios de engenharia para projetar, construir, testar e gerenciar softwares que atendam às necessidades dos usuários e aos requisitos técnicos.",
+  "software-development-list-items1": "Análise de requisitos: Compreende as necessidades dos clientes ou usuários finais e traduz essas necessidades em requisitos funcionais e técnicos.",
+  "software-development-list-items2": "Arquitetura de software: Define a estrutura geral do sistema de software, incluindo a escolha de tecnologias, padrões e estruturas a serem usados.",
+  "software-development-list-items3": "Programação: Escrever o código do software, desenvolver funcionalidades e implementar a lógica do sistema. Isso pode envolver o uso de várias linguagens de programação, como Python, Java, C#, JavaScript, entre outras."
 }
