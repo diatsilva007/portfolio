@@ -122,5 +122,15 @@
   "project-management-list-items3": "Documentação: Mantém uma documentação clara e precisa do código e dos processos para garantir que outros membros da equipe possam entender e continuar o trabalho com facilidade.",
   "scalability-and-performance": "Escalabilidade e Desempenho",
   "scalability-and-performance-list-items1": "Desempenho: Trabalha para otimizar o desempenho do software, garantindo que ele seja rápido e eficiente, especialmente em sistemas que lidam com grandes volumes de dados ou usuários simultâneos.",
-  "scalability-and-performance-list-items2": "Escalabilidade: Garante que o sistema de software possa ser facilmente dimensionado para atender a um número maior de usuários ou dados sem comprometer o desempenho."
+  "scalability-and-performance-list-items2": "Escalabilidade: Garante que o sistema de software possa ser facilmente dimensionado para atender a um número maior de usuários ou dados sem comprometer o desempenho.",
+  "software-security": "Segurança de Software",
+  "software-security-list-items": "Segurança: Implementa práticas e técnicas para proteger o software contra ataques cibernéticos, como injeção de SQL, XSS (cross-site scripting) e outras ameaças à segurança. Isso inclui criptografia de dados e práticas de autenticação e autorização.",
+  "systems-integration": "Integração de Sistemas",
+  "systems-integration-list-items": "Integração com outras plataformas: Os engenheiros de software geralmente precisam garantir que o software se integre corretamente a outras ferramentas ou sistemas externos (APIs, bancos de dados, outros serviços).",
+  "about-me-main-technologies-list-items1": "Linguagens de programação: Conhecimento profundo de uma ou mais linguagens de programação (Java, Python, C#, JavaScript, etc.).", 
+  "about-me-main-technologies-list-items2": "Sistemas de controle de versão: Familiaridade com ferramentas como o Git para gerenciamento e controle de versão de código.",
+  "about-me-main-technologies-list-items3": "Banco de dados: Entendimento de bancos de dados relacionais (MySQL, PostgreSQL) e não relacionais (MongoDB, Firebase).",
+  "about-me-main-technologies-list-items4": "Metodologias de desenvolvimento: Conhecimento de metodologias como Agile, Scrum ou DevOps.",
+  "about-me-main-technologies-list-items5": "Solução de problemas: Capacidade de encontrar soluções criativas e eficientes para problemas técnicos complexos.",
+  "about-me-main-technologies-list-items6": "Comunicação: Capacidade de comunicar ideias e soluções com clareza aos membros da equipe e às partes interessadas."
 }

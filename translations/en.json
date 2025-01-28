@@ -123,5 +123,15 @@
   "project-management-list-items3": "Documentation: Maintains clear and accurate documentation of code and processes to ensure that other team members can easily understand and continue the work.",
   "scalability-and-performance": "Scalability and Performance",
   "scalability-and-performance-list-items1": "Performance: Works to optimize the software's performance, ensuring that it is fast and efficient, especially in systems that handle large volumes of data or simultaneous users.",
-  "scalability-and-performance-list-items2": "Scalability: Ensures that the software system can be easily scaled to serve a larger number of users or data without compromising performance."
+  "scalability-and-performance-list-items2": "Scalability: Ensures that the software system can be easily scaled to serve a larger number of users or data without compromising performance.",
+  "software-security": "Software Security",
+  "software-security-list-items": "Security: Implements practices and techniques to protect software against cyber attacks, such as SQL injection, XSS (cross-site scripting), and other security threats. This includes data encryption and authentication and authorization practices.",
+  "systems-integration": "Systems Integration",
+  "systems-integration-list-items": "Integration with other platforms: Software engineers often need to ensure that software integrates correctly with other external tools or systems (APIs, databases, other services).",
+  "about-me-main-technologies-list-items1": "Programming Languages: In-depth knowledge of one or more programming languages (Java, Python, C#, JavaScript, etc.).", 
+  "about-me-main-technologies-list-items2": "Version Control Systems: Familiarity with tools such as Git for managing and versioning code.",
+  "about-me-main-technologies-list-items3": "Database: Understanding of relational (MySQL, PostgreSQL) and non-relational (MongoDB, Firebase) databases.",
+  "about-me-main-technologies-list-items4": "Development methodologies: Knowledge of methodologies such as Agile, Scrum or DevOps.",
+  "about-me-main-technologies-list-items5": "Problem-solving: Ability to find creative and efficient solutions to complex technical problems.",
+  "about-me-main-technologies-list-items6": "Communication: Ability to communicate ideas and solutions clearly to team members and stakeholders."
 }
