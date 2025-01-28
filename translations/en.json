@@ -84,6 +84,16 @@
   "why-choose-me-list-items2": "Delivery within agreed deadlines.",
   "why-choose-me-list-items3": "Modern, up-to-date technological solutions.",
   "why-choose-me-list-items4": "Complete support, from planning to maintenance.",
-  "mobile-development": "Mobile Development"
-  
+  "mobile-development": "Mobile Development",
+  "mobile-development-what-do-i-do-list-items1": "Native Application Development: Creating apps for Android and iOS using native technologies, ensuring better performance and taking advantage of the specific features of each platform.",
+  "mobile-development-what-do-i-do-list-items2": "Hybrid Application Development: Building multiplatform applications with frameworks such as React Native and Flutter, allowing the same code to work on Android and iOS devices, optimizing development time and costs.",
+  "mobile-development-what-do-i-do-list-items3": "Modern Interface Design (UI/UX): Development of attractive and intuitive user interfaces, focused on usability and user experience (UX), ensuring that the application is easy to use and visually pleasing.",
+  "mobile-development-what-do-i-do-list-items4": "Integration of APIs and Services: Integration of applications with external services, such as REST APIs, authentication services, cloud storage, payment gateways and push notifications.",
+  "mobile-development-what-do-i-do-list-items5": "Application maintenance and updates: I offer ongoing support for maintenance, bug fixes and the implementation of new features, keeping your application up-to-date and secure at all times.",
+  "mobile-development-main-technologies-list-items1": "Languages: Java, Kotlin, Swift, Dart, JavaScript.",
+  "mobile-development-main-technologies-list-items2": "Frameworks: Flutter, React Native.",
+  "mobile-development-main-technologies-list-items3": "Back-End for Mobile: Node.js, Firebase, Django.",
+  "mobile-development-main-technologies-list-items4": "Database: SQLite, Firebase Firestore, MongoDB, PostgreSQL.",
+  "mobile-development-main-technologies-list-items5": "Tools: Git, GitHub, Firebase, AWS, Google Cloud.",
+  "mobile-development-main-technologies-list-items6": "Publishing: Google Play Store, Apple App Store."
 }

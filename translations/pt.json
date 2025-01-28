@@ -84,5 +84,16 @@
   "why-choose-me-list-items2": "Entrega dentro dos prazos acordados.",
   "why-choose-me-list-items3": "Soluções tecnológicas modernas e atualizadas.",
   "why-choose-me-list-items4": "Suporte completo, desde o planejamento até a manutenção.",
-  "mobile-development": "Desenvolvimento Mobile"
+  "mobile-development": "Desenvolvimento Mobile",
+  "mobile-development-what-do-i-do-list-items1": "Desenvolvimento de aplicativos nativos: Criação de aplicativos para Android e iOS usando tecnologias nativas, garantindo melhor desempenho e aproveitando os recursos específicos de cada plataforma.",
+  "mobile-development-what-do-i-do-list-items2": "Desenvolvimento de aplicativos híbridos: Criação de aplicativos multiplataforma com frameworks como React Native e Flutter, permitindo que o mesmo código funcione em dispositivos Android e iOS, otimizando o tempo e os custos de desenvolvimento.",
+  "mobile-development-what-do-i-do-list-items3": "Design moderno de interface (UI/UX): Desenvolvimento de interfaces de usuário atraentes e intuitivas, com foco na usabilidade e na experiência do usuário (UX), garantindo que o aplicativo seja fácil de usar e visualmente agradável.",
+  "mobile-development-what-do-i-do-list-items4": "Integração de APIs e serviços: Integração de aplicativos com serviços externos, como APIs REST, serviços de autenticação, armazenamento em nuvem, gateways de pagamento e notificações push.",
+  "mobile-development-what-do-i-do-list-items5": "Manutenção e atualizações de aplicativos: Ofereço suporte contínuo para manutenção, correções de bugs e implementação de novos recursos, mantendo seu aplicativo sempre atualizado e seguro.",
+  "mobile-development-main-technologies-list-items1": "Linguagens: Java, Kotlin, Swift, Dart, JavaScript.",
+  "mobile-development-main-technologies-list-items2": "Estruturas: Flutter, React Native.",
+  "mobile-development-main-technologies-list-items3": "Back-end para dispositivos móveis: Node.js, Firebase, Django.",
+  "mobile-development-main-technologies-list-items4": "Banco de dados: SQLite, Firebase Firestore, MongoDB, PostgreSQL.",
+  "mobile-development-main-technologies-list-items5": "Ferramentas: Git, GitHub, Firebase, AWS, Google Cloud.",
+  "mobile-development-main-technologies-list-items6": "Publicação: Google Play Store, Apple App Store."
 }
