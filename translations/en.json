@@ -109,5 +109,19 @@
   "software-development": "Software Development",
   "software-development-list-items1": "Requirements Analysis: Understands the needs of customers or end users and translates these needs into functional and technical requirements.",
   "software-development-list-items2": "Software Architecture: Defines the overall structure of the software system, including the choice of technologies, standards and frameworks to be used.",
-  "software-development-list-items3": "Programming: Writing the software code, developing functionalities and implementing the system's logic. This can involve the use of various programming languages, such as Python, Java, C#, JavaScript, among others."
+  "software-development-list-items3": "Programming: Writing the software code, developing functionalities and implementing the system's logic. This can involve the use of various programming languages, such as Python, Java, C#, JavaScript, among others.",
+  "testing-and-quality-assurance": "Testing and Quality Assurance",
+  "testing-and-quality-assurance-list-items1": "Software Testing: Creates and executes tests to ensure that the software works correctly and without Software Testing: Creates and executes tests to ensure that the software works correctly and without errors. This can include unit tests, integration tests, system tests and user acceptance tests.",
+  "testing-and-quality-assurance-list-items2": "Debugging: Identifies and corrects errors or flaws in the software, also known as bugs, using debugging and analysis tools.",
+  "maintenance-and-continous-improvement": "Maintenance and Continuous Improvement",
+  "maintenance-and-continous-improvement-list-items1": "Project Planning: Estimates the time and resources needed to complete the software project.",
+  "maintenance-and-continous-improvement-list-items2": "Team Collaboration: Works as part of a team with other software engineers, designers, product managers, and other professionals. Participates in meetings to discuss progress and solve problems.",
+  "maintenance-and-continous-improvement-list-items3": "Documentation: Maintains clear and accurate documentation of code and processes to ensure that other team members can easily understand and continue the work.",
+  "project-management": "Project Management",
+  "project-management-list-items1": "Project Planning: Estimates the time and resources needed to complete the software project.",
+  "project-management-list-items2": "Team Collaboration: Works as part of a team with other software engineers, designers, product managers, and other professionals. Participates in meetings to discuss progress and solve problems.",
+  "project-management-list-items3": "Documentation: Maintains clear and accurate documentation of code and processes to ensure that other team members can easily understand and continue the work.",
+  "scalability-and-performance": "Scalability and Performance",
+  "scalability-and-performance-list-items1": "Performance: Works to optimize the software's performance, ensuring that it is fast and efficient, especially in systems that handle large volumes of data or simultaneous users.",
+  "scalability-and-performance-list-items2": "Scalability: Ensures that the software system can be easily scaled to serve a larger number of users or data without compromising performance."
 }

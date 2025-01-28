@@ -108,5 +108,19 @@
   "intro-software-engineer": "Eu sou o Diogo. Engenheiro de software, apaixonado por desenvolver soluções inovadoras que resolvam problemas complexos e melhorem a experiência do usuário. Profissional especializado no desenvolvimento, implementação, manutenção e otimização de sistemas de software. Aplica princípios de engenharia para projetar, construir, testar e gerenciar softwares que atendam às necessidades dos usuários e aos requisitos técnicos.",
   "software-development-list-items1": "Análise de requisitos: Compreende as necessidades dos clientes ou usuários finais e traduz essas necessidades em requisitos funcionais e técnicos.",
   "software-development-list-items2": "Arquitetura de software: Define a estrutura geral do sistema de software, incluindo a escolha de tecnologias, padrões e estruturas a serem usados.",
-  "software-development-list-items3": "Programação: Escrever o código do software, desenvolver funcionalidades e implementar a lógica do sistema. Isso pode envolver o uso de várias linguagens de programação, como Python, Java, C#, JavaScript, entre outras."
+  "software-development-list-items3": "Programação: Escrever o código do software, desenvolver funcionalidades e implementar a lógica do sistema. Isso pode envolver o uso de várias linguagens de programação, como Python, Java, C#, JavaScript, entre outras.",
+  "testing-and-quality-assurance": "Testes e Garantia de Qualidade",
+  "testing-and-quality-assurance-list-items1": "Teste de software: Cria e executa testes para garantir que o software funcione corretamente e sem testes de software: Cria e executa testes para garantir que o software funcione corretamente e sem erros. Isso pode incluir testes de unidade, testes de integração, testes de sistema e testes de aceitação do usuário.",
+  "testing-and-quality-assurance-list-items2": "Depuração: Identifica e corrige erros ou falhas no software, também conhecidos como bugs, usando ferramentas de depuração e análise.",
+  "maintenance-and-continous-improvement": "Manutenção e Melhoria Contínua",
+  "maintenance-and-continous-improvement-list-items1": "Planejamento do projeto: Estima o tempo e os recursos necessários para concluir o projeto de software.  ",
+  "maintenance-and-continous-improvement-list-items2": "Colaboração em equipe: Trabalha como parte de uma equipe com outros engenheiros de software, designers, gerentes de produto e outros profissionais. Participates in meetings to discuss progress and solve problems.",
+  "maintenance-and-continous-improvement-list-items3": "Documentação: Mantém uma documentação clara e precisa do código e dos processos para garantir que outros membros da equipe possam entender e continuar o trabalho com facilidade.",
+  "project-management": "Gestão de Projetos",
+  "project-management-list-items1": "Planejamento do projeto: Estima o tempo e os recursos necessários para concluir o projeto de software.",
+  "project-management-list-items2": "Colaboração em equipe: Trabalha como parte de uma equipe com outros engenheiros de software, designers, gerentes de produto e outros profissionais. Participa de reuniões para discutir o progresso e resolver problemas.",
+  "project-management-list-items3": "Documentação: Mantém uma documentação clara e precisa do código e dos processos para garantir que outros membros da equipe possam entender e continuar o trabalho com facilidade.",
+  "scalability-and-performance": "Escalabilidade e Desempenho",
+  "scalability-and-performance-list-items1": "Desempenho: Trabalha para otimizar o desempenho do software, garantindo que ele seja rápido e eficiente, especialmente em sistemas que lidam com grandes volumes de dados ou usuários simultâneos.",
+  "scalability-and-performance-list-items2": "Escalabilidade: Garante que o sistema de software possa ser facilmente dimensionado para atender a um número maior de usuários ou dados sem comprometer o desempenho."
 }
