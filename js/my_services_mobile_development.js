@@ -48,3 +48,19 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+
+// Script para traduzir o site
+function setLanguage(language) {
+  fetch(`/translations/${language}.json`)
+    .then((response) => response.json())
+    .then((translations) => {
+      document.querySelectorAll("[data-translate]").forEach((element) => {
+        const key = element.getAttribute("data-translate");
+        element.textContent = translations[key];
+      });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setLanguage("en"); // Define o idioma padrão como inglês
+});
