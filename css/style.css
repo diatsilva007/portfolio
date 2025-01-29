@@ -710,7 +710,7 @@ a {
 
 /* Botão menu hamburguer */
 .menu-hamburguer {
-  display: none;
+  display: block;
   cursor: pointer;
 }
 
