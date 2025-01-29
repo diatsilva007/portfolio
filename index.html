@@ -3,13 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://cdnjs.cloudflare.com;">
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta Descrição (Importante para SEO) -->
     <meta name="description"
         content="This is my portfolio, where you can see my projects and skills as a Jr. Software Engineer.">
     <!-- Meta Palavras-chave (SEO) -->
     <meta name="keywords"
-        content="portfolio, portfólio, desenvolvedor, developer, front-end developer, full-stack developer, jr. software engineer, web, HTML, CSS, JavaScript, mobile, projects">
+        content="portfolio, portfólio, desenvolvedor, developer, front-end developer, full-stack developer, software engineer, web, HTML, CSS, JavaScript, mobile, projects">
     <!-- Meta Autor -->
     <meta name="author" content="Diogo Ataide Silva">
     <!-- Meta Tag para evitar cache (Útil para mudanças de conteúdo frequentes) -->
@@ -30,7 +37,7 @@
     <meta name="twitter:title" content="My Portfolio">
     <meta name="twitter:description"
         content="heck out my portfolio with incredible projects in full-stack and mobile development..">
-    <meta name="twitter:image" content="img\profile.png">   
+    <meta name="twitter:image" content="img\profile.png">
     <meta name="robots" content="index, follow"> <!-- Permite indexação e segue links -->
     <!-- <meta http-equiv="refresh" content="30"> --> <!-- Atualiza a página após 30 segundos -->
     <link rel="shortcut icon" href="" type="image/x-icon">
@@ -77,8 +84,8 @@
 
             <img src="https://flagcdn.com/32x24/br.png" width="30" height="22" alt="Português"
                 onclick="setLanguage('pt')" class="flag-spacing">
-            <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English"
-                onclick="setLanguage('en')" class="flag-spacing">
+            <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English" onclick="setLanguage('en')"
+                class="flag-spacing">
 
         </div>
 
@@ -91,8 +98,8 @@
 
             <img src="https://flagcdn.com/32x24/br.png" width="30" height="22" alt="Português"
                 onclick="setLanguage('pt')" class="flag-spacing">
-            <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English"
-                onclick="setLanguage('en')" class="flag-spacing">
+            <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English" onclick="setLanguage('en')"
+                class="flag-spacing">
 
         </div>
 
@@ -173,7 +180,8 @@
                     optimization, I always aim to deliver functional, responsive products with a great user experience.
                 </p>
 
-                <a href="index/my_services_web_development.html" class="btn" data-translate="read-more-btn">Read More</a>
+                <a href="index/my_services_web_development.html" class="btn" data-translate="read-more-btn">Read
+                    More</a>
 
             </div>
 
@@ -187,7 +195,8 @@
                     an excellent user experience.
                 </p>
 
-                <a href="/index/my_services_full_stack_development.html" class="btn" data-translate="read-more-btn">Read More</a>
+                <a href="/index/my_services_full_stack_development.html" class="btn" data-translate="read-more-btn">Read
+                    More</a>
             </div>
 
             <div class="services-box">
@@ -200,7 +209,8 @@
                     ensuring that the end product is scalable, secure and meets users' needs.
                 </p>
 
-                <a href="/index/my_services_mobile_development.html" class="btn" data-translate="read-more-btn">Read More</a>
+                <a href="/index/my_services_mobile_development.html" class="btn" data-translate="read-more-btn">Read
+                    More</a>
             </div>
 
         </div>
@@ -347,18 +357,21 @@
 
             <label class="input-box">
                 <input type="text" name="name" placeholder="Full Name" data-translate="placeholder-name" required>
-                <input type="email" name="email" placeholder="youremail@example.com" data-translate="placeholder-email" required>
+                <input type="email" name="email" placeholder="youremail@example.com" data-translate="placeholder-email"
+                    required>
             </label>
 
             <label for="phone" class="input-box">
                 <input type="tel" id="phone" name="phone" oninput="mascaraTelefone(this)"
                     placeholder="Phone: (XX) XXXXX-XXXX"
-                    pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}" data-translate="placeholder-phone" required>
+                    pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}"
+                    data-translate="placeholder-phone" required>
                 <input type="text" placeholder="Subject" data-translate="placeholder-subject" required>
             </label>
 
             <label>
-                <textarea name="message" placeholder="Message..." cols="30" rows="8" data-translate="placeholder-message" required></textarea>
+                <textarea name="message" placeholder="Message..." cols="30" rows="8"
+                    data-translate="placeholder-message" required></textarea>
             </label>
             <!-- your other form fields go here -->
             <button type="submit" class="btn" data-translate="send-message">Send Message</button>
@@ -404,7 +417,7 @@
         <div class="about-content">
             <h3 data-translate="about-me">About <span>Me</span></h3>
             <div id="typing-effect"></div>
-            
+
             <p data-translate="texto-paragrafo-contact-section">
                 Hello, <i class="fas fa-hand-paper wave"></i> I'm Diogo. A recently graduated software engineer with a
                 passion for developing innovative
