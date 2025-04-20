@@ -1,10 +1,149 @@
-# My Portfolio Project 📁
+# 💼 Portfólio Pessoal – Diogo Ataide
 
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Diogo Ataide
-====================================================================================================================================
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel-000?logo=vercel)](https://portfolio-diogoataide.vercel.app)
+[![GitHub Stars](https://img.shields.io/github/stars/diatsilva007/portfolio?style=social)](https://github.com/diatsilva007/portfolio/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio/commits)
+[![Repo Size](https://img.shields.io/github/repo-size/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio)
+[![Issues](https://img.shields.io/github/issues/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio/pulls)
+[![Language](https://img.shields.io/github/languages/top/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio)
+[![Hits](https://hits.sh/github.com/diatsilva007/portfolio.svg)](https://hits.sh/github.com/diatsilva007/portfolio/)
 
-Jr. Software Engineer
----------------------
+> Projeto de portfólio pessoal desenvolvido por [Diogo Ataide](https://br.linkedin.com/in/diatsilva/pt), Software Engineer, com foco em Front-end e Full Stack.
 
-* 🖥️  See my portfolio at [My Portfolio](http://portfolio-diogoataide.vercel.app)
-* ✉️  You can contact me at [diogo.ataidee@gmail.com](mailto:diogo.ataidee@gmail.com)
+---
+
+## 📌 Visão Geral
+
+Este repositório contém o código-fonte do meu portfólio pessoal, onde apresento meus projetos, habilidades e experiências profissionais. O objetivo é fornecer uma visão clara e organizada do meu trabalho como desenvolvedor.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **HTML5** – Estruturação semântica das páginas.
+- **CSS3** – Estilização responsiva e moderna.
+- **JavaScript (ES6+)** – Interatividade e funcionalidades dinâmicas.
+- **Vercel** – Hospedagem e deploy contínuo.
+
+---
+
+## 🖥️ Visualização
+
+Acesse a versão online do portfólio:
+
+👉 [https://portfolio-diogoataide.vercel.app](https://portfolio-diogoataide.vercel.app)
+
+---
+
+### 🖼️ Preview do Portfólio
+
+<div align="center">
+  <img src="docs/screenshot.png" alt="Screenshot do Portfólio de Diogo Ataide" style="border-radius: 12px; max-width: 100%;" />
+</div>
+
+> Interface limpa, responsiva e moderna — 100% HTML, CSS e JavaScript.
+
+## ⚙️ Como Rodar Localmente
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/diatsilva007/portfolio.git
+   ```
+
+2. **Acesse o diretório do projeto:**
+
+   ```bash
+   cd portfolio
+   ```
+
+3. **Abra o arquivo index.html dentro da pasta portfolio na raiz do projeto, no seu navegador de preferência**
+
+   ```bash
+   index.html
+
+## 📂 Estrutura do Projeto
+
+```
+|—— .github
+|    |—— README.md
+|—— css
+|    |—— about_me.css
+|    |—— my_services_full_stack_development.css
+|    |—— my_services_mobile_development.css
+|    |—— my_services_web_development.css
+|    |—— style.css
+|—— docs
+|    |—— icons
+|        |—— portfolio-profissional.png
+|        |—— portfolio.png
+|        |—— portfolio2.png
+|    |—— Resume - Diogo.pdf
+|—— img
+|    |—— barberdev;.png
+|    |—— burguer.jpg
+|    |—— chale-hotel.png
+|    |—— chale-hotel2.jpg
+|    |—— Chalé-hotel.jpg
+|    |—— dietaAI.png
+|    |—— finans.png
+|    |—— finas-easy.png
+|    |—— hamburgueria.png
+|    |—— mario.png
+|    |—— mario2.png
+|    |—— Monalisa.jpg
+|    |—— museu-nacional.png
+|    |—— portfolio 1.jpg
+|    |—— portfolio 2.jpg
+|    |—— portfolio 3.jpg
+|    |—— portfolio 4.jpg
+|    |—— portfolio 5.jpg
+|    |—— portfolio 6.jpg
+|    |—— profile-pic.png
+|    |—— profile.png
+|    |—— spotify.png
+|    |—— spotify2.jpg
+|    |—— The Super Mario Bros_ Movie (2023).jpg
+|—— index
+|    |—— about_me.html
+|    |—— my_services_full_stack_development.html
+|    |—— my_services_mobile_development.html
+|    |—— my_services_web_development.html
+|—— index.html
+|—— js
+|    |—— about_me.js
+|    |—— my_services_full_stack_development.js
+|    |—— my_services_mobile_development.js
+|    |—— my_services_web_development.js
+|    |—— script.js
+|—— translations
+|    |—— en.json
+|    |—— pt.json
+```
+
+## 📈 Status do Projeto
+
+Projeto em constante evolução. Novas funcionalidades e melhorias estão sendo implementadas regularmente.
+
+🤝 Contribuições
+Contribuições são bem-vindas! Se você deseja sugerir melhorias ou corrigir algo, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+---
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas! Se você deseja sugerir melhorias ou corrigir algo, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+---
+
+**Autor do Projeto: [Diogo Ataide](https://br.linkedin.com/in/diatsilva/pt)**  
+📧 diogo.ataidee@gmail.com • 💼 Desenvolvedor de Software | Full Stack | Front-end  
+
+
+
+
+
+
+
+
