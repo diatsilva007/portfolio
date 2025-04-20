@@ -85,6 +85,8 @@ Acesse a versão online do portfólio:
 |        |—— portfolio-profissional.png
 |        |—— portfolio.png
 |        |—— portfolio2.png
+|    |—— README files
+|        |—— portfolio-apresentation.gif
 |    |—— Resume - Diogo.pdf
 |—— img
 |    |—— barberdev;.png
