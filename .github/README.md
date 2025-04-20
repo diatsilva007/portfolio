@@ -64,7 +64,7 @@ Acesse a versão online do portfólio:
    cd portfolio
    ```
 
-3. **Abra o arquivo index.html dentro da pasta portfolio na raiz do projeto, no seu navegador de preferência**
+3. **Abra o arquivo index.html dentro da pasta portfolio, na raiz do projeto, no seu navegador de preferência**
 
    ```bash
    index.html
