@@ -34,14 +34,6 @@ Este repositório contém o código-fonte do meu portfólio pessoal, onde aprese
 
 ---
 
-## 🖥️ Visualização
-
-Acesse a versão online do portfólio:
-
-👉 [https://portfolio-diogoataide.vercel.app](https://portfolio-diogoataide.vercel.app)
-
----
-
 ### 🖼️ Preview do Portfólio
 
 <div align="center">
@@ -49,6 +41,14 @@ Acesse a versão online do portfólio:
 </div>
 
 > Interface limpa, responsiva e moderna — 100% HTML, CSS e JavaScript.
+
+## 🖥️ Visualização
+
+Acesse a versão online do portfólio:
+
+👉 [https://portfolio-diogoataide.vercel.app](https://portfolio-diogoataide.vercel.app)
+
+---
 
 ## ⚙️ Como Rodar Localmente
 
@@ -147,11 +147,13 @@ Contribuições são bem-vindas! Se você deseja sugerir melhorias ou corrigir a
 
 <div align="center">
   
-# 🙅‍♂️ Autor
+# Made with 💙
 | [<img src="https://avatars.githubusercontent.com/u/143373573?v=4" width="100" height="100"><br><sub>Diogo Ataide</sub>](https://github.com/diatsilva007)
 | :---: |
 
  <p><img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/></p>
+ 
+ # 🙅‍♂️
  
  </div>
 
