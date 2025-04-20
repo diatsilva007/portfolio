@@ -1,5 +1,7 @@
-# 💼 Portfólio Pessoal – Diogo Ataide
+<div align="center">
 
+# 💼 Portfólio Pessoal – Diogo Ataide
+  
 [![Deploy](https://img.shields.io/badge/Deploy-Vercel-000?logo=vercel)](https://portfolio-diogoataide.vercel.app)
 [![GitHub Stars](https://img.shields.io/github/stars/diatsilva007/portfolio?style=social)](https://github.com/diatsilva007/portfolio/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio/commits)
@@ -12,6 +14,10 @@
 > Projeto de portfólio pessoal desenvolvido por [Diogo Ataide](https://br.linkedin.com/in/diatsilva/pt), Software Engineer, com foco em Front-end e Full Stack.
 
 ---
+
+</div>
+
+
 
 ## 📌 Visão Geral
 
@@ -39,7 +45,7 @@ Acesse a versão online do portfólio:
 ### 🖼️ Preview do Portfólio
 
 <div align="center">
-  <img src="portfolio/docs/img/portfolio.png" alt="Screenshot do Portfólio de Diogo Ataide" style="border-radius: 12px; max-width: 100%;" />
+  <img src="https://github.com/diatsilva007/portfolio/blob/main/docs/README%20files/portfolio-apresentation.gif" alt="Apresentação do Portfólio" width="100%" height="100%"/>
 </div>
 
 > Interface limpa, responsiva e moderna — 100% HTML, CSS e JavaScript.
@@ -137,10 +143,15 @@ Contribuições são bem-vindas! Se você deseja sugerir melhorias ou corrigir a
 
 ---
 
-**Autor do Projeto: [Diogo Ataide](https://br.linkedin.com/in/diatsilva/pt)**  
-📧 diogo.ataidee@gmail.com • 💼 Desenvolvedor de Software | Full Stack | Front-end  
+<div align="center">
+  
+# 🙅‍♂️ Autor
+| [<img src="https://avatars.githubusercontent.com/u/143373573?v=4" width="100" height="100"><br><sub>Diogo Ataide</sub>](https://github.com/diatsilva007)
+| :---: |
 
-
+ <p><img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/></p>
+ 
+ </div>
 
 
 
