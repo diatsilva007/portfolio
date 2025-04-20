@@ -39,7 +39,7 @@ Acesse a versão online do portfólio:
 ### 🖼️ Preview do Portfólio
 
 <div align="center">
-  <img src="docs/screenshot.png" alt="Screenshot do Portfólio de Diogo Ataide" style="border-radius: 12px; max-width: 100%;" />
+  <img src="portfolio/docs/img/portfolio.png" alt="Screenshot do Portfólio de Diogo Ataide" style="border-radius: 12px; max-width: 100%;" />
 </div>
 
 > Interface limpa, responsiva e moderna — 100% HTML, CSS e JavaScript.
