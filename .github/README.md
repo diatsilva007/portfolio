@@ -11,7 +11,7 @@
 [![Language](https://img.shields.io/github/languages/top/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio)
 [![Hits](https://hits.sh/github.com/diatsilva007/portfolio.svg)](https://hits.sh/github.com/diatsilva007/portfolio/)
 
-> Projeto de portfólio pessoal desenvolvido por [Diogo Ataide](https://br.linkedin.com/in/diatsilva/pt), Software Engineer, com foco em Front-end e Full Stack.
+> Projeto de portfólio pessoal desenvolvido por [Diogo](https://br.linkedin.com/in/diatsilva/pt), Software Engineer, com foco em Front-end e Full Stack.
 
 ---
 
