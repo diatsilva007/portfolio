@@ -147,7 +147,7 @@ Contribuições são bem-vindas! Se você deseja sugerir melhorias ou corrigir a
 
 <div align="center">
   
-# Made with 💙
+# Feito com 💙
 | [<img src="https://avatars.githubusercontent.com/u/143373573?v=4" width="100" height="100"><br><sub>Diogo Ataide</sub>](https://github.com/diatsilva007)
 | :---: |
 
