@@ -134,9 +134,6 @@ Acesse a versão online do portfólio:
 
 Projeto em constante evolução. Novas funcionalidades e melhorias estão sendo implementadas regularmente.
 
-🤝 Contribuições
-Contribuições são bem-vindas! Se você deseja sugerir melhorias ou corrigir algo, sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
 ---
 
 ## 🤝 Contribuições
