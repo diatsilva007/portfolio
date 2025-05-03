@@ -11,7 +11,7 @@
 [![Language](https://img.shields.io/github/languages/top/diatsilva007/portfolio)](https://github.com/diatsilva007/portfolio)
 [![Hits](https://hits.sh/github.com/diatsilva007/portfolio.svg)](https://hits.sh/github.com/diatsilva007/portfolio/)
 
-> Projeto de portfólio pessoal desenvolvido por [Diogo](https://br.linkedin.com/in/diatsilva/pt), Software Engineer, com foco em Front-end e Full Stack.
+> Projeto de portfólio pessoal desenvolvido por [Diogo](https://br.linkedin.com/in/diatsilva/pt), Software Engineer, com foco em Full Stack.
 
 ---
 
@@ -133,9 +133,6 @@ Acesse a versão online do portfólio:
 ## 📈 Status do Projeto
 
 Projeto em constante evolução. Novas funcionalidades e melhorias estão sendo implementadas regularmente.
-
-🤝 Contribuições
-Contribuições são bem-vindas! Se você deseja sugerir melhorias ou corrigir algo, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 ---
 
