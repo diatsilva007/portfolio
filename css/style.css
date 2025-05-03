@@ -683,6 +683,13 @@ body.scrolled .footer {
   pointer-events: auto;
 }
 
+.btn i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 1rem; /* Tamanho do ícone */
+    align-items: center; /* Alinha o ícone verticalmente */
+    justify-content: center; /* Alinha o ícone horizontalmente */
+}
+
 /* Cor dos links */
 a {
   color: var(--main-color);
