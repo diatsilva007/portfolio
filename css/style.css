@@ -685,7 +685,7 @@ body.scrolled .footer {
 
 .btn i {
     margin-right: 8px; /* Espaço entre o ícone e o texto */
-    font-size: 1rem; /* Tamanho do ícone */
+    font-size: 1.3rem; /* Tamanho do ícone */
     align-items: center; /* Alinha o ícone verticalmente */
     justify-content: center; /* Alinha o ícone horizontalmente */
 }
