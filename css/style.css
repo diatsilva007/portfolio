@@ -179,8 +179,6 @@ span {
   color: var(--main-color);
 }
 
-
-
 /* Efeito partículas */
 #particles-js {
   position: absolute;
@@ -462,10 +460,10 @@ h1 {
   font-weight: 700; /* Torna o título mais forte */
   text-align: center;
   text-transform: uppercase; /* Transforma o texto em maiúsculas */
-  letter-spacing: 1px;     /* Adiciona um leve espaçamento entre as letras */
+  letter-spacing: 1px; /* Adiciona um leve espaçamento entre as letras */
   padding-bottom: 0.75rem; /* Espaço abaixo do texto para a linha decorativa */
-  margin-bottom: 3rem;     /* Aumenta o espaço após o título e a linha */
-  position: relative;      /* Necessário para o posicionamento do pseudo-elemento ::after */
+  margin-bottom: 3rem; /* Aumenta o espaço após o título e a linha */
+  position: relative; /* Necessário para o posicionamento do pseudo-elemento ::after */
 }
 
 /* Linha decorativa abaixo dos títulos H2 das seções */
@@ -473,14 +471,16 @@ h1 {
 .portfolio h2::after,
 .contact h2::after,
 .about h3::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: 0; /* Posiciona a linha na parte inferior do padding-bottom do h2 */
   transform: translateX(-50%); /* Centraliza a linha */
   width: 100px; /* Largura da linha decorativa */
-  height: 4px;  /* Espessura da linha decorativa */
-  background-color: var(--main-color); /* Cor da linha, usando sua cor principal */
+  height: 4px; /* Espessura da linha decorativa */
+  background-color: var(
+    --main-color
+  ); /* Cor da linha, usando sua cor principal */
   border-radius: 2px; /* Bordas levemente arredondadas para a linha */
 }
 
@@ -491,22 +491,26 @@ h1 {
   font-weight: 700; /* Torna o título mais forte */
   text-align: center; /* Centraliza o texto "About Me" */
   text-transform: uppercase; /* Transforma o texto em maiúsculas */
-  letter-spacing: 1px;     /* Adiciona um leve espaçamento entre as letras */
+  letter-spacing: 1px; /* Adiciona um leve espaçamento entre as letras */
   padding-bottom: 0.75rem; /* Espaço abaixo do texto para a linha decorativa */
-  margin-bottom: 3rem;     /* Aumenta o espaço após o título e a linha */
-  position: relative;      /* Necessário para o posicionamento do pseudo-elemento ::after */
+  margin-bottom: 3rem; /* Aumenta o espaço após o título e a linha */
+  position: relative; /* Necessário para o posicionamento do pseudo-elemento ::after */
 }
 
 /* Linha decorativa abaixo do título H3 da seção "Sobre" */
 .about h3::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%; /* Posiciona o início da linha no centro do contêiner h3 */
   bottom: 0; /* Posiciona a linha na parte inferior do padding-bottom do h2 */
-  transform: translateX(-50%); /* Desloca a linha para a esquerda pela metade de sua largura, centralizando-a */
+  transform: translateX(
+    -50%
+  ); /* Desloca a linha para a esquerda pela metade de sua largura, centralizando-a */
   width: 100px; /* Largura da linha decorativa */
-  height: 4px;  /* Espessura da linha decorativa */
-  background-color: var(--main-color); /* Cor da linha, usando sua cor principal */
+  height: 4px; /* Espessura da linha decorativa */
+  background-color: var(
+    --main-color
+  ); /* Cor da linha, usando sua cor principal */
   border-radius: 2px; /* Bordas levemente arredondadas para a linha */
 }
 

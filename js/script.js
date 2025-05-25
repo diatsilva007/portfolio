@@ -310,6 +310,5 @@ document.addEventListener("DOMContentLoaded", () => {
       "Container do Portfolio Swiper (.portfolio-swiper) não encontrado."
     );
   }
-
 });
 // Fim do script
