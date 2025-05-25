@@ -44,6 +44,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Favicon (ícone da página) -->
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="icon" href="/img/portfolio.png" type="image/png">
     <!-- Atributo alt removido de link -->
     <!--WhatsApp-->
@@ -230,214 +232,153 @@
     <section class="portfolio" id="portfolio">
         <h2 data-translate="latest-projects" data-aos="flip-right">Latest <span>Projects</span></h2>
 
-        <div class="portfolio-container">
+        <!-- Swiper -->
+        <div class="swiper-container portfolio-swiper">
+            <div class="swiper-wrapper">
 
-            <div class="portfolio-box" data-aos="flip-up">
-                <img src="/img/burguer.jpg" alt="Projeto do site da hamburgueria Dev; Burguer" class="portfolio-image">
-                <!-- Removido estilo inline, idealmente definido em CSS:
-                    .portfolio-image {
-                        width: 100%;
-                        height: 100%; /* ou altura específica */
-                        object-fit: cover;
-                        object-position: center;
-                    }
-                -->
-
-                <div class="portfolio-layer">
-                    <h4 data-translate="Dev-burguer">Dev; 👨‍💻 Burguer 🍔</h4>
-                    <p data-translate="texto-paragrafo4">
-                        Website for a burger restaurant.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/cardapio" class="btn-project" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- Se tiver um demo ao vivo, adicione um link similar:
-                        <a href="URL_DA_DEMO_AQUI" class="btn-project" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a>
-                        -->
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
+                        <img src="/img/burguer.jpg" alt="Projeto do site da hamburgueria Dev; Burguer"
+                            class="portfolio-image">
+                        <div class="portfolio-layer">
+                            <h4 data-translate="Dev-burguer">Dev; 👨‍💻 Burguer 🍔</h4>
+                            <p data-translate="texto-paragrafo4">
+                                Website for a burger restaurant.
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/diatsilva007/cardapio" class="btn-project" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="portfolio-box" data-aos="flip-right">
-                <img src="/img/barberdev;.png" alt="Projeto Landing Page para Barbearia BarberDev"
-                    class="portfolio-image">
-                <div class="portfolio-layer">
-                    <h4 data-translate="landing-page-barberdev">Landing Page - BarberDev; ✂️</h4>
-                    <p data-translate="texto-paragrafo6">
-                        Complete responsive landing page for the BarberDev website.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/Barber" class="btn-project" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a> -->
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="portfolio-box" data-aos="fade-up">
+                        <img src="/img/barberdev;.png" alt="Projeto Landing Page para Barbearia BarberDev"
+                            class="portfolio-image">
+                        <div class="portfolio-layer">
+                            <h4 data-translate="landing-page-barberdev">Landing Page - BarberDev; ✂️</h4>
+                            <p data-translate="texto-paragrafo6">
+                                Complete responsive landing page for the BarberDev website.
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/diatsilva007/Barber" class="btn-project" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="portfolio-box" data-aos="flip-left">
-                <img src="/img/dietaAI.png" alt="Projeto aplicativo móvel Dieta.AI para acompanhamento de dieta"
-                    class="portfolio-image">
-                <div class="portfolio-layer">
-                    <h4 data-translate="dieta-AIapp">❤️ Dieta.AI app 📲</h4>
-                    <p data-translate="texto-paragrafo7">
-                        Mobile application for tracking diet and nutrition.
-                    </p>
-                    <div class="project-tags">
-                        <span>React Native</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/Dieta.AI_backend" class="btn-project" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a> -->
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="portfolio-box" data-aos="fade-up">
+                        <img src="/img/dietaAI.png" alt="Projeto aplicativo móvel Dieta.AI para acompanhamento de dieta"
+                            class="portfolio-image">
+                        <div class="portfolio-layer">
+                            <h4 data-translate="dieta-AIapp">❤️ Dieta.AI app 📲</h4>
+                            <p data-translate="texto-paragrafo7">
+                                Mobile application for tracking diet and nutrition.
+                            </p>
+                            <div class="project-tags">
+                                <span>React Native</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/diatsilva007/Dieta.AI_backend" class="btn-project"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="portfolio-box" data-aos="flip-right">
-                <img src="/img/finans.png" alt="Projeto website de gerenciamento financeiro Finans"
-                    class="portfolio-image">
-                <div class="portfolio-layer">
-                    <h4 data-translate="finans-website">Finans website 🪙</h4>
-                    <p data-translate="texto-paragrafo8">
-                        Finans project - Financial management website.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/finans" class="btn-project" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a> -->
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div class="portfolio-box" data-aos="fade-up">
+                        <img src="/img/finans.png" alt="Projeto website de gerenciamento financeiro Finans"
+                            class="portfolio-image">
+                        <div class="portfolio-layer">
+                            <h4 data-translate="finans-website">Finans website 🪙</h4>
+                            <p data-translate="texto-paragrafo8">
+                                Finans project - Financial management website.
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/diatsilva007/finans" class="btn-project" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="portfolio-box" data-aos="flip-left">
-                <img src="/img/spotify2.jpg" alt="Projeto clone da página web do Spotify" class="portfolio-image">
-                <div class="portfolio-layer">
-                    <h4 data-translate="spotify-clone">Spotify clone project 🎵</h4>
-                    <p data-translate="texto-paragrafo9">
-                        Clone of the Spotify music streaming service.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/spotify" class="btn-project" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a> -->
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <div class="portfolio-box" data-aos="fade-up">
+                        <img src="/img/spotify2.jpg" alt="Projeto clone da página web do Spotify"
+                            class="portfolio-image">
+                        <div class="portfolio-layer">
+                            <h4 data-translate="spotify-clone">Spotify clone project 🎵</h4>
+                            <p data-translate="texto-paragrafo9">
+                                Clone of the Spotify music streaming service.
+                            </p>
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/diatsilva007/spotify" class="btn-project" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class='bx bxl-github'></i> GitHub
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="portfolio-box" data-aos="flip-right">
-                <img src="/img/The Super Mario Bros_ Movie (2023).jpg" alt="Projeto website do filme Super Mario Bros."
-                    class="portfolio-image">
-                <div class="portfolio-layer">
-                    <h4 data-translate="mario">The Super Mario 🍄 Bros.Movie - Website</h4>
-                    <p data-translate="texto-paragrafo10">
-                        Website for the Super Mario Bros. movie.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/Site-MarioBros.movie" class="btn-project"
-                            target="_blank" rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a> -->
-                    </div>
-                </div>
-            </div>
+                <!-- Adicione os outros projetos como swiper-slide da mesma forma -->
 
-            <div class="portfolio-box" data-aos="flip-left">
-                <img src="/img/Monalisa.jpg" alt="Projeto website do Museu Nacional" class="portfolio-image">
-                <div class="portfolio-layer">
-                    <h4 data-translate="national-museum">National Museum 🏛️</h4>
-                    <p data-translate="texto-paragrafo11">
-                        Website for the National Museum.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/Museu-Nacional" class="btn-project" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a> -->
-                    </div>
-                </div>
             </div>
-
-            <div class="portfolio-box" data-aos="flip-right">
-                <img src="/img/Chalé-hotel.jpg" alt="Projeto website do Chalé Hotel" class="portfolio-image">
-                <div class="portfolio-layer">
-                    <h4 data-translate="chale-hotel">🛎️ Chalé Hotel 🏨</h4>
-                    <p data-translate="texto-paragrafo12">
-                        A traditional chalet hotel website.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/diatsilva007/chale-hotel" class="btn-project" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class='bx bxl-github'></i> GitHub
-                        </a>
-                        <!-- <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">
-                            <i class='bx bx-show'></i> Ver Demo
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
+
+        <!-- O container original .portfolio-container foi substituído pelo .swiper-container -->
+        <!-- <div class="portfolio-container">
+             ...
+        </div> -->
+
+        <!-- Modal Structure (deve estar fora do swiper, geralmente no final do body) -->
+        <!-- Se o modal já existe, certifique-se de que não está dentro do .portfolio-container original -->
+
     </section>
     <!-- /Portfolio section -->
 
@@ -545,6 +486,7 @@
     });
 </script>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="/js/script.js"></script> <!-- Padronizado para caminho relativo à raiz -->
 
 </html>

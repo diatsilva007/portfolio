@@ -179,6 +179,8 @@ span {
   color: var(--main-color);
 }
 
+
+
 /* Efeito partículas */
 #particles-js {
   position: absolute;
@@ -453,10 +455,59 @@ h1 {
 
 .services h2,
 .portfolio h2,
-.contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+.contact h2,
+.about h3 {
+  color: var(--text-color); /* Cor base do texto do H2 */
+  font-size: 2rem;
+  font-weight: 700; /* Torna o título mais forte */
   text-align: center;
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  letter-spacing: 1px;     /* Adiciona um leve espaçamento entre as letras */
+  padding-bottom: 0.75rem; /* Espaço abaixo do texto para a linha decorativa */
+  margin-bottom: 3rem;     /* Aumenta o espaço após o título e a linha */
+  position: relative;      /* Necessário para o posicionamento do pseudo-elemento ::after */
+}
+
+/* Linha decorativa abaixo dos títulos H2 das seções */
+.services h2::after,
+.portfolio h2::after,
+.contact h2::after,
+.about h3::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0; /* Posiciona a linha na parte inferior do padding-bottom do h2 */
+  transform: translateX(-50%); /* Centraliza a linha */
+  width: 100px; /* Largura da linha decorativa */
+  height: 4px;  /* Espessura da linha decorativa */
+  background-color: var(--main-color); /* Cor da linha, usando sua cor principal */
+  border-radius: 2px; /* Bordas levemente arredondadas para a linha */
+}
+
+/* Estilo para os títulos H3 dentro da seção "Sobre" */
+.about h3 {
+  color: var(--text-color); /* Cor base do texto do H2 */
+  font-size: 2rem;
+  font-weight: 700; /* Torna o título mais forte */
+  text-align: center; /* Centraliza o texto "About Me" */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  letter-spacing: 1px;     /* Adiciona um leve espaçamento entre as letras */
+  padding-bottom: 0.75rem; /* Espaço abaixo do texto para a linha decorativa */
+  margin-bottom: 3rem;     /* Aumenta o espaço após o título e a linha */
+  position: relative;      /* Necessário para o posicionamento do pseudo-elemento ::after */
+}
+
+/* Linha decorativa abaixo do título H3 da seção "Sobre" */
+.about h3::after {
+  content: '';
+  position: absolute;
+  left: 50%; /* Posiciona o início da linha no centro do contêiner h3 */
+  bottom: 0; /* Posiciona a linha na parte inferior do padding-bottom do h2 */
+  transform: translateX(-50%); /* Desloca a linha para a esquerda pela metade de sua largura, centralizando-a */
+  width: 100px; /* Largura da linha decorativa */
+  height: 4px;  /* Espessura da linha decorativa */
+  background-color: var(--main-color); /* Cor da linha, usando sua cor principal */
+  border-radius: 2px; /* Bordas levemente arredondadas para a linha */
 }
 
 .services-container {
@@ -755,12 +806,13 @@ form textarea {
   bottom: 0;
   left: 0;
   width: 100%;
-  opacity: 0; /* Começa invisível */
+  opacity: 0; /* Começa invisível, aparece com o scroll */
   transition: opacity 1s ease-in-out; /* Efeito de transição */
+  z-index: 998; /* Para gerenciamento de empilhamento com outros elementos fixos */
 }
 
-.footer,
-p {
+.footer {
+  /* Aplica text-align: center apenas ao footer e seu conteúdo */
   text-align: center;
 }
 
@@ -879,6 +931,7 @@ a {
 
 /* Extra small (xs): Smartphone (portrait) */
 @media (min-width: 0px) {
+  /* ... outros estilos para xs ... */
   .menu-hamburguer {
     display: block;
   }
@@ -954,7 +1007,7 @@ a {
   }
 
   #footer {
-    font-size: 0.5rem;
+    font-size: 0.8rem; /* Aumentado para melhor legibilidade (12.8px) */
   }
 
   /* Ajustes específicos para o conteúdo do portfolio em telas pequenas */
@@ -1000,11 +1053,12 @@ a {
 
 .back-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
+  /* Valores base, serão ajustados nas media queries específicas */
+  bottom: 70px; /* Ajustado para ficar acima do footer em telas pequenas */
+  right: 15px;
+  width: 40px; /* Tamanho para telas pequenas */
+  height: 40px; /* Tamanho para telas pequenas */
+  font-size: 18px; /* Ícone menor para telas pequenas */
   color: var(--bg-color-02);
   background-color: var(--main-color);
   border: none;
@@ -1017,6 +1071,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 999; /* Garante que fique acima do footer */
   animation: bounce 2s infinite;
 }
 
@@ -1087,7 +1142,15 @@ a {
   }
 
   #footer {
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* (14.4px) */
+  }
+
+  .back-to-top {
+    bottom: 80px; /* Ajustado para SM screens */
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
   }
 }
 
@@ -1158,7 +1221,14 @@ a {
   }
 
   #footer {
-    font-size: 1rem;
+    font-size: 1rem; /* (16px) */
+  }
+
+  .back-to-top {
+    bottom: 85px; /* Ajustado para MD screens */
+    width: 50px; /* Tamanho padrão original */
+    height: 50px; /* Tamanho padrão original */
+    font-size: 24px; /* Tamanho padrão original */
   }
 
   form .input-box input {
@@ -1199,7 +1269,11 @@ a {
   }
 
   #footer {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* (17.6px) */
+  }
+
+  .back-to-top {
+    bottom: 90px; /* Ajustado para LG screens */
   }
 }
 
@@ -1244,7 +1318,185 @@ a {
   }
 
   #footer {
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* (19.2px) */
+  }
+
+  .back-to-top {
+    bottom: 95px; /* Ajustado para XL screens */
   }
 }
 /* /Media queries */
+
+/* ==========================================================================
+   Portfolio Swiper Carousel Styles (Revisado)
+   ========================================================================== */
+
+.portfolio {
+  /* Se a seção portfolio tiver padding, o swiper pode precisar de margens negativas
+       para ocupar a largura total, ou o padding deve ser aplicado dentro do swiper.
+       Por simplicidade, vamos assumir que a seção .portfolio não tem padding horizontal
+       que restrinja o .portfolio-swiper. */
+}
+
+.portfolio-swiper {
+  width: 100%;
+  max-width: 1600px; /* Limita a largura máxima em telas muito grandes */
+  margin-left: auto; /* Centraliza o carrossel se max-width for atingido */
+  margin-right: auto; /* Centraliza o carrossel se max-width for atingido */
+  padding-top: 20px; /* Espaço acima do carrossel, abaixo do título da seção */
+  padding-bottom: 70px; /* Aumentado para dar mais espaço para paginação/navegação */
+  position: relative; /* Necessário para o posicionamento absoluto dos botões de navegação */
+  overflow: hidden; /* Adicionado para garantir que nada "vaze" de forma inesperada */
+}
+
+.portfolio-swiper .swiper-wrapper {
+  /* Swiper cuida do display: flex e alinhamento aqui */
+}
+
+.portfolio-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Faz os portfolio-box terem a mesma altura */
+  box-sizing: border-box;
+  height: auto; /* Permite que a altura do slide seja determinada pelo conteúdo */
+  /* O padding entre slides é melhor controlado pelo parâmetro 'spaceBetween' do Swiper */
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out; /* Suaviza transições de slide */
+  /* Para o efeito coverflow, o Swiper pode aplicar transformações.
+     Podemos adicionar um filtro para os slides não ativos para destacá-los menos. */
+}
+
+/* O .portfolio-box dentro do slide */
+.portfolio-swiper .portfolio-box {
+  width: 100%; /* Ocupa toda a largura do slide */
+  max-width: 400px; /* Limita a largura de cada card em telas maiores, ajuste conforme necessário */
+  margin-left: auto; /* Centraliza o card se max-width for menor que a largura do slide */
+  margin-right: auto;
+  height: 100%; /* Estica para preencher a altura do slide (devido ao align-items: stretch no slide) */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Transições suaves para o box */
+  /* Seus estilos existentes de .portfolio-box (border-radius, box-shadow, overflow: hidden para efeitos internos) devem ser mantidos.
+       O overflow:hidden aqui é para o conteúdo DENTRO do portfolio-box, não para o slide em si. */
+}
+
+/* Estilo para slides não ativos no modo Coverflow para dar mais foco ao slide ativo */
+.portfolio-swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.7; /* Reduz a opacidade dos slides não ativos */
+  /* filter: blur(1px); */ /* Opcional: adiciona um leve desfoque */
+}
+
+.portfolio-swiper .swiper-slide-active .portfolio-box {
+  /* Opcional: Se quiser dar um destaque extra ao box do slide ativo */
+  /* box-shadow: 0 5px 25px rgba(0, 238, 255, 0.2); */ /* Sombra com a cor principal */
+}
+
+/* Garante que a imagem dentro do portfolio-box se comporte bem */
+.portfolio-swiper .portfolio-box .portfolio-image {
+  /* Seus estilos existentes para .portfolio-image devem funcionar, ex: */
+  /* width: 100%; */
+  /* height: 250px; */ /* Altura fixa para a imagem */
+  /* object-fit: cover; */
+}
+
+/* Estilos para os botões de navegação do Swiper */
+.portfolio-swiper .swiper-button-next,
+.portfolio-swiper .swiper-button-prev {
+  color: var(--main-color); /* Cor principal do seu tema */
+  width: calc(
+    var(--swiper-navigation-size) / 44 * 30
+  ); /* Ajuste o tamanho se necessário */
+  height: calc(var(--swiper-navigation-size) / 44 * 30);
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajuste fino da centralização vertical */
+  /* Adiciona um fundo sutil para melhor visibilidade sobre imagens variadas */
+  background-color: rgba(30, 30, 30, 0.3);
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 10; /* Garante que fiquem sobre os slides */
+}
+
+.portfolio-swiper .swiper-button-next:hover,
+.portfolio-swiper .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Escurece um pouco mais o fundo */
+  transform: translateY(-50%) scale(1.05); /* Leve aumento e mantém o centro vertical */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra sutil */
+}
+.portfolio-swiper .swiper-button-next::after,
+.portfolio-swiper .swiper-button-prev::after {
+  font-size: 1rem; /* Tamanho das setas (menor para caber no círculo) */
+  font-weight: bold;
+}
+
+/* Posicionamento dos botões */
+.portfolio-swiper .swiper-button-prev {
+  left: 10px;
+}
+.portfolio-swiper .swiper-button-next {
+  right: 10px;
+}
+
+/* Estilos para a paginação do Swiper */
+.portfolio-swiper .swiper-pagination {
+  bottom: 20px; /* Posição da paginação, um pouco mais para cima */
+  z-index: 10; /* Sobre os slides */
+}
+
+.portfolio-swiper .swiper-pagination-bullet {
+  background-color: var(--text-color);
+  opacity: 0.6;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px !important; /* Espaçamento entre os bullets */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-swiper .swiper-pagination-bullet-active {
+  background-color: var(--main-color);
+  opacity: 1;
+  transform: scale(1.2); /* Destaca o bullet ativo */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 767px) {
+  .portfolio-swiper .portfolio-box {
+    max-width: 90%; /* Permite que o card ocupe mais da largura do slide */
+    /* Para coverflow, pode ser necessário ajustar isso ou deixar o Swiper controlar mais a largura */
+  }
+  /* Ajustes específicos para o coverflow em telas menores, se necessário */
+  /* Ex: .portfolio-swiper .swiper-slide { width: 80% !important; } // Forçar largura se 'auto' não funcionar bem */
+
+  .portfolio-swiper .swiper-button-next,
+  .portfolio-swiper .swiper-button-prev {
+    /* Opcional: Ocultar botões em telas muito pequenas se a navegação por swipe for suficiente */
+    /* display: none; */
+    width: calc(var(--swiper-navigation-size) / 44 * 26);
+    height: calc(var(--swiper-navigation-size) / 44 * 26);
+  }
+  .portfolio-swiper .swiper-button-next::after,
+  .portfolio-swiper .swiper-button-prev::after {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-swiper {
+    padding-bottom: 60px;
+  }
+  .portfolio-swiper .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.6; /* Ainda menos opacidade para slides não ativos em telas pequenas */
+    /* filter: blur(0.5px); */
+  }
+  .portfolio-swiper .swiper-button-next,
+  .portfolio-swiper .swiper-button-prev {
+    /* display: none; */ /* Comentado para que os botões apareçam em telas pequenas */
+    width: calc(
+      var(--swiper-navigation-size) / 44 * 24
+    ); /* Slightly larger for better tap */
+    height: calc(var(--swiper-navigation-size) / 44 * 24);
+  }
+  .portfolio-swiper .swiper-button-next::after,
+  .portfolio-swiper .swiper-button-prev::after {
+    font-size: 0.8rem; /* Ícone da seta menor */
+  }
+}
