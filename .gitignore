@@ -64,5 +64,5 @@ Thumbs.db
 # Arquivos de download ou uploads locais que não devem ser versionados
 # /downloads/
 # /uploads/
-/docs/
-/img/
+/docs
+/img
