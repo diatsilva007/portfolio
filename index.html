@@ -388,26 +388,56 @@
         <!-- modify this form HTML and place wherever you want your form -->
         <form id="contactForm" action="https://formspree.io/f/mzzzqwpb" method="POST"
             data-redirect="https://portfolio-diogoataide.vercel.app/" onsubmit="setTimeout(() => this.reset(), 1000);">
+            
+            <!-- Campo Nome -->
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" id="name" name="name" placeholder="Full name" required data-translate="form-placeholder-name">
+                    <span class="validation-icon"></span>
+                </div>
+                <span class="form-message error-message" id="nameErrorMessage"></span>
+            </div>
+            <!-- Campo Email -->
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="email" id="email" name="email" placeholder="youremail@example.com" required data-translate="form-placeholder-email">
+                    <span class="validation-icon"></span>
+                </div>
+                <span class="form-message error-message" id="emailErrorMessage"></span>
+            </div>
+            <!-- Campo Telefone -->
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="tel" id="phone" name="phone" oninput="mascaraTelefone(this)" placeholder="Phone: (XX) XXXXX-XXXX" pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}" data-translate="form-placeholder-phone" required>
+                    <span class="validation-icon"></span>
+                </div>
+                <span class="form-message error-message" id="phoneErrorMessage"></span>
+            </div>
+            <!-- Campo Assunto -->
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" id="subject" name="subject" placeholder="Message subject" required data-translate="form-placeholder-subject">
+                    <span class="validation-icon"></span>
+                </div>
+                <span class="form-message error-message" id="subjectErrorMessage"></span>
+            </div>
+            <!-- Campo Mensagem -->
+            <div class="input-group">
+                <div class="input-box">
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required data-translate="form-placeholder-message"></textarea>
+                    <span class="validation-icon"></span>
+                </div>
+                <span class="form-message error-message" id="messageErrorMessage"></span>
+            </div>
+            <!-- Honeypot field (anti-spam) - deve estar oculto via CSS -->
+            <div class="input-group honeypot-field" style="display:none;">
+                <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+            </div>
 
-            <label class="input-box">
-                <input type="text" name="name" placeholder="Full Name" data-translate="placeholder-name" required>
-                <input type="email" name="email" placeholder="youremail@example.com" data-translate="placeholder-email"
-                    required>
-            </label>
+            <div id="form-submission-status" class="form-submission-status-message">
+                <!-- Mensagens de sucesso ou erro da submissão (controladas por JS) aparecerão aqui -->
+            </div>
 
-            <label for="phone" class="input-box">
-                <input type="tel" id="phone" name="phone" oninput="mascaraTelefone(this)"
-                    placeholder="Phone: (XX) XXXXX-XXXX"
-                    pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}"
-                    data-translate="placeholder-phone" required>
-                <input type="text" placeholder="Subject" data-translate="placeholder-subject" required>
-            </label>
-
-            <label>
-                <textarea name="message" placeholder="Message..." cols="30" rows="8"
-                    data-translate="placeholder-message" required></textarea>
-            </label>
-            <!-- your other form fields go here -->
             <button type="submit" class="btn" data-translate="send-message">Send Message</button>
         </form>
 
@@ -421,24 +451,6 @@
                 }, 1000); // Ajuste o tempo se necessário (aqui, 1 segundo)
             });
         </script>
-
-        <!-- <form action="https://formspree.io/f/mzzzqwpb" method="POST" data-redirect="http://127.0.0.1:5500/index.html">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="E-mail" required>
-            </div>
-
-            <div class="input-box">
-                <input type="tel" id="telefone" name="telefone" oninput="mascaraTelefone(this)"
-                    placeholder="Phone: (XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
-                <input type="text" placeholder="Subject" required>
-            </div>
-
-            <textarea cols="30" rows="8" placeholder="Message..." required></textarea>
-
-            <a href="" class="btn" type="submit">Send Message</a>
-        </form> -->
-
     </section>
     <!-- /Contact section -->
 
