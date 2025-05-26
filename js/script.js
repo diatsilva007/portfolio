@@ -71,21 +71,6 @@ particlesJS("particles-js", {
   retina_detect: true,
 });
 
-/* Código para telefone de formulário */
-function mascaraTelefone(input) {
-  /* Remove tudo o que não for número */
-  let telefone = input.value.replace(/\D/g, "");
-
-  /* Formatação (XX) XXXXX-XXXX */
-  if (telefone.length <= 10) {
-    telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3"); // Formato (XX) XXXXX-XXXX
-  } else {
-    telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3"); // Mantém o formato
-  }
-
-  input.value = telefone;
-}
-
 // Script para traduzir o site
 let currentTranslations = {}; // Variável para armazenar as traduções atuais
 
@@ -311,4 +296,259 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 });
-// Fim do script
+
+// Máscara de telefone para o formulário de contato
+function mascaraTelefone(input) {
+  /* Remove tudo o que não for número */
+  let telefone = input.value.replace(/\D/g, "");
+
+  /* Formatação (XX) XXXXX-XXXX */
+  if (telefone.length <= 10) {
+    telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3"); // Formato (XX) XXXXX-XXXX
+  } else {
+    telefone = telefone.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3"); // Mantém o formato
+  }
+
+  input.value = telefone;
+}
+// ======================================================================================================
+
+// ======================================================================================================
+// Código para o formulário de contato
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Unificando com o listener existente
+  const contactForm = document.getElementById("contactForm");
+  const formStatusMessage = document.getElementById("form-submission-status");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Previne o envio padrão do formulário
+      handleFormSubmit();
+    });
+
+    // Adicionar event listeners para validação em tempo real (on input/blur)
+    const inputsToValidate = contactForm.querySelectorAll(
+      "input[required], textarea[required]"
+    );
+    inputsToValidate.forEach((input) => {
+      input.addEventListener("input", () => validateField(input));
+      input.addEventListener("blur", () => validateField(input)); // Corrigido: 'R=>' para '=>'
+    });
+  }
+  function validateField(field) {
+    let isValid = true;
+    let errorMessage = "";
+    const fieldId = field.id;
+    const errorDisplay = document.getElementById(`${fieldId}ErrorMessage`);
+    const inputBox = field.closest(".input-box"); // Para adicionar/remover classes de ícone
+
+    // Remover classes de erro/sucesso e ocultar mensagem antes de revalidar
+    field.classList.remove("error-field", "valid-field");
+    if (inputBox) {
+      // Textarea não terá ícone diretamente, mas o input sim
+      // A lógica de mostrar/ocultar ícone é melhor tratada pelas classes .valid-field/.error-field no CSS
+      // e o JS apenas adiciona/remove essas classes do input/textarea.
+      // O CSS já cuida de mostrar o ícone baseado na classe do input.
+    }
+    if (errorDisplay) {
+      errorDisplay.textContent = "";
+      errorDisplay.classList.remove("visible");
+    }
+
+    // Lógica de validação específica para cada campo
+    if (field.hasAttribute("required") && field.value.trim() === "") {
+      isValid = false;
+      errorMessage = "Este campo é obrigatório."; // Você pode usar chaves de tradução aqui
+    } else {
+      if (field.type === "email") {
+        if (!isValidEmail(field.value.trim())) {
+          isValid = false;
+          errorMessage =
+            currentTranslations["error-invalid-email"] ||
+            "Por favor, insira um e-mail válido.";
+        }
+      }
+      // Adicione mais validações aqui (ex: telefone, assunto, etc.)
+      if (field.id === "phone") {
+        // Exemplo: validar se o telefone (após a máscara) tem um mínimo de dígitos
+        const phoneDigits = field.value.replace(/\D/g, ""); // Remove não dígitos
+        if (phoneDigits.length < 10) {
+          // Exemplo: mínimo de 10 dígitos
+          isValid = false;
+          errorMessage =
+            currentTranslations["error-invalid-phone"] ||
+            "Por favor, insira um telefone válido.";
+        }
+      }
+    }
+
+    if (!isValid) {
+      field.classList.add("error-field");
+      if (errorDisplay) {
+        errorDisplay.textContent = errorMessage;
+        errorDisplay.classList.add("visible");
+      }
+    } else {
+      field.classList.add("valid-field");
+      // O ícone de check é o feedback de sucesso.
+    }
+    return isValid;
+  }
+
+  function validateAllFields() {
+    let isFormValid = true;
+    const fieldsToValidate = contactForm.querySelectorAll(
+      "input[required], textarea[required]"
+    );
+    fieldsToValidate.forEach((field) => {
+      if (!validateField(field)) {
+        isFormValid = false;
+      }
+    });
+    return isFormValid;
+  }
+
+  async function handleFormSubmit() {
+    clearStatusMessage(); // Limpa mensagens de status anteriores
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+
+    if (!validateAllFields()) {
+      showStatusMessage(
+        currentTranslations["error-form-invalid"] ||
+          "Por favor, corrija os erros no formulário.",
+        "error"
+      );
+      return; // Impede o envio se a validação falhar
+    }
+
+    // Adicionar estado de carregamento ao botão
+    submitButton.classList.add("loading");
+    submitButton.disabled = true;
+    const originalButtonText = submitButton.textContent; // Salva o texto original
+
+    // Usar a tradução atual para "Enviando..."
+    const sendingText =
+      currentTranslations["form-button-sending"] ||
+      (document.documentElement.lang === "en" ? "Sending" : "Enviando");
+
+    // O CSS já cuida dos "..." com .loading::after, então não precisamos do span aqui.
+    submitButton.textContent = sendingText;
+
+    // Simulação de envio AJAX (substitua pelo seu código de envio real)
+    // Se você está usando Formspree e quer manter o envio padrão,
+    // você pode remover o event.preventDefault() e esta parte de AJAX.
+    // Mas para feedback sem recarregar a página, AJAX é melhor.
+
+    const formData = new FormData(contactForm);
+    const formAction = contactForm.getAttribute("action");
+
+    try {
+      // Verifica o campo honeypot
+      if (formData.get("honeypot") && formData.get("honeypot").trim() !== "") {
+        console.warn("Honeypot field filled. Likely spam.");
+        showStatusMessage(
+          currentTranslations["error-form-submit"] ||
+            "Ocorreu um erro ao enviar sua mensagem. Tente novamente.",
+          "error"
+        ); // Mensagem genérica para spam
+        // Não envie o formulário
+        return; // Importante: sair da função aqui
+      }
+
+      const response = await fetch(formAction, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        showStatusMessage(
+          currentTranslations["success-form-submit"] ||
+            "Mensagem enviada com sucesso!",
+          "success"
+        );
+        contactForm.reset(); // Limpa o formulário
+        // Limpar classes de validação dos campos
+        contactForm
+          .querySelectorAll(".valid-field, .error-field")
+          .forEach((el) => {
+            el.classList.remove("valid-field", "error-field");
+          });
+        contactForm.querySelectorAll(".form-message.visible").forEach((el) => {
+          el.classList.remove("visible");
+          el.textContent = "";
+        });
+      } else {
+        // Tenta obter a mensagem de erro do Formspree
+        const data = await response.json();
+        if (data.errors && data.errors.length > 0) {
+          const formspreeError = data.errors
+            .map((err) => err.message)
+            .join(", ");
+          showStatusMessage(
+            `${
+              currentTranslations["error-prefix"] || "Erro"
+            }: ${formspreeError}`,
+            "error"
+          );
+        } else {
+          console.error("Formspree error response (no detailed errors):", data); // Adicione este log
+          showStatusMessage(
+            currentTranslations["error-form-submit"] ||
+              "Ocorreu um erro ao enviar sua mensagem. Tente novamente.",
+            "error"
+          );
+        }
+      }
+    } catch (error) {
+      console.error("Erro no envio do formulário:", error);
+      showStatusMessage(
+        currentTranslations["error-connection"] ||
+          "Ocorreu um erro de conexão. Verifique sua internet e tente novamente.",
+        "error"
+      );
+    } finally {
+      // Remover estado de carregamento do botão
+      submitButton.classList.remove("loading");
+      submitButton.disabled = false;
+      // Restaurar texto original do botão (considerando tradução)
+      const buttonTranslateKey = submitButton.getAttribute("data-translate");
+      let translatedButtonText = originalButtonText; // Fallback para o texto que estava antes do "Sending"
+      if (buttonTranslateKey && currentTranslations[buttonTranslateKey]) {
+        translatedButtonText = currentTranslations[buttonTranslateKey];
+      } else if (document.documentElement.lang === "en") {
+        // Fallback específico se a chave não for encontrada mas o idioma for inglês
+        translatedButtonText = "Send Message";
+      }
+      submitButton.textContent = translatedButtonText;
+    }
+  }
+
+  function isValidEmail(email) {
+    // Expressão regular simples para validação de e-mail
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function showStatusMessage(message, type) {
+    // type pode ser 'success' ou 'error'
+    formStatusMessage.textContent = message;
+    formStatusMessage.className = "form-submission-status-message"; // Reseta classes
+    formStatusMessage.classList.add(type); // Adiciona success ou error
+    formStatusMessage.style.display = "block"; // Torna visível
+  }
+
+  function clearStatusMessage() {
+    formStatusMessage.textContent = "";
+    formStatusMessage.style.display = "none";
+    formStatusMessage.className = "form-submission-status-message"; // Reseta classes
+  }
+
+  // Função para máscara de telefone (você já tem uma, mas para referência)
+  // window.mascaraTelefone = function(telefoneInput) { ... }
+  // A função mascaraTelefone já está definida globalmente neste arquivo.
+});
+// Fim do código para o formulário de contato
+// ======================================================================================================
