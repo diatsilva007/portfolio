@@ -1,5 +1,5 @@
 /* Configurações de cores */
-:root {
+/* :root { // Movido para baixo para consolidar
   --main-color: #00eeff;
   --text-color: #ffffff;
   --bg-color-01: #1f242d;
@@ -11,7 +11,7 @@
   --color-02: #009539;
   --color-03: #7950f2;
   --color-04: #c00000;
-  --color-05: #232323;
+  --color-05: #232323; 
 }
 
 /* Estilo do ícone olá (hero) */
@@ -53,24 +53,24 @@
 
 /* Definindo variáveis para cores */
 :root {
+  /* Cores principais do tema */
+  --main-color: #00eeff;
+  --text-color: #ffffff;
+  --bg-color-01: #1f242d;
+  --bg-color-02: #323946;
+  --color-00: #0000001a; /* Usado para sombras ou fundos sutis */
+
+  /* Cores extras para status, alertas, etc. */
+  --color-01: #999999; /* Cinza para texto secundário ou bordas */
+  --color-02: #009539; /* Verde para sucesso/validação */
+  --color-03: #7950f2; /* Roxo, pode ser usado para destaque */
+  --color-04: #c00000; /* Vermelho para erros/alertas */
+  --color-05: #232323; /* Cinza escuro, alternativo ao bg-color-01 */
+
   --background-light: #ffffff;
   --background-dark: #121212;
   --text-light: #000000;
   --text-dark: #ffffff;
-}
-
-/* Estilo para o typing effect */
-
-#typing-effect {
-  font-family: "Poppins", monospace;
-  font-size: 33px;
-  color: var(--main-color);
-  padding: 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 1px solid black;
-  width: fit-content;
-  animation: blink-cursor 1s steps(3) infinite;
 }
 
 @keyframes blink-cursor {
@@ -80,6 +80,20 @@
   to {
     border-right-color: transparent;
   }
+}
+
+/* Estilo para o typing effect */
+#typing-effect {
+  font-family: "Poppins", monospace; /* Monospace é bom para efeito de digitação */
+  font-size: 33px; /* Ajuste conforme necessário */
+  color: var(--main-color);
+  padding: 15px; /* Espaçamento interno */
+  white-space: nowrap; /* Impede que o texto quebre linha */
+  overflow: hidden; /* Esconde o texto que excede a largura */
+  border-right: 2px solid var(--text-color); /* Cursor piscante, cor ajustada */
+  width: fit-content; /* Ajusta a largura ao conteúdo */
+  animation: blink-cursor 0.75s steps(1) infinite; /* Animação do cursor */
+  /* 'steps(1)' faz o cursor aparecer e desaparecer abruptamente */
 }
 
 /* Estilos adicionais */
@@ -113,7 +127,7 @@ html {
 body {
   background-color: var(--bg-color-01);
   color: var(--text-color);
-  line-height: 1.6;
+  line-height: 1.6; /* Bom para legibilidade */
   height: 2000px; /* Apenas para ter uma página com rolagem */
   margin: 0;
 }
@@ -123,7 +137,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.1rem;
+  padding: 1.1rem 6%; /* Adicionado padding lateral percentual para responsividade */
   background-color: var(--bg-color-01);
   display: flex;
   justify-content: space-between;
@@ -137,17 +151,7 @@ header {
   font-weight: 600;
   cursor: default;
 }
-.nav-responsive {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--bg-color-01);
-  width: 100%;
-  /*height: 100vh;*/
-  padding: 1rem;
-  /*z-index: 100; */
-}
+/* .nav-responsive (bloco antigo) foi movido/substituído pela versão mais recente */
 
 .nav a,
 .nav-responsive a {
@@ -172,7 +176,7 @@ header {
 
 section {
   min-heigh: 100vh;
-  padding: 6rem 6rem 2rem;
+  padding: 6rem 6% 2rem; /* Usando padding lateral percentual */
 }
 
 span {
@@ -233,7 +237,7 @@ span {
 .home-content h1,
 .about-content h1 {
   font-weight: 700;
-  line-heigh: 1.3;
+  line-height: 1.3;
 }
 
 .home-content h3,
@@ -1202,8 +1206,8 @@ a {
   .home-content h1,
   .about-content h1 {
     font-size: 2.2rem;
-    font-weight: 700;
-    line-heigh: 1.3;
+    font-weight: 700; /* Corrigido para line-height */
+    line-height: 1.3;
   }
 
   .services-container {
@@ -1215,8 +1219,8 @@ a {
     width: 100%;
   }
 
-  #footer {
-    font-size: 0.8rem; /* Aumentado para melhor legibilidade (12.8px) */
+  .footer { /* Corrigido de #footer para .footer para consistência */
+    font-size: 0.8rem;
   }
 
   /* Ajustes específicos para o conteúdo do portfolio em telas pequenas */
@@ -1350,8 +1354,8 @@ a {
     gap: 5px;
   }
 
-  #footer {
-    font-size: 0.9rem; /* (14.4px) */
+  .footer { /* Corrigido de #footer para .footer */
+    font-size: 0.9rem;
   }
 
   .back-to-top {
@@ -1429,8 +1433,8 @@ a {
     gap: 2rem;
   }
 
-  #footer {
-    font-size: 1rem; /* (16px) */
+  .footer { /* Corrigido de #footer para .footer */
+    font-size: 1rem;
   }
 
   .back-to-top {
@@ -1477,8 +1481,8 @@ a {
     font-size: 2.8rem;
   }
 
-  #footer {
-    font-size: 1.1rem; /* (17.6px) */
+  .footer { /* Corrigido de #footer para .footer */
+    font-size: 1.1rem;
   }
 
   .back-to-top {
@@ -1526,8 +1530,8 @@ a {
     font-size: 3.2rem;
   }
 
-  #footer {
-    font-size: 1.2rem; /* (19.2px) */
+  .footer { /* Corrigido de #footer para .footer */
+    font-size: 1.2rem;
   }
 
   .back-to-top {
@@ -1711,13 +1715,18 @@ a {
 }
 
 /* ==========================================================================
-   Menu hamburguer Responsivo Styles
+   Menu hamburguer Responsivo Styles (Bloco Antigo - Considerar Remover se a nova versão estiver em uso)
    ========================================================================== */
 /* Estilos para o contêiner principal do menu responsivo quando ativo */
 /* Certifique-se de que seu .nav-responsive (ou a classe que o torna visível)
    tenha display: flex e flex-direction: column. */
-/* Exemplo de como .nav-responsive pode estar configurado quando visível:
-.nav-responsive.active {
+/* 
+   NOTA: Esta seção parece ser uma versão mais antiga do menu responsivo.
+   Se a versão mais recente (com .nav-responsive-inner-content, etc.) estiver ativa e funcionando,
+   este bloco inteiro (linhas ~1318 a ~1380) pode ser REMOVIDO para evitar conflitos e código morto.
+
+   Exemplo de como .nav-responsive (da nova versão) pode estar configurado quando visível:
+   .nav-responsive.active {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -1730,7 +1739,7 @@ a {
     padding-bottom: 20px;
     align-items: center; // Centraliza os blocos de itens e bandeiras no geral
     z-index: 1000; // Para garantir que fique sobre outros conteúdos
-}
+   }
 */
 
 /* Contêiner para os links de navegação dentro do menu responsivo */
@@ -1739,7 +1748,7 @@ a {
   flex-direction: column; /* Empilha os links verticalmente */
   align-items: flex-end; /* Alinha os links à direita dentro deste contêiner */
   width: 100%; /* Ocupa toda a largura disponível */
-  padding-right: 5px;  Espaçamento da borda direita da tela */
+  padding-right: 5px;  /* Espaçamento da borda direita da tela */
   box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
 
