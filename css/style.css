@@ -790,7 +790,8 @@ h1 {
   position: relative;
 }
 
-.contact form .input-box { /* Adicionado para posicionar o ícone de validação */
+.contact form .input-box {
+  /* Adicionado para posicionar o ícone de validação */
   position: relative;
 }
 
@@ -803,7 +804,8 @@ h1 {
   background-color: var(--bg-color-01);
   border-radius: 0.4rem;
   border: 2px solid transparent;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .contact form .input-box input:focus,
@@ -829,14 +831,16 @@ h1 {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease-out, max-height 0.3s ease-out, margin-top 0.3s ease-out;
+  transition: opacity 0.3s ease-out, max-height 0.3s ease-out,
+    margin-top 0.3s ease-out;
 }
 
 .contact form .form-message.error-message {
   color: var(--color-04);
 }
 
-.contact form .form-message.visible { /* Classe a ser adicionada via JS para mostrar a mensagem */
+.contact form .form-message.visible {
+  /* Classe a ser adicionada via JS para mostrar a mensagem */
   opacity: 1;
   max-height: 3em; /* Altura suficiente para 1-2 linhas de mensagem */
   margin-top: 0.3rem; /* Espaço quando visível */
@@ -889,7 +893,7 @@ h1 {
 }
 .contact form .input-box input.valid-field + .validation-icon::before,
 .contact form .input-box textarea.valid-field + .validation-icon::before {
-  content: '\f00c'; /* Ícone de check - FontAwesome */
+  content: "\f00c"; /* Ícone de check - FontAwesome */
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
@@ -902,7 +906,7 @@ h1 {
 }
 .contact form .input-box input.error-field + .validation-icon::before,
 .contact form .input-box textarea.error-field + .validation-icon::before {
-  content: '\f00d'; /* Ícone de X/times - FontAwesome */
+  content: "\f00d"; /* Ícone de X/times - FontAwesome */
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
@@ -933,12 +937,16 @@ h1 {
 /* Estado de carregamento para o botão (controlado por JS) */
 .contact form .btn[type="submit"].loading {
   cursor: wait;
-  background-color: color-mix(in srgb, var(--main-color) 70%, var(--bg-color-02));
+  background-color: color-mix(
+    in srgb,
+    var(--main-color) 70%,
+    var(--bg-color-02)
+  );
   color: color-mix(in srgb, var(--bg-color-02) 70%, var(--main-color));
 }
 
 .contact form .btn[type="submit"].loading::after {
-  content: '...';
+  content: "...";
   display: inline-block;
   animation: loading-dots 1.4s infinite steps(4, end);
   margin-left: 0.7em;
@@ -947,10 +955,20 @@ h1 {
 }
 
 @keyframes loading-dots {
-  0%, 20% { content: '.'; }
-  40% { content: '..'; }
-  60% { content: '...'; }
-  80%, 100% { content: '....'; }
+  0%,
+  20% {
+    content: ".";
+  }
+  40% {
+    content: "..";
+  }
+  60% {
+    content: "...";
+  }
+  80%,
+  100% {
+    content: "....";
+  }
 }
 
 /* Mensagem de status da submissão do formulário (controlada por JS) */
@@ -1691,3 +1709,64 @@ a {
     font-size: 0.8rem; /* Ícone da seta menor */
   }
 }
+
+/* ==========================================================================
+   Menu hamburguer Responsivo Styles
+   ========================================================================== */
+/* Estilos para o contêiner principal do menu responsivo quando ativo */
+/* Certifique-se de que seu .nav-responsive (ou a classe que o torna visível)
+   tenha display: flex e flex-direction: column. */
+/* Exemplo de como .nav-responsive pode estar configurado quando visível:
+.nav-responsive.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; // ou a altura do seu header
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #333; // Cor de fundo do seu menu
+    padding-top: 70px; // Espaço para o header, ajuste conforme necessário
+    padding-bottom: 20px;
+    align-items: center; // Centraliza os blocos de itens e bandeiras no geral
+    z-index: 1000; // Para garantir que fique sobre outros conteúdos
+}
+*/
+
+/* Contêiner para os links de navegação dentro do menu responsivo */
+.nav-responsive-items {
+  display: flex;
+  flex-direction: column; /* Empilha os links verticalmente */
+  align-items: flex-end; /* Alinha os links à direita dentro deste contêiner */
+  width: 100%; /* Ocupa toda a largura disponível */
+  padding-right: 5px;  Espaçamento da borda direita da tela */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+/* Estilo para cada link no menu responsivo */
+.nav-responsive-items a {
+  padding: 12px 0; /* Espaçamento vertical entre os links */
+  font-size: 1.1rem; /* Tamanho da fonte, ajuste conforme seu design */
+  text-decoration: none;
+  /* A cor será herdada ou defina uma específica, ex: color: white; */
+  /* text-align: right; /* Garante que o texto dentro do link esteja à direita */
+  /* Geralmente não é necessário com align-items: flex-end no pai */
+}
+
+/* Contêiner para as bandeiras de tradução */
+.nav-responsive-flags {
+  display: flex;
+  justify-content: center; /* Centraliza as bandeiras horizontalmente */
+  align-items: center;
+  width: 100%;
+  margin-top: 25px; /* Espaçamento acima das bandeiras */
+}
+
+/* Estilo para cada imagem de bandeira */
+.nav-responsive-flags img {
+  margin: 0 10px; /* Espaçamento entre as bandeiras */
+  cursor: pointer;
+}
+
+/* Se você tiver uma classe como .flag-spacing, pode ajustar ou remover
+   as margens dela se .nav-responsive-flags img já cuidar disso. */
