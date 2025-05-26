@@ -903,6 +903,11 @@ a {
   cursor: pointer;
 }
 
+/* Garante que o texto dentro do span do .btn seja visível por padrão */
+.btn span {
+  color: inherit; /* Herda a cor do elemento .btn pai */
+}
+
 /* Botão menu hamburguer */
 .menu-hamburguer {
   display: block;
