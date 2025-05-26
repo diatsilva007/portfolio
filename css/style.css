@@ -773,32 +773,214 @@ h1 {
 } */
 
 /* Form */
-form {
-  max-width: 45rem;
-  margin: 0.6rem auto;
-  text-align: center;
-}
 
-form .input-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-form .input-box input,
-form textarea {
-  width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
-  color: var(--text-color);
+/* Estilos para o formulário de contato na seção .contact */
+.contact form {
+  max-width: 50rem;
+  margin: 1.5rem auto;
+  text-align: left;
+  padding: 1.2rem;
   background-color: var(--bg-color-02);
-  border-radius: 0.5rem;
-  margin: 0.4rem 0;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-form textarea {
-  resize: none;
+.contact form .input-group {
+  margin-bottom: 1.2rem; /* Espaçamento ajustado entre os grupos de input */
+  position: relative;
 }
+
+.contact form .input-box { /* Adicionado para posicionar o ícone de validação */
+  position: relative;
+}
+
+.contact form .input-box input,
+.contact form .input-box textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  background-color: var(--bg-color-01);
+  border-radius: 0.4rem;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contact form .input-box input:focus,
+.contact form .input-box textarea:focus {
+  outline: none;
+  border-color: var(--main-color);
+  background-color: color-mix(in srgb, var(--bg-color-01) 90%, black);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--main-color) 25%, transparent);
+}
+
+.contact form .input-box input::placeholder,
+.contact form .input-box textarea::placeholder {
+  color: color-mix(in srgb, var(--text-color) 60%, transparent);
+  opacity: 1;
+}
+
+/* Estilos para mensagens de validação (controladas por JS) */
+.contact form .form-message {
+  display: block;
+  font-size: 0.75rem;
+  padding-left: 0.2rem;
+  font-weight: 500;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-out, max-height 0.3s ease-out, margin-top 0.3s ease-out;
+}
+
+.contact form .form-message.error-message {
+  color: var(--color-04);
+}
+
+.contact form .form-message.visible { /* Classe a ser adicionada via JS para mostrar a mensagem */
+  opacity: 1;
+  max-height: 3em; /* Altura suficiente para 1-2 linhas de mensagem */
+  margin-top: 0.3rem; /* Espaço quando visível */
+}
+
+/* Estilos para campos com erro (classe adicionada por JS) */
+.contact form .input-box input.error-field,
+.contact form .input-box textarea.error-field {
+  border-color: var(--color-04);
+  background-color: color-mix(in srgb, var(--color-04) 5%, var(--bg-color-01));
+}
+
+.contact form .input-box input.error-field:focus,
+.contact form .input-box textarea.error-field:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-04) 25%, transparent);
+}
+
+/* Estilos para campos válidos (opcional, classe adicionada por JS) */
+.contact form .input-box input.valid-field,
+.contact form .input-box textarea.valid-field {
+  border-color: var(--color-02);
+}
+
+.contact form .input-box input.valid-field:focus,
+.contact form .input-box textarea.valid-field:focus {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-02) 25%, transparent);
+}
+
+/* Ocultar o campo honeypot via CSS */
+.contact form .honeypot-field {
+  display: none !important;
+}
+
+/* Estilos para Ícones de Validação */
+.contact form .input-box .validation-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  display: none;
+  pointer-events: none;
+}
+
+/* Mostrar e estilizar ícone quando o input é válido */
+.contact form .input-box input.valid-field + .validation-icon,
+.contact form .input-box textarea.valid-field + .validation-icon {
+  display: inline-block;
+  color: var(--color-02); /* Verde */
+}
+.contact form .input-box input.valid-field + .validation-icon::before,
+.contact form .input-box textarea.valid-field + .validation-icon::before {
+  content: '\f00c'; /* Ícone de check - FontAwesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* Mostrar e estilizar ícone quando o input é inválido */
+.contact form .input-box input.error-field + .validation-icon,
+.contact form .input-box textarea.error-field + .validation-icon {
+  display: inline-block;
+  color: var(--color-04); /* Vermelho */
+}
+.contact form .input-box input.error-field + .validation-icon::before,
+.contact form .input-box textarea.error-field + .validation-icon::before {
+  content: '\f00d'; /* Ícone de X/times - FontAwesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.contact form .input-box input.valid-field,
+.contact form .input-box input.error-field,
+.contact form .input-box textarea.valid-field,
+.contact form .input-box textarea.error-field {
+  padding-right: 35px; /* Espaço para o ícone dentro do campo */
+}
+
+/* Botão de submissão do formulário */
+.contact form .btn[type="submit"] {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact form .btn[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--main-color) 30%, transparent);
+}
+
+/* Estado de carregamento para o botão (controlado por JS) */
+.contact form .btn[type="submit"].loading {
+  cursor: wait;
+  background-color: color-mix(in srgb, var(--main-color) 70%, var(--bg-color-02));
+  color: color-mix(in srgb, var(--bg-color-02) 70%, var(--main-color));
+}
+
+.contact form .btn[type="submit"].loading::after {
+  content: '...';
+  display: inline-block;
+  animation: loading-dots 1.4s infinite steps(4, end);
+  margin-left: 0.7em;
+  font-size: 1.2em;
+  line-height: 0;
+}
+
+@keyframes loading-dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60% { content: '...'; }
+  80%, 100% { content: '....'; }
+}
+
+/* Mensagem de status da submissão do formulário (controlada por JS) */
+.contact form .form-submission-status-message {
+  padding: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-width: 2px;
+  border-style: solid;
+  display: none; /* Escondido por padrão, JS controla a visibilidade */
+}
+
+.contact form .form-submission-status-message.success {
+  background-color: color-mix(in srgb, var(--color-02) 10%, transparent);
+  color: var(--color-02);
+  border-color: var(--color-02);
+  display: block; /* Torna visível quando a classe .success é adicionada */
+}
+
+.contact form .form-submission-status-message.error {
+  background-color: color-mix(in srgb, var(--color-04) 10%, transparent);
+  color: var(--color-04);
+  border-color: var(--color-04);
+  display: block; /* Torna visível quando a classe .error é adicionada */
+}
+/* Fim do Form */
 
 /* Rodapé Animação de Fade In no Footer */
 .footer {
