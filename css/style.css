@@ -128,7 +128,6 @@ body {
   background-color: var(--bg-color-01);
   color: var(--text-color);
   line-height: 1.6; /* Bom para legibilidade */
-  height: 2000px; /* Apenas para ter uma página com rolagem */
   margin: 0;
 }
 
@@ -455,12 +454,12 @@ h1 {
   }
 }*/
 
+/* Estilos unificados para títulos de seção */
 .services h2,
 .portfolio h2,
 .contact h2,
 .about h3 {
   color: var(--text-color); /* Cor base do texto do H2 */
-  font-size: 2rem;
   font-weight: 700; /* Torna o título mais forte */
   text-align: center;
   text-transform: uppercase; /* Transforma o texto em maiúsculas */
@@ -468,13 +467,14 @@ h1 {
   padding-bottom: 0.75rem; /* Espaço abaixo do texto para a linha decorativa */
   margin-bottom: 3rem; /* Aumenta o espaço após o título e a linha */
   position: relative; /* Necessário para o posicionamento do pseudo-elemento ::after */
+  font-size: 2rem; /* Movido para cá para garantir que se aplique a todos */
 }
 
 /* Linha decorativa abaixo dos títulos H2 das seções */
 .services h2::after,
 .portfolio h2::after,
 .contact h2::after,
-.about h3::after {
+.about h3::after { /* Incluído no agrupamento */
   content: "";
   position: absolute;
   left: 50%;
@@ -488,35 +488,7 @@ h1 {
   border-radius: 2px; /* Bordas levemente arredondadas para a linha */
 }
 
-/* Estilo para os títulos H3 dentro da seção "Sobre" */
-.about h3 {
-  color: var(--text-color); /* Cor base do texto do H2 */
-  font-size: 2rem;
-  font-weight: 700; /* Torna o título mais forte */
-  text-align: center; /* Centraliza o texto "About Me" */
-  text-transform: uppercase; /* Transforma o texto em maiúsculas */
-  letter-spacing: 1px; /* Adiciona um leve espaçamento entre as letras */
-  padding-bottom: 0.75rem; /* Espaço abaixo do texto para a linha decorativa */
-  margin-bottom: 3rem; /* Aumenta o espaço após o título e a linha */
-  position: relative; /* Necessário para o posicionamento do pseudo-elemento ::after */
-}
-
-/* Linha decorativa abaixo do título H3 da seção "Sobre" */
-.about h3::after {
-  content: "";
-  position: absolute;
-  left: 50%; /* Posiciona o início da linha no centro do contêiner h3 */
-  bottom: 0; /* Posiciona a linha na parte inferior do padding-bottom do h2 */
-  transform: translateX(
-    -50%
-  ); /* Desloca a linha para a esquerda pela metade de sua largura, centralizando-a */
-  width: 100px; /* Largura da linha decorativa */
-  height: 4px; /* Espessura da linha decorativa */
-  background-color: var(
-    --main-color
-  ); /* Cor da linha, usando sua cor principal */
-  border-radius: 2px; /* Bordas levemente arredondadas para a linha */
-}
+/* Fim dos estilos unificados para títulos de seção */
 
 .services-container {
   display: flex;
@@ -1019,51 +991,9 @@ h1 {
   z-index: 998; /* Para gerenciamento de empilhamento com outros elementos fixos */
 }
 
-.footer {
-  /* Aplica text-align: center apenas ao footer e seu conteúdo */
-  text-align: center;
-}
-
 /* Quando o footer aparecer, ele terá opacidade 1 */
 body.scrolled .footer {
   opacity: 1;
-}
-
-/*footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1.2rem;
-  background-color: var(--bg-color-01);
-  color: var(--main-color);
-}*/
-
-/* Social media */
-.social-media img {
-  width: 3.5rem;
-}
-
-.social-media a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: transparent;
-  border: solid 0.15rem var(--main-color);
-  border-radius: 50%;
-  font-size: 2rem;
-  color: var(--main-color);
-  margin: 1.8rem 0.5rem;
-  transition: 0.5s ease;
-  pointer-events: auto;
-}
-
-.social-media a:hover {
-  background-color: var(--main-color);
-  color: var(--bg-color-02);
-  box-shadow: 0 0 0.3rem var(--main-color);
 }
 
 /* Botão currículo */
@@ -1833,3 +1763,154 @@ a {
 
 /* Se você tiver uma classe como .flag-spacing, pode ajustar ou remover
    as margens dela se .nav-responsive-flags img já cuidar disso. */
+
+   /* Estilos para Links de Redes Sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Espaçamento ligeiramente aumentado */
+    margin-top: 3rem; /* Aumentado o espaço acima */
+    margin-bottom: 2rem; /* Adicionado espaço abaixo, antes do botão CV */
+    pointer-events: auto; /* ESSENCIAL: Permite cliques nos links dentro de .home-content */
+}
+
+.social-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; /* Tamanho ligeiramente aumentado */
+    height: 48px; /* Tamanho ligeiramente aumentado */
+    border-radius: 50%;
+    color: #ffffff; /* Cor do ícone */
+    text-decoration: none;
+    font-size: 24px; /* Tamanho do ícone aumentado */
+    position: relative; /* Necessário para pseudo-elementos ::before e ::after */
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), /* Efeito de "pulo" elástico */
+                box-shadow 0.35s ease-out;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra base sutil */
+    /* overflow: hidden; Removido para não cortar brilhos/tooltips externos */
+}
+
+/* Efeito de borda neon dinâmica no hover usando ::before */
+.social-icon-link::before {
+    content: '';
+    position: absolute;
+    /* Ligeiramente maior que o ícone para a borda aparecer ao redor */
+    top: -3px; left: -3px; right: -3px; bottom: -3px;
+    border-radius: 50%;
+    border: 2px solid transparent; /* Borda inicialmente transparente */
+    opacity: 0;
+    transform: scale(0.8); /* Começa menor */
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity 0.35s ease-out,
+                border-color 0.35s ease-out;
+    z-index: 0; /* Atrás do conteúdo do link (ícone), mas acima do fundo do link */
+    pointer-events: none; /* Não interfere com os eventos do mouse no link */
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus-visible { /* Adicionado estado de foco para acessibilidade */
+    transform: translateY(-6px) scale(1.15); /* Efeito de elevação e aumento mais pronunciado */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22); /* Sombra projetada mais forte */
+    outline: none; /* Remove outline padrão no foco, pois temos o box-shadow */
+}
+
+.social-icon-link:hover::before,
+.social-icon-link:focus-visible::before {
+    transform: scale(1); /* Borda expande para o tamanho normal */
+    opacity: 0.8; /* Borda neon se torna visível */
+    border-color: var(--main-color); /* Cor principal do site para o brilho neon */
+}
+
+/* Tooltip personalizada usando ::after */
+.social-icon-link::after {
+    content: attr(aria-label); /* Pega o texto do atributo aria-label */
+    position: absolute;
+    bottom: 130%; /* Posiciona a tooltip acima do ícone */
+    left: 50%;
+    transform: translateX(-50%) translateY(5px); /* Começa um pouco para baixo e centralizada */
+    background-color: var(--bg-color-02); /* Fundo da tooltip */
+    color: var(--text-color); /* Texto da tooltip */
+    padding: 7px 14px; /* Espaçamento interno da tooltip */
+    border-radius: 6px; /* Bordas arredondadas */
+    font-size: 0.9rem; /* Tamanho da fonte da tooltip */
+    font-weight: 500;
+    white-space: nowrap; /* Impede que o texto da tooltip quebre linha */
+    opacity: 0;
+    visibility: hidden;
+    /* Transição suave com delay para não aparecer/sumir abruptamente */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
+    z-index: 20; /* Garante que a tooltip fique sobre outros elementos */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    pointer-events: none; /* Não interfere com os eventos do mouse no link */
+}
+
+.social-icon-link:hover::after,
+.social-icon-link:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-8px); /* Move a tooltip para cima */
+    transition-delay: 0.1s, 0.1s, 0s; /* Pequeno delay para a tooltip aparecer */
+}
+
+.social-icon-link i {
+    line-height: 1;
+    position: relative; /* Para garantir que o ícone fique sobre o ::before */
+    z-index: 1;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon-link:hover i,
+.social-icon-link:focus-visible i {
+    transform: scale(1.08); /* Ícone aumenta um pouco mais */
+}
+
+/* Cores de fundo específicas de cada rede social */
+.social-icon-link.github {
+    background-color: #24292e;
+}
+.social-icon-link.github:hover,
+.social-icon-link.github:focus-visible {
+    background-color: #3a4047; /* Levemente mais claro no hover */
+}
+
+.social-icon-link.facebook {
+    background-color: #1877F2;
+}
+.social-icon-link.facebook:hover,
+.social-icon-link.facebook:focus-visible {
+    background-color: #136ad5; /* Levemente mais escuro no hover */
+}
+
+.social-icon-link.instagram {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+/* Para o Instagram, o hover no background é mais complexo com gradiente.
+   O efeito de borda neon e sombra já fornecerão um bom feedback visual. */
+
+.social-icon-link.linkedin {
+    background-color: #0A66C2;
+}
+.social-icon-link.linkedin:hover,
+.social-icon-link.linkedin:focus-visible {
+    background-color: #095bb1; /* Levemente mais escuro no hover */
+}
+
+.social-icon-link.xtwitter {
+    background-color: #000000;
+}
+.social-icon-link.xtwitter:hover,
+.social-icon-link.xtwitter:focus-visible {
+    background-color: #1e1e1e; /* Levemente mais claro no hover */
+}
+
+/* Garante que o ícone FontAwesome (X) seja renderizado corretamente */
+.social-icon-link .fab.fa-x-twitter {
+    font-family: "Font Awesome 6 Brands", "FontAwesome", sans-serif; /* Adicionado FontAwesome como fallback genérico */
+    font-weight: 400; /* Brands são geralmente 400 ou 'normal' */
+}
