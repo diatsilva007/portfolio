@@ -1787,8 +1787,12 @@ a {
     font-size: 24px; /* Tamanho do ícone aumentado */
     position: relative; /* Necessário para pseudo-elementos ::before e ::after */
     transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), /* Efeito de "pulo" elástico */
-                box-shadow 0.35s ease-out;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra base sutil */
+                box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transição mais suave para a sombra */
+    box-shadow:
+        /* Efeito de espessura 3D sutil - borda inferior escura derivada do fundo */
+        0 2px 0px color-mix(in srgb, var(--bg-color-01) 65%, black),
+        /* Sombra principal projetada mais suave */
+        0 4px 8px rgba(0, 0, 0, 0.15);
     /* overflow: hidden; Removido para não cortar brilhos/tooltips externos */
 }
 
@@ -1811,8 +1815,12 @@ a {
 
 .social-icon-link:hover,
 .social-icon-link:focus-visible { /* Adicionado estado de foco para acessibilidade */
-    transform: translateY(-6px) scale(1.15); /* Efeito de elevação e aumento mais pronunciado */
-    box-shadow: 0 8px 18px rgba(0,0,0,0.22); /* Sombra projetada mais forte */
+    transform: translateY(-5px) scale(1.12); /* Interação de hover levemente mais sutil */
+    box-shadow:
+        /* Espessura 3D mais pronunciada e contrastante no hover */
+        0 3px 0px color-mix(in srgb, var(--bg-color-01) 55%, black),
+        /* Sombra projetada mais forte e distante devido à elevação */
+        0 8px 18px rgba(0, 0, 0, 0.25);
     outline: none; /* Remove outline padrão no foco, pois temos o box-shadow */
 }
 
