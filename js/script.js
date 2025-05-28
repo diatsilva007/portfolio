@@ -86,19 +86,34 @@ function setLanguage(language) {
       currentTranslations = translations;
       document.querySelectorAll("[data-translate]").forEach((element) => {
         const key = element.getAttribute("data-translate");
-        if (translations[key] !== undefined) {
-          // Se for o elemento do rodapé, usar innerHTML para renderizar entidades HTML como &copy;
-          if (element.id === "footer" && key === "footer") {
+        const translationValue = translations[key];
+
+        if (translationValue !== undefined) {
+          // Tratar placeholders de input/textarea
+          if (
+            (element.tagName === "INPUT" || element.tagName === "TEXTAREA") &&
+            element.placeholder &&
+            key.startsWith("form-placeholder-")
+          ) {
+            element.placeholder = translationValue;
+          }
+          // Tratar elementos que podem conter HTML (como o rodapé com &copy;)
+          else if (element.id === "footer" && key === "footer") {
             element.innerHTML = translations[key];
-          } else {
+          }
+          // Tratar outros elementos com textContent
+          else {
             element.textContent = translations[key];
           }
         } else {
           console.warn(
-            `Translation key "${key}" not found for language "${language}".`
+            `Translation key "${key}" not found for language "${language}". Element:`,
+            element
           );
         }
       });
+      // Atualizar o lang da tag <html>
+      document.documentElement.lang = language === "pt" ? "pt-br" : language;
     })
     .catch((error) => {
       console.error("Error loading translation file:", error);
@@ -108,199 +123,241 @@ function setLanguage(language) {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM fully loaded and parsed. Initializing scripts...");
 
-  // --- Configuração Inicial de Idioma ---
-  setLanguage("en"); // Define o idioma padrão como inglês
+  // --- Configuração Inicial de Idioma (será tratada pela nova lógica abaixo) ---
+  // setLanguage("en"); // REMOVIDO - A nova lógica de idioma cuidará disso.
 
-  // --- Lógica de Scroll para Classe no Body ---
-  window.onscroll = function () {
-    if (window.scrollY > 100) {
-      document.body.classList.add("scrolled");
-    } else {
-      document.body.classList.remove("scrolled");
-    }
-  };
+  // ==========================================================================
+  // LÓGICA DE IDIOMA (Consolidada e Corrigida)
+  // ==========================================================================
+  const languageButtons = document.querySelectorAll(".language-switcher");
+  let activeLanguage = localStorage.getItem("selectedLanguage") || "pt"; // Padrão 'pt'
 
-  // --- Efeito Glitch ---
-  const glitchElement = document.querySelector(".glitch");
-  if (glitchElement) {
-    glitchElement.addEventListener("mouseover", () => {
-      glitchElement.style.animation = "glitch-animation 0.2s infinite";
-    });
-    glitchElement.addEventListener("mouseout", () => {
-      glitchElement.style.animation = "glitch-animation 2s infinite";
-    });
-  } else {
-    // console.warn("Elemento .glitch não encontrado."); // Não crítico se não estiver em todas as páginas
-  }
-
-  // --- Menu Hambúrguer ---
-  const menuHamburguer = document.querySelector(".menu-hamburguer");
-  const navResponsive = document.querySelector(".nav-responsive");
-
-  if (menuHamburguer && navResponsive) {
-    function toggleMenu() {
-      menuHamburguer.classList.toggle("change");
-      navResponsive.style.display = menuHamburguer.classList.contains("change")
-        ? "block"
-        : "none";
-    }
-
-    menuHamburguer.addEventListener("click", (event) => {
-      event.stopPropagation();
-      toggleMenu();
-    });
-
-    document.addEventListener("click", (event) => {
-      if (
-        menuHamburguer.classList.contains("change") &&
-        !navResponsive.contains(event.target) &&
-        !menuHamburguer.contains(event.target)
-      ) {
-        toggleMenu();
-      }
-    });
-  } else {
-    // console.warn("Elementos do menu hambúrguer (.menu-hamburguer ou .nav-responsive) não encontrados.");
-  }
-
-  // --- Efeito Typing ---
-  const typingEffectElement = document.getElementById("typing-effect");
-  if (typingEffectElement) {
-    const texts = [
-      "Front-End Developer",
-      "Full-Stack Developer",
-      "Software Engineer",
-    ];
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-      const currentText = texts[textIndex];
-      const speed = isDeleting ? 50 : 100;
-
-      typingEffectElement.textContent = currentText.substring(0, charIndex);
-      isDeleting ? charIndex-- : charIndex++;
-
-      if (!isDeleting && charIndex === currentText.length + 1) {
-        isDeleting = true;
-        setTimeout(type, 1000);
-      } else if (isDeleting && charIndex === -1) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-        setTimeout(type, 500);
+  function updateActiveButtonVisuals(selectedLang) {
+    languageButtons.forEach((button) => {
+      if (button.dataset.lang === selectedLang) {
+        button.classList.add("active-lang");
+        button.setAttribute("aria-pressed", "true");
       } else {
-        setTimeout(type, speed);
+        button.classList.remove("active-lang");
+        button.setAttribute("aria-pressed", "false");
       }
-    }
-    type();
-  } else {
-    // console.warn("Elemento #typing-effect não encontrado.");
-  }
-
-  // --- Botão "Leia Mais" (Genérico - se usado em várias páginas com os mesmos IDs) ---
-  const leiaMaisBtn = document.getElementById("leiaMaisBtn");
-  const leiaMaisContent = document.getElementById("leiaMais");
-
-  if (leiaMaisBtn && leiaMaisContent) {
-    leiaMaisBtn.addEventListener("click", function () {
-      leiaMaisContent.classList.toggle("hidden-content");
-      leiaMaisContent.classList.toggle("visible-content");
-      // Atualizar texto do botão se necessário
-      // e.g., this.textContent = leiaMaisContent.classList.contains("hidden-content") ? "Read More" : "Read Less";
     });
   }
 
-  // ==========================================================================
-  // Portfolio Swiper Initialization
-  // ==========================================================================
-  if (document.querySelector(".portfolio-swiper")) {
-    const portfolioSwiper = new Swiper(".portfolio-swiper", {
-      effect: "coverflow", // Habilita o efeito Coverflow
-      grabCursor: true, // Muda o cursor para "mãozinha"
-      centeredSlides: true, // Slide ativo fica centralizado
-      slidesPerView: "auto", // Swiper determina o número de slides visíveis com base no tamanho
-      spaceBetween: 25, // Espaço entre os slides
-      loop: true, // Habilita o loop contínuo
+  function changeAndApplyLanguage(lang) {
+    // 1. Chamar a função de tradução existente (setLanguage definida globalmente neste arquivo)
+    setLanguage(lang); // Esta função busca o JSON e atualiza o DOM
 
-      coverflowEffect: {
-        rotate: 45, // Rotação dos slides laterais
-        stretch: 0, // Distância (em px) para esticar o slide. 0 para não esticar.
-        depth: 120, // Profundidade do efeito (quanto menor, mais "achatado")
-        modifier: 1, // Multiplicador do efeito (1 = efeito normal)
-        slideShadows: true, // Habilita sombras nos slides laterais
-      },
+    // 2. Atualizar o idioma ativo na lógica e no localStorage
+    activeLanguage = lang;
+    localStorage.setItem("selectedLanguage", lang);
 
-      autoplay: {
-        delay: 2000, // Tempo em milissegundos entre as transições
-        disableOnInteraction: false, // O autoplay não será desabilitado após interações do usuário (como swipe manual)
-        pauseOnMouseEnter: true, // Pausa o autoplay quando o mouse estiver sobre o carrossel
-      },
+    // 3. Atualizar o estado visual dos botões de bandeira
+    updateActiveButtonVisuals(lang);
 
-      // Paginação
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true, // Permite clicar nos bullets da paginação para navegar
-      },
-
-      // Botões de Navegação
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-      // Breakpoints para responsividade (ajuste conforme necessário)
-      breakpoints: {
-        // Para telas muito pequenas, podemos voltar a 1 slide visível ou ajustar o coverflow
-        320: {
-          slidesPerView: 1.2, // Mostra um pouco do próximo slide
-          spaceBetween: 15,
-          coverflowEffect: {
-            // Ajustes específicos do coverflow para telas pequenas
-            rotate: 50,
-            depth: 100,
-            modifier: 1,
-          },
-        },
-        // Quando a largura da janela é >= 768px (ajustado de 640px para um breakpoint mais comum)
-        640: {
-          slidesPerView: 2.5, // Ajuste para o efeito coverflow
-          spaceBetween: 30,
-        },
-        // Quando a largura da janela é >= 1024px
-        1024: {
-          slidesPerView: 3, // Mostrar 3 slides em telas maiores para coverflow
-          spaceBetween: 30,
-        },
-        // Quando a largura da janela é >= 1200px
-        1200: {
-          slidesPerView: 3.5, // Permite ver partes dos slides adjacentes de forma mais clara
-          spaceBetween: 35,
-        },
-      },
-
-      // Opcional: Se estiver usando animações AOS nos slides e elas não dispararem corretamente
-      // após a transição de slides, você pode precisar atualizar o AOS.
-      on: {
-        slideChangeTransitionEnd: function () {
-          if (typeof AOS !== "undefined") {
-            AOS.refresh(); // Atualiza as animações AOS
-          }
-        },
-        // Se o modal não estiver abrindo após a inicialização do Swiper,
-        // pode ser necessário re-atribuir os event listeners dos botões do modal
-        // após a inicialização do Swiper ou em cada mudança de slide.
-        // No entanto, como os listeners são delegados ou aplicados a elementos que
-        // já existem, isso geralmente não é necessário se o HTML do modal estiver correto.
-      },
-    });
-    console.log("Portfolio Swiper inicializado.");
-  } else {
-    console.warn(
-      "Container do Portfolio Swiper (.portfolio-swiper) não encontrado."
-    );
+    // 4. O atributo lang da tag <html> já é atualizado dentro da função setLanguage.
   }
+
+  languageButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const langToSet = this.dataset.lang;
+      changeAndApplyLanguage(langToSet);
+    });
+  });
+
+  changeAndApplyLanguage(activeLanguage); // Aplicar idioma inicial
 });
+
+// --- Lógica de Scroll para Classe no Body ---
+window.onscroll = function () {
+  if (window.scrollY > 100) {
+    document.body.classList.add("scrolled");
+  } else {
+    document.body.classList.remove("scrolled");
+  }
+};
+
+// --- Efeito Glitch ---
+const glitchElement = document.querySelector(".glitch");
+if (glitchElement) {
+  glitchElement.addEventListener("mouseover", () => {
+    glitchElement.style.animation = "glitch-animation 0.2s infinite";
+  });
+  glitchElement.addEventListener("mouseout", () => {
+    glitchElement.style.animation = "glitch-animation 2s infinite";
+  });
+} else {
+  // console.warn("Elemento .glitch não encontrado."); // Não crítico se não estiver em todas as páginas
+}
+
+// --- Menu Hambúrguer ---
+const menuHamburguer = document.querySelector(".menu-hamburguer");
+const navResponsive = document.querySelector(".nav-responsive");
+
+if (menuHamburguer && navResponsive) {
+  function toggleMenu() {
+    menuHamburguer.classList.toggle("change");
+    navResponsive.style.display = menuHamburguer.classList.contains("change")
+      ? "block"
+      : "none";
+  }
+
+  menuHamburguer.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleMenu();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      menuHamburguer.classList.contains("change") &&
+      !navResponsive.contains(event.target) &&
+      !menuHamburguer.contains(event.target)
+    ) {
+      toggleMenu();
+    }
+  });
+} else {
+  // console.warn("Elementos do menu hambúrguer (.menu-hamburguer ou .nav-responsive) não encontrados.");
+}
+
+// --- Efeito Typing ---
+const typingEffectElement = document.getElementById("typing-effect");
+if (typingEffectElement) {
+  const texts = [
+    "Front-End Developer",
+    "Full-Stack Developer",
+    "Software Engineer",
+  ];
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentText = texts[textIndex];
+    const speed = isDeleting ? 50 : 100;
+
+    typingEffectElement.textContent = currentText.substring(0, charIndex);
+    isDeleting ? charIndex-- : charIndex++;
+
+    if (!isDeleting && charIndex === currentText.length + 1) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+    } else if (isDeleting && charIndex === -1) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      setTimeout(type, 500);
+    } else {
+      setTimeout(type, speed);
+    }
+  }
+  type();
+} else {
+  // console.warn("Elemento #typing-effect não encontrado.");
+}
+
+// --- Botão "Leia Mais" (Genérico - se usado em várias páginas com os mesmos IDs) ---
+const leiaMaisBtn = document.getElementById("leiaMaisBtn");
+const leiaMaisContent = document.getElementById("leiaMais");
+
+if (leiaMaisBtn && leiaMaisContent) {
+  leiaMaisBtn.addEventListener("click", function () {
+    leiaMaisContent.classList.toggle("hidden-content");
+    leiaMaisContent.classList.toggle("visible-content");
+    // Atualizar texto do botão se necessário
+    // e.g., this.textContent = leiaMaisContent.classList.contains("hidden-content") ? "Read More" : "Read Less";
+  });
+}
+
+// ==========================================================================
+// Portfolio Swiper Initialization
+// ==========================================================================
+if (document.querySelector(".portfolio-swiper")) {
+  const portfolioSwiper = new Swiper(".portfolio-swiper", {
+    effect: "coverflow", // Habilita o efeito Coverflow
+    grabCursor: true, // Muda o cursor para "mãozinha"
+    centeredSlides: true, // Slide ativo fica centralizado
+    slidesPerView: "auto", // Swiper determina o número de slides visíveis com base no tamanho
+    spaceBetween: 25, // Espaço entre os slides
+    loop: true, // Habilita o loop contínuo
+
+    coverflowEffect: {
+      rotate: 45, // Rotação dos slides laterais
+      stretch: 0, // Distância (em px) para esticar o slide. 0 para não esticar.
+      depth: 120, // Profundidade do efeito (quanto menor, mais "achatado")
+      modifier: 1, // Multiplicador do efeito (1 = efeito normal)
+      slideShadows: true, // Habilita sombras nos slides laterais
+    },
+
+    autoplay: {
+      delay: 2000, // Tempo em milissegundos entre as transições
+      disableOnInteraction: false, // O autoplay não será desabilitado após interações do usuário (como swipe manual)
+      pauseOnMouseEnter: true, // Pausa o autoplay quando o mouse estiver sobre o carrossel
+    },
+
+    // Paginação
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true, // Permite clicar nos bullets da paginação para navegar
+    },
+
+    // Botões de Navegação
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    // Breakpoints para responsividade (ajuste conforme necessário)
+    breakpoints: {
+      // Para telas muito pequenas, podemos voltar a 1 slide visível ou ajustar o coverflow
+      320: {
+        slidesPerView: 1.2, // Mostra um pouco do próximo slide
+        spaceBetween: 15,
+        coverflowEffect: {
+          // Ajustes específicos do coverflow para telas pequenas
+          rotate: 50,
+          depth: 100,
+          modifier: 1,
+        },
+      },
+      // Quando a largura da janela é >= 768px (ajustado de 640px para um breakpoint mais comum)
+      640: {
+        slidesPerView: 2.5, // Ajuste para o efeito coverflow
+        spaceBetween: 30,
+      },
+      // Quando a largura da janela é >= 1024px
+      1024: {
+        slidesPerView: 3, // Mostrar 3 slides em telas maiores para coverflow
+        spaceBetween: 30,
+      },
+      // Quando a largura da janela é >= 1200px
+      1200: {
+        slidesPerView: 3.5, // Permite ver partes dos slides adjacentes de forma mais clara
+        spaceBetween: 35,
+      },
+    },
+
+    // Opcional: Se estiver usando animações AOS nos slides e elas não dispararem corretamente
+    // após a transição de slides, você pode precisar atualizar o AOS.
+    on: {
+      slideChangeTransitionEnd: function () {
+        if (typeof AOS !== "undefined") {
+          AOS.refresh(); // Atualiza as animações AOS
+        }
+      },
+      // Se o modal não estiver abrindo após a inicialização do Swiper,
+      // pode ser necessário re-atribuir os event listeners dos botões do modal
+      // após a inicialização do Swiper ou em cada mudança de slide.
+      // No entanto, como os listeners são delegados ou aplicados a elementos que
+      // já existem, isso geralmente não é necessário se o HTML do modal estiver correto.
+    },
+  });
+  console.log("Portfolio Swiper inicializado.");
+} else {
+  console.warn(
+    "Container do Portfolio Swiper (.portfolio-swiper) não encontrado."
+  );
+}
+// ==========================================================================
 
 // Máscara de telefone para o formulário de contato
 function mascaraTelefone(input) {
