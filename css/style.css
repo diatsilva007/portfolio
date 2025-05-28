@@ -142,6 +142,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1000; /* Garante que o header fique acima do menu responsivo */
+  transform: translateZ(0); /* Ajuda a resolver problemas de empilhamento com elementos transformados */
 }
 
 .logo {
@@ -192,30 +193,121 @@ span {
   /* z-index: -1; /* Fica atrás dos outros elementos */
 }
 /* /Efeito partículas */
-
 .home,
 .about {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Mantido, mas será column em telas menores */
   justify-content: space-evenly;
   align-items: center;
+  gap: 2rem; /* Adiciona um espaço entre o conteúdo e a imagem */
 }
 
-.home-img {
+.home-img,
+.about-img {
+  position: relative; /* Para potenciais pseudo-elementos ou overlays */
+  padding: 0.75rem; /* Espaço entre a borda externa e a imagem */
+  border-radius: 1.25rem; /* Cantos arredondados para o contêiner */
+  background-color: var(--bg-color-02); /* Fundo para a área de padding, destaca a moldura */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
+              0 0 0 2px transparent; /* Sombra e borda de transição (para o hover) */
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), /* Transição mais elástica e um pouco mais longa */
+              box-shadow 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* As definições de borda específicas (direita/esquerda/inferior) vêm depois */
+  /* Garante que o container da imagem não encolha demais */
+  flex-shrink: 0;
+  overflow: hidden; /* Essencial para o efeito de brilho na imagem e parallax de fundo */
+}
+
+.home-img { /* Mantém a borda original, mas agora aplicada a um contêiner com padding */
   border-right: solid 0.6rem var(--main-color);
   border-bottom: solid 0.6rem var(--main-color);
   border-image: linear-gradient(135deg, transparent 50%, var(--main-color)) 1;
 }
 
-.about-img {
+.about-img { /* Mantém a borda original */
   border-left: solid 0.6rem var(--main-color);
   border-bottom: solid 0.6rem var(--main-color);
   border-image: linear-gradient(225deg, transparent 50%, var(--main-color)) 1;
 }
 
+/* Camada de fundo parallax sutil para o contêiner da imagem */
+.home-img::before,
+.about-img::before {
+  content: '';
+  position: absolute;
+  top: -10%; left: -10%; /* Começa um pouco fora para permitir movimento */
+  width: 120%;
+  height: 120%;
+  background-image: linear-gradient(45deg, color-mix(in srgb, var(--main-color) 5%, transparent) 0%, color-mix(in srgb, var(--bg-color-01) 80%, black) 100%);
+  opacity: 0.3; /* Sutil */
+  z-index: 0; /* Atrás da imagem */
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease-out;
+  border-radius: inherit; /* Herda o border-radius do pai */
+}
+
+.home-img:hover::before,
+.about-img:hover::before {
+  transform: translateX(5px) translateY(5px) scale(1.05); /* Movimento sutil e oposto ao hover principal */
+  opacity: 0.45;
+}
+
 .home-img img,
 .about-img img {
-  width: 100%;
+  display: block; /* Remove espaço extra abaixo da imagem */
+  position: relative; /* Para o efeito de brilho e para ficar acima do ::before do pai */
+  z-index: 1;
+  width: 100%; /* Faz a imagem preencher o contêiner (considerando o padding do pai) */
+  height: auto; /* Mantém a proporção da imagem. */
+  /* Se você quiser que as imagens tenham uma altura consistente e preencham o espaço verticalmente,
+     você precisaria definir uma altura para .home-img/.about-img ou usar align-items: stretch
+     no flex pai (.home, .about) e então usar:
+     height: 100%; object-fit: cover;
+     Por agora, height: auto é mais seguro para manter a proporção original da imagem. */
+  border-radius: 0.85rem; /* Cantos arredondados para a imagem */
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.5s ease-in-out;
+  /* box-shadow: 0 4px 15px rgba(0,0,0,0.1); Sombra sutil na própria imagem - substituído por filter */
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.18)); /* Sombra projetada sutil para dar profundidade inicial */
+  overflow: hidden; /* Necessário para o efeito de brilho na imagem */
+}
+
+/* Efeito de brilho (glint/shine) na imagem */
+.home-img img::after, /* Usando ::after para a imagem, pois o contêiner já usa ::before */
+.about-img img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%; /* Começa totalmente à esquerda, fora da imagem */
+  width: 70%; /* Largura do brilho */
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%, /* Intensidade do brilho */
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg); /* Inclina o brilho */
+  transition: left 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 2; /* Acima da imagem, mas abaixo de outros conteúdos do .portfolio-layer se houver */
+}
+
+.home-img:hover,
+.about-img:hover {
+  transform: translateY(-12px) scale(1.05) rotate(1.8deg); /* Interação um pouco mais pronunciada */
+  box-shadow: 0 25px 55px color-mix(in srgb, var(--main-color) 22%, transparent), /* Sombra principal mais difusa */
+              0 0 0 4px var(--main-color), /* Contorno de destaque */
+              0 0 20px color-mix(in srgb, var(--main-color) 35%, transparent) inset; /* Brilho interno mais forte */
+}
+
+.home-img:hover img::after,
+.about-img:hover img::after {
+  left: 120%; /* Move o brilho para a direita, varrendo a imagem */
+  transition-delay: 0.1s; /* Pequeno delay para o brilho começar após o hover */
+}
+
+.home-img:hover img,
+.about-img:hover img {
+  transform: scale(1.04) rotate(-0.8deg); /* Interação da imagem um pouco mais pronunciada */
+  filter: brightness(1.1) drop-shadow(0 5px 12px rgba(0,0,0,0.28)); /* Brilho e sombra mais intensos */
 }
 
 .about {
@@ -2293,4 +2385,26 @@ body.scrolled .whatsapp-float {
 
 .nav-responsive-flags .language-switcher img {
     width: 26px; height: 19px; /* Imagem menor para botões menores no mobile */
+}
+
+/* Animação de flutuação aprimorada para imagens */
+@keyframes enhancedFloatAnimation {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.15)); /* Sombra quando a imagem está "mais baixa" */
+  }
+  50% {
+    transform: translateY(-20px) scale(1.03); /* Move mais para cima e aumenta levemente o tamanho */
+    filter: drop-shadow(0 22px 10px rgba(0, 0, 0, 0.2)); /* Sombra mais pronunciada e afastada quando "mais alta" */
+  }
+}
+
+.floating-image {
+  /* Aplica a animação aprimorada */
+  animation: enhancedFloatAnimation 3.5s ease-in-out infinite;
+  /* Estado inicial da sombra para evitar 'pulos' visuais no carregamento */
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.15));
+  /* Garante que a imagem fique sobre outros elementos se necessário durante a animação */
+  position: relative;
+  z-index: 1;
 }
