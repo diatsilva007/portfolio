@@ -36,7 +36,9 @@
     <!--Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--Font Awesome (Atualizado para versão estável mais recente)-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Removido duplicado -->
     <!--Estilo css-->
     <link rel="stylesheet" href="/css/style.css"> <!-- Padronizado para caminho relativo à raiz -->
@@ -107,8 +109,8 @@
             <div class="nav-responsive-flags">
                 <img src="https://flagcdn.com/32x24/br.png" width="30" height="22" alt="Português"
                     onclick="setLanguage('pt')" class="flag-spacing">
-                <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English" onclick="setLanguage('en')"
-                    class="flag-spacing">
+                <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English"
+                    onclick="setLanguage('en')" class="flag-spacing">
             </div>
         </div>
 
@@ -146,19 +148,24 @@
             </p>-->
 
             <div class="social-media">
-                <a href="https://www.github.com/diatsilva007" target="_blank" rel="noopener noreferrer" class="social-icon-link github" aria-label="GitHub">
+                <a href="https://www.github.com/diatsilva007" target="_blank" rel="noopener noreferrer"
+                    class="social-icon-link github" aria-label="GitHub">
                     <i class='bx bxl-github'></i>
                 </a>
-                <a href="https://www.facebook.com/diogoatsilva" target="_blank" rel="noopener noreferrer" class="social-icon-link facebook" aria-label="Facebook">
+                <a href="https://www.facebook.com/diogoatsilva" target="_blank" rel="noopener noreferrer"
+                    class="social-icon-link facebook" aria-label="Facebook">
                     <i class='bx bxl-facebook'></i>
                 </a>
-                <a href="https://www.instagram.com/diogoatsilva/" target="_blank" rel="noopener noreferrer" class="social-icon-link instagram" aria-label="Instagram">
+                <a href="https://www.instagram.com/diogoatsilva/" target="_blank" rel="noopener noreferrer"
+                    class="social-icon-link instagram" aria-label="Instagram">
                     <i class='bx bxl-instagram'></i>
                 </a>
-                <a href="https://www.linkedin.com/in/diatsilva" target="_blank" rel="noopener noreferrer" class="social-icon-link linkedin" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/diatsilva" target="_blank" rel="noopener noreferrer"
+                    class="social-icon-link linkedin" aria-label="LinkedIn">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="https://x.com/diatsilva" target="_blank" rel="noopener noreferrer" class="social-icon-link xtwitter" aria-label="X">
+                <a href="https://x.com/diatsilva" target="_blank" rel="noopener noreferrer"
+                    class="social-icon-link xtwitter" aria-label="X">
                     <i class='fab fa-x-twitter'></i> <!-- Alterado para Font Awesome X icon -->
                 </a>
             </div>
@@ -396,11 +403,12 @@
         <!-- modify this form HTML and place wherever you want your form -->
         <form id="contactForm" action="https://formspree.io/f/mzzzqwpb" method="POST"
             data-redirect="https://portfolio-diogoataide.vercel.app/" onsubmit="setTimeout(() => this.reset(), 1000);">
-            
+
             <!-- Campo Nome -->
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" id="name" name="name" placeholder="Full name" required data-translate="form-placeholder-name">
+                    <input type="text" id="name" name="name" placeholder="Full name" required
+                        data-translate="form-placeholder-name">
                     <span class="validation-icon"></span>
                 </div>
                 <span class="form-message error-message" id="nameErrorMessage"></span>
@@ -408,7 +416,8 @@
             <!-- Campo Email -->
             <div class="input-group">
                 <div class="input-box">
-                    <input type="email" id="email" name="email" placeholder="youremail@example.com" required data-translate="form-placeholder-email">
+                    <input type="email" id="email" name="email" placeholder="youremail@example.com" required
+                        data-translate="form-placeholder-email">
                     <span class="validation-icon"></span>
                 </div>
                 <span class="form-message error-message" id="emailErrorMessage"></span>
@@ -416,7 +425,10 @@
             <!-- Campo Telefone -->
             <div class="input-group">
                 <div class="input-box">
-                    <input type="tel" id="phone" name="phone" oninput="mascaraTelefone(this)" placeholder="Phone: (XX) XXXXX-XXXX" pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}" data-translate="form-placeholder-phone" required>
+                    <input type="tel" id="phone" name="phone" oninput="mascaraTelefone(this)"
+                        placeholder="Phone: (XX) XXXXX-XXXX"
+                        pattern="\+?(55|1|[1-9]{1,3})[-. (]*\d{1,4}[-. )]*\d{3,4}[-. ]?\d{4}"
+                        data-translate="form-placeholder-phone" required>
                     <span class="validation-icon"></span>
                 </div>
                 <span class="form-message error-message" id="phoneErrorMessage"></span>
@@ -424,7 +436,8 @@
             <!-- Campo Assunto -->
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" id="subject" name="subject" placeholder="Message subject" required data-translate="form-placeholder-subject">
+                    <input type="text" id="subject" name="subject" placeholder="Message subject" required
+                        data-translate="form-placeholder-subject">
                     <span class="validation-icon"></span>
                 </div>
                 <span class="form-message error-message" id="subjectErrorMessage"></span>
@@ -432,7 +445,8 @@
             <!-- Campo Mensagem -->
             <div class="input-group">
                 <div class="input-box">
-                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required data-translate="form-placeholder-message"></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required
+                        data-translate="form-placeholder-message"></textarea>
                     <span class="validation-icon"></span>
                 </div>
                 <span class="form-message error-message" id="messageErrorMessage"></span>
@@ -498,6 +512,12 @@
     </footer>
     <!-- /Footer section -->
 
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5535997714779" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Fale comigo pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 </body>
 
 <script>
@@ -508,4 +528,4 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="/js/script.js"></script> <!-- Padronizado para caminho relativo à raiz -->
 
-</html>
+</html> 
