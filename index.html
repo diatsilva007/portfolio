@@ -91,11 +91,15 @@
             <a href="#contact" data-translate="contact">Contact</a>
             <a href="#about" data-translate="about">About</a>
 
-            <img src="https://flagcdn.com/32x24/br.png" width="30" height="22" alt="Português"
-                onclick="setLanguage('pt')" class="flag-spacing">
-            <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English" onclick="setLanguage('en')"
-                class="flag-spacing">
-
+            <!-- Language Switchers -->
+            <div class="language-switcher-container">
+                <button type="button" class="language-switcher" data-lang="pt" aria-label="Mudar para Português" title="Português">
+                    <img src="https://flagcdn.com/32x24/br.png" width="30" height="22" alt="Bandeira do Brasil">
+                </button>
+                <button type="button" class="language-switcher" data-lang="en" aria-label="Switch to English" title="English">
+                    <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="USA Flag">
+                </button>
+            </div>
         </div>
 
         <div class="nav-responsive" data-aos="flip-down">
@@ -107,10 +111,13 @@
                 <a href="#about" data-translate="about">About</a>
             </div>
             <div class="nav-responsive-flags">
-                <img src="https://flagcdn.com/32x24/br.png" width="30" height="22" alt="Português"
-                    onclick="setLanguage('pt')" class="flag-spacing">
-                <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="English"
-                    onclick="setLanguage('en')" class="flag-spacing">
+                <!-- Language Switchers for responsive nav -->
+                <button type="button" class="language-switcher" data-lang="pt" aria-label="Mudar para Português" title="Português">
+                    <img src="https://flagcdn.com/32x24/br.png" width="30" height="22" alt="Bandeira do Brasil">
+                </button>
+                <button type="button" class="language-switcher" data-lang="en" aria-label="Switch to English" title="English">
+                    <img src="https://flagcdn.com/32x24/us.png" width="30" height="22" alt="USA Flag">
+                </button>
             </div>
         </div>
 
