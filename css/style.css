@@ -1281,14 +1281,15 @@ a {
   line-height: 1;
 }
 
-/* Estilização dos ícones das bandeiras */
+/* Estilização dos ícones das bandeiras - ESTA REGRA ANTIGA CAUSA SOBREPOSIÇÃO */
+/*
 .language-switcher {
   position: absolute;
   top: 10px;
   right: 10px;
   display: flex;
   gap: 10px;
-}
+}*/
 
 /* Extra small (sm): Smartphone (landscape) */
 @media (min-width: 576px) {
@@ -1341,7 +1342,8 @@ a {
   }
 
   .nav {
-    display: block;
+    display: flex; /* CORRIGIDO: Mantém flex para alinhar links e bandeiras */
+    align-items: center; /* Garante o alinhamento vertical dos itens no nav */
   }
 
   /* Esconde o painel do menu responsivo em telas maiores */
@@ -2132,4 +2134,163 @@ body.scrolled .whatsapp-float {
     /* O .back-to-top já está coberto pela regra de max-width: 767px para posicionamento.
        O tamanho será o base (40px width/height) pois min-width: 576px não será atingido. */
        
+}
+
+/* styles.css ou seu arquivo CSS principal */
+
+.nav .language-switcher-container {
+    margin-left: 1.5rem; /* Aumenta o espaço entre o último link e as bandeiras */
+}
+
+.language-switcher-container {
+    display: flex; /* Alinha os botões de idioma lado a lado */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+}
+
+.language-switcher {
+    background-color: transparent; /* Fundo transparente por padrão */
+    border: 2px solid transparent; /* Borda base, transparente */
+    padding: 4px; /* Espaço entre a borda e a imagem da bandeira */
+    margin: 0 7px; /* Espaçamento horizontal entre os botões de bandeira */
+    cursor: pointer;
+    border-radius: 50%; /* Torna o botão perfeitamente circular */
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição suave e elástica */
+    line-height: 0; /* Remove espaço extra se a imagem não preencher o botão */
+    display: inline-flex; /* Para melhor controle do conteúdo interno */
+    align-items: center;
+    justify-content: center;
+    width: 42px; /* Largura do círculo do botão */
+    height: 42px; /* Altura do círculo do botão */
+    overflow: hidden; /* Garante que a imagem não ultrapasse o círculo */
+    position: relative; /* Essencial para o posicionamento dos pseudo-elementos */
+}
+
+/* Pseudo-elemento para o efeito de preenchimento radial no hover */
+.language-switcher::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: color-mix(in srgb, var(--main-color) 25%, transparent); /* Cor do preenchimento */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 0; /* Atrás da imagem */
+}
+
+.language-switcher:hover::before,
+.language-switcher:focus-visible::before {
+    width: 120%; /* Um pouco maior que o botão para cobrir totalmente */
+    height: 120%;
+}
+
+.language-switcher img {
+    display: block; /* Garante que a imagem se comporte como bloco */
+    position: relative; /* Para garantir que a imagem fique acima do ::before */
+    z-index: 1;
+    width: 30px;  /* Largura da imagem da bandeira, menor que o botão */
+    height: 22px; /* Altura da imagem da bandeira */
+    border-radius: 4px; /* Arredondamento um pouco maior na própria imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço designado sem distorcer */
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.language-switcher:hover,
+.language-switcher:focus-visible { /* :focus-visible para melhor acessibilidade no foco por teclado */
+    border-color: var(--main-color); /* A borda ainda aparece sobre o ::before */
+    background-color: color-mix(in srgb, var(--main-color) 10%, transparent); /* Fundo sutil com a cor principal */
+    transform: scale(1.18) translateY(-3px); /* Efeito de "flutuar" e aumentar mais pronunciado */
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--main-color) 30%, transparent),
+                0 0 0 3px color-mix(in srgb, var(--main-color) 20%, transparent); /* Sombra e brilho externo */
+    outline: none;
+}
+
+.language-switcher:hover img,
+.language-switcher:focus-visible img {
+    transform: scale(1.05); /* Leve zoom na imagem da bandeira no hover do botão */
+}
+
+/* Estilo para o botão de idioma ativo */
+.language-switcher.active-lang {
+    border-color: var(--main-color);
+    border-width: 3px; /* Borda um pouco mais grossa para o ativo */
+    /* A sombra base será controlada pela animação */
+    transform: scale(1.1); /* Leve aumento para o botão ativo, menor que o hover */
+    opacity: 1; /* Garante opacidade total para o ativo */
+    filter: grayscale(0%); /* Remove qualquer filtro de grayscale */
+    animation: active-flag-pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes active-flag-pulse {
+    0% {
+        box-shadow: 0 0 12px color-mix(in srgb, var(--main-color) 40%, transparent),
+                    0 0 0 0px color-mix(in srgb, var(--main-color) 20%, transparent);
+    }
+    50% {
+        box-shadow: 0 0 20px color-mix(in srgb, var(--main-color) 65%, transparent),
+                    0 0 0 4px color-mix(in srgb, var(--main-color) 10%, transparent);
+    }
+    100% {
+        box-shadow: 0 0 12px color-mix(in srgb, var(--main-color) 40%, transparent),
+                    0 0 0 0px color-mix(in srgb, var(--main-color) 20%, transparent);
+    }
+}
+
+/* Brilho sutil na imagem da bandeira ativa */
+.language-switcher.active-lang img {
+    filter: drop-shadow(0 0 3px var(--main-color));
+}
+
+/* Tooltip customizada */
+.language-switcher::after {
+    content: attr(title); /* Pega o texto do atributo title do botão */
+    position: absolute;
+    bottom: 125%; /* Posiciona acima do botão */
+    left: 50%;
+    transform: translateX(-50%) translateY(5px); /* Começa um pouco para baixo */
+    background-color: var(--bg-color-02);
+    color: var(--text-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out, visibility 0s 0.25s;
+    z-index: 10; /* Acima de outros elementos */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.language-switcher:hover::after,
+.language-switcher:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px); /* Move para a posição final */
+    transition-delay: 0.1s, 0.1s, 0s; /* Pequeno delay para aparecer */
+}
+
+/* Opcional: Diminuir um pouco a opacidade das bandeiras inativas */
+.language-switcher:not(.active-lang) {
+    opacity: 0.6; /* Torna os inativos um pouco mais sutis */
+    filter: grayscale(40%); /* Adiciona um leve tom de cinza aos inativos */
+}
+
+.language-switcher:not(.active-lang):hover {
+    opacity: 1; /* Opacidade total no hover, mesmo se inativo */
+    filter: grayscale(0%); /* Remove o filtro de cinza no hover */
+}
+
+/* Para o menu responsivo, se precisar de ajustes específicos */
+.nav-responsive-flags .language-switcher {
+    /* Os estilos globais de .language-switcher já se aplicam.
+       Ajuste o tamanho ou margens aqui se necessário para o mobile. */
+    width: 38px; height: 38px; /* Exemplo de tamanho um pouco menor para mobile */
+    /* margin: 0 5px; */ /* Espaçamento ligeiramente menor no mobile */
+}
+
+.nav-responsive-flags .language-switcher img {
+    width: 26px; height: 19px; /* Imagem menor para botões menores no mobile */
 }
