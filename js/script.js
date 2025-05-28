@@ -87,7 +87,12 @@ function setLanguage(language) {
       document.querySelectorAll("[data-translate]").forEach((element) => {
         const key = element.getAttribute("data-translate");
         if (translations[key] !== undefined) {
-          element.textContent = translations[key];
+          // Se for o elemento do rodapé, usar innerHTML para renderizar entidades HTML como &copy;
+          if (element.id === "footer" && key === "footer") {
+            element.innerHTML = translations[key];
+          } else {
+            element.textContent = translations[key];
+          }
         } else {
           console.warn(
             `Translation key "${key}" not found for language "${language}".`
