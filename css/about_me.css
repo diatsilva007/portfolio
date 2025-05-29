@@ -1,140 +1,36 @@
-/* Configurações de cores */
-:root {
-  --main-color: #00eeff;
-  --text-color: #ffffff;
-  --bg-color-01: #1f242d;
-  --bg-color-02: #323946;
-  --color-00: #0000001a;
-
-  /* Extra colors */
-  --color-01: #999999;
-  --color-02: #009539;
-  --color-03: #7950f2;
-  --color-04: #c00000;
-  --color-05: #232323;
-}
-
-/* Reset de estilos básicos */
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-}
+/*
+  about_me.css - Estilos específicos para a página "Sobre Mim".
+  Estilos globais (variáveis, resets, header, footer, etc.)
+  devem estar em /css/style.css e são carregados antes deste arquivo.
+*/
 
 /* Definições para a página */
 body {
-  background-color: var(--bg-color-02);
-  color: var(--text-color);
-  line-height: 1.6;
-  height: 2000px; /* Apenas para ter uma página com rolagem */
+  background-color: var(--bg-color-02); /* Fundo específico para esta página, se diferente do global. */
+  /* color e line-height são herdados do style.css global */
+  /* height: 2000px; foi removido pois era para teste de rolagem */
 }
 
-h3 {
-  padding-top: 1em;
-}
+/*
+  Os estilos para :root, *, html, header, .logo, .nav, .nav-responsive, .flag-spacing,
+  .menu-hamburguer, .bar1, .bar2, .bar3, .change .bar*, e .footer
+  foram removidos daqui porque devem ser gerenciados pelo /css/style.css global.
+  Certifique-se de que /css/style.css contém todos esses estilos de forma completa
+  e que about_me.html o carrega ANTES de about_me.css.
 
-h3,
-span {
-  color: var(--main-color);
-  padding: 1.3em;
-  text-align: justify;
-}
+  O estilo base de 'body' (color, line-height) também é herdado do style.css.
+  Apenas o 'background-color' foi mantido aqui caso esta página precise de um fundo diferente.
+  Se o fundo for o mesmo do restante do site, a regra 'background-color' do body
+  também pode ser removida daqui.
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.1rem;
-  background-color: var(--bg-color-01);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.logo {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  font-weight: 600;
-  cursor: default;
-}
-
-.nav-responsive {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--bg-color-01);
-  width: 100%;
-  /*height: 100vh;*/
-  padding: 1rem;
-  /*z-index: 100; */
-}
-
-.nav a,
-.nav-responsive a {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  transition: 0.4s;
-}
-
-.nav a:hover,
-.nav-responsive a:hover {
-  //background-color: var(--main-color);
-  //color: var(--bg-color-01);
-  color: var(--main-color);
-}
-
-/* Bandeiras dos idiomas da página */
-.flag-spacing {
-  cursor: pointer;
-  margin-left: 1px;
-  margin-right: 1px;
-}
-
-/* Botão menu hamburguer */
-.menu-hamburguer {
-  display: none;
-  cursor: pointer;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 2rem;
-  height: 0.3rem;
-  background-color: var(--text-color);
-  margin: 0.4rem 0;
-  transition: 0.3s ease;
-}
-
-.change .bar1 {
-  transform: translate(0, 0.65rem) rotate(-45deg);
-}
-
-.change .bar2 {
-  opacity: 0;
-}
-
-.change .bar3 {
-  transform: translate(0, -0.65rem) rotate(45deg);
-}
+  A regra genérica "h3, span" foi removida. Estilos para h3 e span dentro desta
+  seção são tratados abaixo de forma mais específica ou herdados do global style.css.
+*/
 
 /* Seção Principal */
 .main-section {
   padding: 50px 20px;
-  background-color: var(--bg-color-01);
+  background-color: var(--bg-color-01); /* Fundo da seção, diferente do body desta página */
   text-align: center;
 }
 
@@ -145,10 +41,20 @@ header {
   padding-bottom: 30px;
 }
 
-.main-section h2 {
+/* Estilo específico para o h2 (com id="title") dentro da .main-section .content */
+.main-section .content h2#title {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: var(--main-color);
+}
+
+/* Estilo específico para os h3 dentro da .main-section .content */
+.main-section .content h3 {
+  padding-top: 1em;
+  color: var(--main-color);
+  padding-left: 1.3em; /* Ajustado para padding lateral */
+  padding-right: 1.3em;
+  text-align: justify;
 }
 
 .main-section .intro {
@@ -158,6 +64,8 @@ header {
   color: var(--text-color);
 }
 
+/* Os estilos para .main-section .btn e .btn:hover foram removidos.
+   O botão com class="btn" herdará os estilos globais de .btn de style.css. */
 .main-section .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -192,7 +100,8 @@ header {
   font-size: 1.25rem;
 }
 
-li {
+/* Estilo específico para os li dentro da .main-section .content */
+.main-section .content li {
   padding: 0.5rem;
 }
 
@@ -202,113 +111,23 @@ li {
   }
 }
 
-/* Rodapé - Animação de Deslizar para Cima (Slide In) 
-.footer {
-    background-color: var(--bg-color-01);
-    color: var(--main-color);
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: -100px; /* Inicialmente fora da tela 
-    left: 0;
-    width: 100%;
-    transition: bottom 0.5s ease-in-out;
-}*/
-
-/* Quando o footer for visível, ele vem para o lugar correto
-body.scrolled .footer {
-    bottom: 0;
-}*/
-
-/* Rodapé Animação de Fade In no Footer */
-.footer {
-  background-color: var(--bg-color-01);
-  color: var(--main-color);
-  text-align: center;
-  padding: 20px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0; /* Começa invisível */
-  transition: opacity 1s ease-in-out; /* Efeito de transição */
-}
-
-/* Quando o footer aparecer, ele terá opacidade 1 */
-body.scrolled .footer {
-  opacity: 1;
-}
-
-/* Animação de "Bouncing" (Pular) no Footer
-.footer {
-    background-color: var(--bg-color-01);   
-    color: var(--main-color);
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: -100px; /* Inicialmente fora da tela 
-    left: 0;
-    width: 100%;
-    animation: bounce 1s ease-out forwards; /* Aplica a animação 
-}
-
-/* Animação de "bounce" 
-@keyframes bounce {
-    0% {
-        bottom: -100px;
-    }
-    50% {
-        bottom: 10px;
-    }
-    70% {
-        bottom: -5px;
-    }
-    100% {
-        bottom: 0;
-    }
-}*/
-
-/*
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1.2rem;
-  background-color: var(--bg-color-01);
-  color: var(--main-color);
-}*/
-
 /* Media queries */
-
 /* Extra small (xs): Smartphone (portrait) */
 @media (min-width: 0px) {
-  .menu-hamburguer {
-    display: block;
-  }
+  /*
+    Os estilos de .menu-hamburguer, .nav, .nav-responsive a, .container .brand, e .footer
+    foram removidos daqui. Eles devem ser gerenciados globalmente em /css/style.css
+    e suas media queries correspondentes.
+  */
 
-  .nav {
-    display: none;
-  }
-
-  .nav-responsive a {
-    display: block;
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-
-  .container .brand {
-    font-size: 1.2rem;
-    white-space: nowrap;
-  }
-
+  /* Ajustes de fonte específicos para .main-section .content nesta página */
   .main-section .intro,
-  p {
+  .main-section .content p { /* Escopo para parágrafos dentro de .main-section .content */
     font-size: 1rem;
   }
 
-  .hidden-content,
-  li {
+  .main-section .content .hidden-content, /* Escopo para .hidden-content */
+  .main-section .content li { /* Escopo para li */
     font-size: 1rem;
   }
 
@@ -317,94 +136,71 @@ footer {
     padding-top: 1rem;
   }
 
-  #title-h3 {
+  .main-section .content h3#title-h3 { /* Escopo para #title-h3. Lembre-se que IDs devem ser únicos. */
     font-size: 1.2rem;
     white-space: nowrap;
-  }
-
-  .footer {
-    font-size: 0.5rem;
   }
 }
 
 /* Extra small (sm): Smartphone (landscape) */
 @media (min-width: 576px) {
-  .container .brand {
+  /* .container .brand removido */
+  /* .container .brand {
     font-size: 1.5rem;
     white-space: nowrap;
-  }
-
+  } */
   .main-section .intro,
-  p {
+  .main-section .content p {
     font-size: 1.2rem;
   }
 
-  .hidden-content,
-  li {
+  .main-section .content .hidden-content,
+  .main-section .content li {
     font-size: 1.2rem;
   }
 
-  #title {
+  .main-section .content h2#title {
     font-size: 2rem;
   }
 
   #title-h3 {
     font-size: 1.5rem;
     white-space: nowrap;
-  }
-
-  .footer {
-    font-size: 0.8rem;
   }
 }
 
 /* Medium (md): Tablet */
 @media (min-width: 768px) {
-  .menu-hamburguer {
-    display: none;
-  }
-
-  .nav {
-    display: block;
-  }
-
-  .nav-responsive,
-  .nav-responsive a {
-    display: none;
-  }
-
-  .container .brand {
+  /* .menu-hamburguer, .nav, .nav-responsive removidos */
+  /* .container .brand removido */
+  /* .container .brand {
     font-size: 1.8rem;
     white-space: nowrap;
-  }
-
+  } */
   .main-section .intro,
-  p {
+  .main-section .content p {
     font-size: 1.4rem;
   }
 
-  .hidden-content,
-  li {
+  .main-section .content .hidden-content,
+  .main-section .content li {
     font-size: 1.4rem;
   }
 
-  #title {
+  .main-section .content h2#title {
     font-size: 2.5rem;
   }
 
-  #title-h3 {
+  .main-section .content h3#title-h3 {
     font-size: 1.8rem;
     white-space: nowrap;
-  }
-
-  .footer {
-    font-size: 1rem;
   }
 }
 
 /* Large (lg): Notebook */
 @media (min-width: 992px) {
-  .container .brand {
+  /* .container .brand removido */
+  /* .container .brand {
     font-size: 2rem;
     white-space: nowrap;
   }
@@ -412,55 +208,45 @@ footer {
   .main-section .intro,
   p {
     font-size: 1.6rem;
-  }
-
-  .hidden-content,
-  li {
+  } */
+  .main-section .content .hidden-content,
+  .main-section .content li {
     font-size: 1.6rem;
   }
 
-  #title {
+  .main-section .content h2#title {
     font-size: 3rem;
   }
 
-  #title-h3 {
+  .main-section .content h3#title-h3 {
     font-size: 2rem;
     white-space: nowrap;
-  }
-
-  .footer {
-    font-size: 1.2rem;
   }
 }
 
 /* Extra large (xl): Desktop */
 @media (min-width: 1200px) {
-  .container .brand {
+  /* .container .brand removido */
+  /* .container .brand {
     font-size: 2.2rem;
     white-space: nowrap;
   }
-
   .main-section .intro,
   p {
     font-size: 1.8rem;
-  }
-
-  .hidden-content,
-  li {
+  } */
+  .main-section .content .hidden-content,
+  .main-section .content li {
     font-size: 1.8rem;
   }
 
-  #title {
+  .main-section .content h2#title {
     font-size: 3.2rem;
   }
 
-  #title-h3 {
+  .main-section .content h3#title-h3 {
     font-size: 2.2rem;
     white-space: nowrap;
-  }
-
-  .footer {
-    font-size: 1.4rem;
   }
 }
 /* /Media queries */
