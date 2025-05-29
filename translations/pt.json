@@ -140,5 +140,10 @@
   "about-me-my-work-process-list-items4": "Colaboração em testes automatizados.",
   "about-me-my-work-process-list-items5": "Leitura e compreensão de código legado.",
   "about-me-my-work-process-list-items6": "Realização de implementações em ambientes de desenvolvimento ou de preparação.",
-  "about-me-why-choose-me-paragraph": "O engenheiro de software desempenha uma função essencial em quase todas as empresas ou organizações que desenvolvem ou utiliza software. Seu trabalho abrange desde o projeto e a criação de soluções tecnológicas até a manutenção de sistemas complexos e garantir que o software seja seguro, eficiente e atenda às necessidades dos usuários. Eles combinam habilidades técnicas avançadas com habilidades de resolução de problemas e colaboração em equipe."
+  "about-me-why-choose-me-paragraph": "O engenheiro de software desempenha uma função essencial em quase todas as empresas ou organizações que desenvolvem ou utiliza software. Seu trabalho abrange desde o projeto e a criação de soluções tecnológicas até a manutenção de sistemas complexos e garantir que o software seja seguro, eficiente e atenda às necessidades dos usuários. Eles combinam habilidades técnicas avançadas com habilidades de resolução de problemas e colaboração em equipe.",
+  "form-placeholder-name": "Nome completo",
+  "form-placeholder-email": "seuemail@exemplo.com",
+  "form-placeholder-phone": "Telefone: (XX) XXXXX-XXXX",
+  "form-placeholder-subject": "Assunto da mensagem",
+  "form-placeholder-message": "Sua mensagem..."
 }
