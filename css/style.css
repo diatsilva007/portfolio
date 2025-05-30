@@ -2020,43 +2020,49 @@ a {
 /* ==========================================================================
    Botão Flutuante do WhatsApp
    ========================================================================== */
+/*   
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    /* Posicionamento para desktop (>=768px), será sobrescrito para mobile */
-    bottom: 90px; /* Desktop: Acima do rodapé (altura aprox. 70px) + Espaçamento (20px) */
-    right: 30px;  /* Desktop: Alinhamento à direita */
-    background-color: #25D366; /* Cor oficial do WhatsApp */
+    /* Posicionamento para desktop (>=768px), será sobrescrito para mobile 
+    bottom: 90px; /* Desktop: Acima do rodapé (altura aprox. 70px) + Espaçamento (20px) 
+    right: 30px;  /* Desktop: Alinhamento à direita 
+    background-color: #25D366; /* Cor oficial do WhatsApp 
     color: #FFF;
     border-radius: 50%;
     text-align: center;
-    font-size: 30px; /* Tamanho do ícone */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0.7); /* Sombra e início da animação de pulso */
-    z-index: 1000; /* Garante que fique acima da maioria dos elementos */
+    font-size: 30px; /* Tamanho do ícone 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0.7); /* Sombra e início da animação de pulso 
+    z-index: 1000; /* Garante que fique acima da maioria dos elementos 
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;    
-    opacity: 0; /* Começa invisível */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease, opacity 1s ease-in-out; /* Adicionada transição de opacidade */
+    opacity: 0; /* Começa invisível 
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease, opacity 1s ease-in-out; /* Adicionada transição de opacidade
     animation: whatsapp-pulse 2s infinite;
 }
+*/
 
+/*
 .whatsapp-float:hover,
 .whatsapp-float:focus-visible {
     transform: scale(1.1) translateY(-3px);
-    background-color: #1DAE54; /* Um tom de verde ligeiramente mais escuro no hover */
+    background-color: #1DAE54; /* Um tom de verde ligeiramente mais escuro no hover 
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    animation-play-state: paused; /* Pausa a animação de pulso no hover para não distrair */
+    animation-play-state: paused; /* Pausa a animação de pulso no hover para não distrair 
     outline: none;
 }
+*/
 
+/*
 .whatsapp-float i {
-    line-height: 1; /* Ajuda a centralizar o ícone */
+    line-height: 1; /* Ajuda a centralizar o ícone 
 }
+*/
 
-/* Animação de pulso para o botão do WhatsApp */
+/* Animação de pulso para o botão do WhatsApp 
 @keyframes whatsapp-pulse {
     0% {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0.7);
@@ -2068,14 +2074,15 @@ a {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0);
     }
 }
+*/
 
-/* Tooltip para o botão do WhatsApp */
+/* Tooltip para o botão do WhatsApp 
 .whatsapp-float::after {
     content: attr(aria-label);
     position: absolute;
-    bottom: 50%; /* Centraliza verticalmente com o botão */
-    right: 120%; /* Posiciona à esquerda do botão */
-    transform: translateY(50%) translateX(10px); /* Ajusta para não sobrepor e começa um pouco à direita */
+    bottom: 50%; /* Centraliza verticalmente com o botão 
+    right: 120%; /* Posiciona à esquerda do botão 
+    transform: translateY(50%) translateX(10px); /* Ajusta para não sobrepor e começa um pouco à direita 
     background-color: var(--bg-color-02);
     color: var(--text-color);
     padding: 8px 15px;
@@ -2086,23 +2093,27 @@ a {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
-    z-index: 1001; /* Acima do próprio botão para a tooltip */
+    z-index: 1001; /* Acima do próprio botão para a tooltip 
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     pointer-events: none;
 }
+*/
 
+/*
 .whatsapp-float:hover::after,
 .whatsapp-float:focus-visible::after {
     opacity: 1;
     visibility: visible;
-    transform: translateY(50%) translateX(0); /* Move para a posição final */
+    transform: translateY(50%) translateX(0); /* Move para a posição final 
     transition-delay: 0.1s, 0.1s, 0s;
 }
+*/
 
-/* Quando o corpo tiver a classe 'scrolled', o botão do WhatsApp se torna visível */
+/* Quando o corpo tiver a classe 'scrolled', o botão do WhatsApp se torna visível 
 body.scrolled .whatsapp-float {
     opacity: 1;
 }
+*/
 
 /* Botão Voltar ao Topo */
 .back-to-top {
