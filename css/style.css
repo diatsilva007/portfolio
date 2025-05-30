@@ -2119,7 +2119,7 @@ body.scrolled .whatsapp-float {
 .back-to-top {
   position: fixed;
   /* Posicionamento para desktop (>=768px), será sobrescrito para mobile */
-  bottom: 165px; /* Acima do WhatsApp: WhatsApp_bottom (90px) + WhatsApp_height (60px) + Espaçamento (15px) */
+  bottom: 100px; /* Acima do WhatsApp: WhatsApp_bottom (90px) + WhatsApp_height (60px) + Espaçamento (15px) */
   right: 30px;   /* Alinhado com o WhatsApp no desktop */
   color: var(--bg-color-02);
   background-color: var(--main-color);
@@ -2227,7 +2227,7 @@ body.scrolled .whatsapp-float {
     }
 
     .back-to-top {
-        bottom: 140px; /* Mobile: Acima do WhatsApp (WhatsApp_bottom (75px) + WhatsApp_height (55px) + Espaçamento (10px)) */
+        bottom: 100px; /* Mobile: Acima do WhatsApp (WhatsApp_bottom (75px) + WhatsApp_height (55px) + Espaçamento (10px)) */
         right: 20px;   /* Mobile: Alinhado com o WhatsApp */
         /* O tamanho do .back-to-top para esta resolução será o base (40px) ou o de 576px (45px) dependendo da largura exata da tela */
     }
