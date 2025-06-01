@@ -531,8 +531,14 @@
 
 </body>
 
+<!-- Script para controlar os efeitos de fade in da página -->
 <script>
     AOS.init({
+        duration: 800, // Duração da animação em milissegundos (aumentar para mais suavidade)
+        easing: 'ease-in-out', // Função de temporização para uma transição suave
+        once: false, // Define se a animação deve ocorrer apenas uma vez (false para reanimar ao rolar)
+        mirror: true, // Define se os elementos devem animar ao rolar para cima também
+        anchorPlacement: 'top-bottom', // Define o ponto de gatilho da animação
     });
 </script>
 
