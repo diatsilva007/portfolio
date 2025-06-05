@@ -704,6 +704,35 @@ h1 {
   line-height: 1.5;
   text-align: justify; /* Justifica o texto do parágrafo */
   max-width: 95%; /* Garante que o parágrafo não ocupe toda a largura, melhorando a leitura */
+
+  /* Ajustes para evitar que o texto ultrapasse a div */
+  /* Limita a altura e adiciona barra de rolagem se necessário */
+  /* Ajuste o max-height com base no seu layout para que o conteúdo se encaixe */
+  max-height: 120px; /* Valor de exemplo, ajuste conforme necessário */
+  overflow-y: auto;
+
+  /* Adiciona um espaçamento abaixo do parágrafo */
+  margin-bottom: 10px;
+
+  /* Garante que o texto ocupe a largura disponível */
+  width: 100%;
+
+  /* Garante que o texto quebre linhas */
+  white-space: normal;
+  word-wrap: break-word; /* Ou overflow-wrap: break-word; */
+}
+
+/* Opcional: Estiliza a barra de rolagem para melhor aparência */
+.portfolio-layer p::-webkit-scrollbar {
+    width: 6px;
+}
+
+.portfolio-layer p::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Fundo claro */
+    border-radius: 10px;
+}
+
+/* Regras de quebra de palavra já estavam aqui, mantidas */
   word-break: break-word; /* Permite quebrar palavras longas */
   overflow-wrap: break-word; /* Alternativa/complemento para word-break */
 }
@@ -721,6 +750,15 @@ h1 {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease,
     box-shadow 0.3s ease;
+}
+
+.portfolio-layer p::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Thumb branco semi-transparente */
+    border-radius: 10px;
+}
+
+.portfolio-layer p::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8); /* Mais opaco ao passar o mouse */
 }
 
 .portfolio-layer a:hover {
