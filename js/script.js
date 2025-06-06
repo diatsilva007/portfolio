@@ -99,7 +99,8 @@ function setLanguage(language) {
           }
           // Tratar elementos que podem conter HTML (como o rodapé com &copy;)
           else if (element.id === "footer" && key === "footer") {
-            element.innerHTML = translations[key];
+            const currentYear = new Date().getFullYear(); // Obtém o ano atual
+            element.innerHTML = translationValue.replace('{YEAR}', currentYear); // Substitui {YEAR} pelo ano atual
           }
           // Tratar outros elementos com textContent
           else {
