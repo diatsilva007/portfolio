@@ -368,6 +368,26 @@ if (document.querySelector(".portfolio-swiper")) {
       }
     });
   });
+
+  // --- MELHORIA ADICIONAL: Reiniciar autoplay ao clicar fora do Swiper ---
+  // Este listener é adicionado ao documento para capturar cliques.
+  // Ele só é relevante e funcional se o portfolioSwiper foi inicializado.
+  document.addEventListener('click', function(event) {
+    // Verifica se:
+    // 1. A instância do portfolioSwiper existe e seu elemento DOM (portfolioSwiper.el) também.
+    // 2. O clique NÃO ocorreu dentro do elemento do Swiper (ou seja, o clique foi fora).
+    // 3. O autoplay do Swiper existe.
+    // 4. O autoplay não está rodando atualmente.
+    // 5. A configuração `disableOnInteraction` está ativa (o que significa que o autoplay foi parado por uma interação).
+    if (portfolioSwiper && portfolioSwiper.el && !portfolioSwiper.el.contains(event.target) &&
+        portfolioSwiper.autoplay &&
+        !portfolioSwiper.autoplay.running &&
+        portfolioSwiper.params.autoplay.disableOnInteraction) {
+      
+      // Se todas as condições acima forem verdadeiras, reinicia o autoplay.
+      portfolioSwiper.autoplay.start();
+    }
+  });
 } else {
   console.warn(
     "Container do Portfolio Swiper (.portfolio-swiper) não encontrado."
