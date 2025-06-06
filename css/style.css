@@ -163,8 +163,8 @@ header {
 
 .nav a:hover,
 .nav-responsive a:hover {
-  //background-color: var(--main-color);
-  //color: var(--bg-color-01);
+      /* background-color: var(--main-color); */
+      /* color: var(--bg-color-01); */
   color: var(--main-color);
 }
 
@@ -175,7 +175,7 @@ header {
 }
 
 section {
-  min-heigh: 100vh;
+  min-height: 100vh;
   padding: 6rem 6% 2rem; /* Usando padding lateral percentual */
 }
 
@@ -435,117 +435,6 @@ h1 {
   }
 }
 
-/* Efeito glitch 
-.glitch {
-  position: relative;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background: #000;
-  overflow: hidden;
-  clip-path: inset(0 0 50% 0);
-}
-
-.glitch::before {
-  color: var(--text-color);
-  z-index: -1;
-  animation: glitch-top 2s infinite;
-}
-
-.glitch::after {
-  color: var(--text-color);
-  z-index: -2;
-  animation: glitch-bottom 2s infinite;
-}*/
-
-/* Animações 
-@keyframes glitch-top {
-  0% {
-      transform: translate(0, 0);
-  }
-  20% {
-      transform: translate(-5px, -5px);
-  }
-  40% {
-      transform: translate(5px, 5px);
-  }
-  60% {
-      transform: translate(-5px, 5px);
-  }
-  80% {
-      transform: translate(5px, -5px);
-  }
-  100% {
-      transform: translate(0, 0);
-  }
-}
-
-@keyframes glitch-bottom {
-  0% {
-      transform: translate(0, 0);
-  }
-  20% {
-      transform: translate(5px, 5px);
-  }
-  40% {
-      transform: translate(-5px, -5px);
-  }
-  60% {
-      transform: translate(5px, -5px);
-  }
-  80% {
-      transform: translate(-5px, 5px);
-  }
-  100% {
-      transform: translate(0, 0);
-  }
-}*/
-
-/* Texto com Gradiente Animado (Colorido) */
-/*h1 {
-  font-size: 80px;
-  text-transform: uppercase;
-  background-image: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffe5, #2b65ff, #fff, #8000ff);
-  background-size: 300%;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: gradient-animation 6s infinite linear;
-}
-
-@keyframes gradient-animation {
-  0% {
-      background-position: 0% 50%;
-  }
-  100% {
-      background-position: 100% 50%;
-  }
-}*/
-
-/* Efeito Neon (Texto Brilhante) 
-.about-content, h1 {
-  font-size: 80px;
-  color: #fff;
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
-  animation: neon-glow 1.5s infinite alternate;
-}
-
-@keyframes neon-glow {
-  from {
-      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
-  }
-  to {
-      text-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 160px #0ff;
-  }
-}*/
-
 /* Estilos unificados para títulos de seção */
 .services h2,
 .portfolio h2,
@@ -699,7 +588,7 @@ h1 {
   margin-bottom: 0.5rem;
   word-break: break-word; /* Permite quebrar palavras longas */
   overflow-wrap: break-word; /* Alternativa/complemento para word-break */
-  color: var(--white-color); /* Garante contraste */
+          color: var(--text-color);
 }
 
 .portfolio-layer p {
@@ -707,7 +596,7 @@ h1 {
   margin-bottom: 1rem;
   line-height: 1.5;
   text-align: justify; /* Justifica o texto do parágrafo */
-  color: var(--white-color); /* Garante contraste */
+          color: var(--text-color);
   max-width: 95%; /* Garante que o parágrafo não ocupe toda a largura, melhorando a leitura */
 
   /* Ajustes para evitar que o texto ultrapasse a div */
@@ -742,28 +631,6 @@ h1 {
 /* Regras de quebra de palavra já estavam aqui, mantidas */
 /*  word-break: break-word;  Removido - já definido acima */
 /*  overflow-wrap: break-word; Removido - já definido acima */
-/* .portfolio-layer a {  Estilo antigo, substituído por .btn-project abaixo
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 1.5rem;
-  background-color: var(--main-color);
-  color: var(--bg-color-02); /* Cor de texto clara para contraste */
-  border-radius: 0.8rem;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease,
-    box-shadow 0.3s ease;
-} */
-
-/* .portfolio-layer a:hover { Estilo antigo
-  background-color: transparent;
-  color: var(--main-color);
-  transform: scale(1.05);
-  box-shadow: 0 0 10px var(--main-color);
-}
-
 /* Estilos para as Tags de Tecnologia */
 .project-tags {
   display: flex;
@@ -843,46 +710,26 @@ h1 {
   outline: 2px solid var(--main-color);
   outline-offset: 3px;
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--bg-color-01) 70%, transparent),
-    0 4px 12px color-mix(in srgb, var(--main-color) 40%, transparent); /* Consistent glow with hover */
-}
+    0 4px 12px color-mix(in srgb, var(--main-color) 40%, transparent); /* Consistent glow with hover 
+}*/
 
 .portfolio-layer .btn-project:focus-visible { Estilo antigo
   font-size: 1.8rem;
   margin-right: 0.5rem;
   transition: transform 0.3s ease; /* Add transition for the icon */
-} */
-
-/* .btn-project:hover i { Estilo antigo
-  transform: scale(1.1) translateX(2px); /* Slight animation for the icon */
-} */
-
-/* Estilos antigos para o link de ícone único (comentados caso não sejam mais usados) */
-/* .portfolio-layer a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  background: var(--text-color);
-  border-radius: 50%;
-} */
-
-/* .portfolio-layer a i {
-  font-size: 1.2rem;
-  color: var(--bg-color-02);
-} */
+}
 
 /* Form */
 
 /* Estilos para o formulário de contato na seção .contact */
 .contact form {
-  max-width: 50rem;
+  max-width: 45rem; /* Aumentado para uma sensação mais espaçosa, aprox. 720px */
   margin: 1.5rem auto;
   text-align: left;
-  padding: 1.2rem;
+  padding: 2.5rem 3rem; /* Padding interno mais generoso */
   background-color: var(--bg-color-02);
-  border-radius: 0.8rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 1.2rem; /* Bordas mais suaves */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 1px 5px rgba(0,0,0,0.08); /* Sombra mais suave e difundida */
 }
 
 .contact form .input-group {
@@ -898,27 +745,28 @@ h1 {
 .contact form .input-box input,
 .contact form .input-box textarea {
   width: 100%;
-  padding: 0.7rem 1rem;
-  font-size: 0.9rem;
+  padding: 1rem 1.3rem; /* Padding interno dos campos mais confortável */
+  font-size: 1rem; /* Tamanho da fonte padrão e legível */
   color: var(--text-color);
-  background-color: var(--bg-color-01);
-  border-radius: 0.4rem;
+  background-color: var(--bg-color-01); /* Fundo escuro para os campos */
+  border-radius: 0.6rem; /* Bordas dos campos mais suaves */
   border: 2px solid transparent;
   transition: border-color 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
+  resize: none; /* Impede que o textarea seja redimensionado pelo usuário */
 }
 
 .contact form .input-box input:focus,
 .contact form .input-box textarea:focus {
   outline: none;
-  border-color: var(--main-color);
+  border-color: var(--main-color); /* Borda ciano no foco */
   background-color: color-mix(in srgb, var(--bg-color-01) 90%, black);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--main-color) 25%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--main-color) 25%, transparent); /* Sombra externa no foco mais pronunciada */
 }
 
 .contact form .input-box input::placeholder,
 .contact form .input-box textarea::placeholder {
-  color: color-mix(in srgb, var(--text-color) 60%, transparent);
+  color: color-mix(in srgb, var(--text-color) 50%, transparent); /* Placeholder ainda mais sutil */
   opacity: 1;
 }
 
@@ -926,7 +774,7 @@ h1 {
 .contact form .form-message {
   display: block;
   font-size: 0.75rem;
-  padding-left: 0.2rem;
+  padding-left: 0.2rem; 
   font-weight: 500;
   opacity: 0;
   max-height: 0;
@@ -936,7 +784,7 @@ h1 {
 }
 
 .contact form .form-message.error-message {
-  color: var(--color-04);
+  color: var(--color-04); /* Vermelho para mensagens de erro */
 }
 
 .contact form .form-message.visible {
@@ -950,7 +798,7 @@ h1 {
 .contact form .input-box input.error-field,
 .contact form .input-box textarea.error-field {
   border-color: var(--color-04);
-  background-color: color-mix(in srgb, var(--color-04) 5%, var(--bg-color-01));
+  background-color: color-mix(in srgb, var(--color-04) 10%, var(--bg-color-01)); /* Fundo levemente avermelhado mais perceptível */
 }
 
 .contact form .input-box input.error-field:focus,
@@ -961,12 +809,12 @@ h1 {
 /* Estilos para campos válidos (opcional, classe adicionada por JS) */
 .contact form .input-box input.valid-field,
 .contact form .input-box textarea.valid-field {
-  border-color: var(--color-02);
+  border-color: var(--color-02); /* Verde para campos válidos */
 }
 
 .contact form .input-box input.valid-field:focus,
 .contact form .input-box textarea.valid-field:focus {
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-02) 25%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-02) 25%, transparent); /* Sombra externa verde no foco mais pronunciada */
 }
 
 /* Ocultar o campo honeypot via CSS */
@@ -980,7 +828,7 @@ h1 {
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1rem;
+  font-size: 1.1rem; /* Ícone de validação um pouco maior */
   display: none;
   pointer-events: none;
 }
@@ -1021,17 +869,18 @@ h1 {
 /* Botão de submissão do formulário */
 .contact form .btn[type="submit"] {
   width: 100%;
-  padding: 0.7rem 1rem;
-  font-size: 0.95rem;
+  padding: 1rem 2rem; /* Padding do botão significativamente aumentado para destaque */
+  font-size: 1.1rem; /* Tamanho da fonte do botão aumentado */
   font-weight: 700;
-  margin-top: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  margin-top: 1.5rem; /* Mais espaço acima do botão */
+  /* text-transform: uppercase; */ /* Removido uppercase para um visual mais suave, opcional */
+  letter-spacing: 0.08em; /* Espaçamento entre letras sutilmente aumentado */
+  border-radius: 0.6rem; /* Para consistência com os inputs */
 }
 
 .contact form .btn[type="submit"]:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--main-color) 30%, transparent);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--main-color) 35%, transparent); /* Sombra no hover mais pronunciada */
 }
 
 /* Estado de carregamento para o botão (controlado por JS) */
@@ -1079,7 +928,7 @@ h1 {
   border-radius: 0.5rem;
   text-align: center;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.95rem; /* Tamanho da fonte da mensagem de status ligeiramente aumentado */
   border-width: 2px;
   border-style: solid;
   display: none; /* Escondido por padrão, JS controla a visibilidade */
@@ -1538,8 +1387,9 @@ a {
     font-size: 24px; /* Tamanho padrão original */
   }
 
-  form .input-box input {
-    width: 49%;
+  /* Garante que os inputs ocupem 100% da largura do formulário, mesmo em telas maiores */
+  .contact form .input-box input {
+    width: 100%;
   }
 }
 
@@ -1826,34 +1676,6 @@ a {
   }
 }
 
-/* ==========================================================================
-   Menu hamburguer Responsivo Styles (Bloco Antigo - Considerar Remover se a nova versão estiver em uso)
-   ========================================================================== */
-/* Estilos para o contêiner principal do menu responsivo quando ativo */
-/* Certifique-se de que seu .nav-responsive (ou a classe que o torna visível)
-   tenha display: flex e flex-direction: column. */
-/* 
-   NOTA: Esta seção parece ser uma versão mais antiga do menu responsivo.
-   Se a versão mais recente (com .nav-responsive-inner-content, etc.) estiver ativa e funcionando,
-   este bloco inteiro (linhas ~1318 a ~1380) pode ser REMOVIDO para evitar conflitos e código morto.
-
-   Exemplo de como .nav-responsive (da nova versão) pode estar configurado quando visível:
-   .nav-responsive.active {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0; // ou a altura do seu header
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #333; // Cor de fundo do seu menu
-    padding-top: 70px; // Espaço para o header, ajuste conforme necessário
-    padding-bottom: 20px;
-    align-items: center; // Centraliza os blocos de itens e bandeiras no geral
-    z-index: 1000; // Para garantir que fique sobre outros conteúdos
-   }
-*/
-
 /* Contêiner para os links de navegação DENTRO do .nav-responsive ativo */
 .nav-responsive-items {
   display: flex;
@@ -2071,100 +1893,6 @@ a {
 /* ==========================================================================
    Botão Flutuante do WhatsApp
    ========================================================================== */
-/*   
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    /* Posicionamento para desktop (>=768px), será sobrescrito para mobile 
-    bottom: 90px; /* Desktop: Acima do rodapé (altura aprox. 70px) + Espaçamento (20px) 
-    right: 30px;  /* Desktop: Alinhamento à direita 
-    background-color: #25D366; /* Cor oficial do WhatsApp 
-    color: #FFF;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px; /* Tamanho do ícone 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0.7); /* Sombra e início da animação de pulso 
-    z-index: 1000; /* Garante que fique acima da maioria dos elementos 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;    
-    opacity: 0; /* Começa invisível 
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease, opacity 1s ease-in-out; /* Adicionada transição de opacidade
-    animation: whatsapp-pulse 2s infinite;
-}
-*/
-
-/*
-.whatsapp-float:hover,
-.whatsapp-float:focus-visible {
-    transform: scale(1.1) translateY(-3px);
-    background-color: #1DAE54; /* Um tom de verde ligeiramente mais escuro no hover 
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    animation-play-state: paused; /* Pausa a animação de pulso no hover para não distrair 
-    outline: none;
-}
-*/
-
-/*
-.whatsapp-float i {
-    line-height: 1; /* Ajuda a centralizar o ícone 
-}
-*/
-
-/* Animação de pulso para o botão do WhatsApp 
-@keyframes whatsapp-pulse {
-    0% {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
-*/
-
-/* Tooltip para o botão do WhatsApp 
-.whatsapp-float::after {
-    content: attr(aria-label);
-    position: absolute;
-    bottom: 50%; /* Centraliza verticalmente com o botão 
-    right: 120%; /* Posiciona à esquerda do botão 
-    transform: translateY(50%) translateX(10px); /* Ajusta para não sobrepor e começa um pouco à direita 
-    background-color: var(--bg-color-02);
-    color: var(--text-color);
-    padding: 8px 15px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s 0.3s;
-    z-index: 1001; /* Acima do próprio botão para a tooltip 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    pointer-events: none;
-}
-*/
-
-/*
-.whatsapp-float:hover::after,
-.whatsapp-float:focus-visible::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(50%) translateX(0); /* Move para a posição final 
-    transition-delay: 0.1s, 0.1s, 0s;
-}
-*/
-
-/* Quando o corpo tiver a classe 'scrolled', o botão do WhatsApp se torna visível 
-body.scrolled .whatsapp-float {
-    opacity: 1;
-}
-*/
 
 /* Botão Voltar ao Topo */
 .back-to-top {

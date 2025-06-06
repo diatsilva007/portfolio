@@ -100,7 +100,7 @@ function setLanguage(language) {
           // Tratar elementos que podem conter HTML (como o rodapé com &copy;)
           else if (element.id === "footer" && key === "footer") {
             const currentYear = new Date().getFullYear(); // Obtém o ano atual
-            element.innerHTML = translationValue.replace('{YEAR}', currentYear); // Substitui {YEAR} pelo ano atual
+            element.innerHTML = translationValue.replace("{YEAR}", currentYear); // Substitui {YEAR} pelo ano atual
           }
           // Tratar outros elementos com textContent
           else {
@@ -356,14 +356,21 @@ if (document.querySelector(".portfolio-swiper")) {
 
   // --- MELHORIA DE USABILIDADE PARA MOBILE: Pausar autoplay ao clicar no slide ---
   // Adicionado após a inicialização do portfolioSwiper
-  const portfolioSlides = document.querySelectorAll('.portfolio-swiper .swiper-slide');
-  portfolioSlides.forEach(slide => {
-    slide.addEventListener('click', function() {
+  const portfolioSlides = document.querySelectorAll(
+    ".portfolio-swiper .swiper-slide"
+  );
+  portfolioSlides.forEach((slide) => {
+    slide.addEventListener("click", function () {
       // Verifica se é uma visualização móvel (ex: largura da tela menor que 640px,
       // que é o breakpoint onde o layout do swiper começa a mudar no seu código)
       // Ajuste o valor 640 conforme os breakpoints do seu Swiper/CSS, se necessário.
-      if (window.innerWidth < 640) { // Usando 640px baseado nos seus breakpoints do Swiper
-        if (portfolioSwiper && portfolioSwiper.autoplay && portfolioSwiper.autoplay.running) {
+      if (window.innerWidth < 640) {
+        // Usando 640px baseado nos seus breakpoints do Swiper
+        if (
+          portfolioSwiper &&
+          portfolioSwiper.autoplay &&
+          portfolioSwiper.autoplay.running
+        ) {
           portfolioSwiper.autoplay.stop();
         }
       }
@@ -373,18 +380,21 @@ if (document.querySelector(".portfolio-swiper")) {
   // --- MELHORIA ADICIONAL: Reiniciar autoplay ao clicar fora do Swiper ---
   // Este listener é adicionado ao documento para capturar cliques.
   // Ele só é relevante e funcional se o portfolioSwiper foi inicializado.
-  document.addEventListener('click', function(event) {
+  document.addEventListener("click", function (event) {
     // Verifica se:
     // 1. A instância do portfolioSwiper existe e seu elemento DOM (portfolioSwiper.el) também.
     // 2. O clique NÃO ocorreu dentro do elemento do Swiper (ou seja, o clique foi fora).
     // 3. O autoplay do Swiper existe.
     // 4. O autoplay não está rodando atualmente.
     // 5. A configuração `disableOnInteraction` está ativa (o que significa que o autoplay foi parado por uma interação).
-    if (portfolioSwiper && portfolioSwiper.el && !portfolioSwiper.el.contains(event.target) &&
-        portfolioSwiper.autoplay &&
-        !portfolioSwiper.autoplay.running &&
-        portfolioSwiper.params.autoplay.disableOnInteraction) {
-      
+    if (
+      portfolioSwiper &&
+      portfolioSwiper.el &&
+      !portfolioSwiper.el.contains(event.target) &&
+      portfolioSwiper.autoplay &&
+      !portfolioSwiper.autoplay.running &&
+      portfolioSwiper.params.autoplay.disableOnInteraction
+    ) {
       // Se todas as condições acima forem verdadeiras, reinicia o autoplay.
       portfolioSwiper.autoplay.start();
     }
