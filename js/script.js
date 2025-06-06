@@ -290,7 +290,7 @@ if (document.querySelector(".portfolio-swiper")) {
 
     autoplay: {
       delay: 2000, // Tempo em milissegundos entre as transições
-      disableOnInteraction: false, // O autoplay não será desabilitado após interações do usuário (como swipe manual)
+      disableOnInteraction: true, // O autoplay SERÁ desabilitado após interações do usuário (swipe, botões, etc.)
       pauseOnMouseEnter: true, // Pausa o autoplay quando o mouse estiver sobre o carrossel
     },
 
@@ -352,6 +352,22 @@ if (document.querySelector(".portfolio-swiper")) {
     },
   });
   console.log("Portfolio Swiper inicializado.");
+
+  // --- MELHORIA DE USABILIDADE PARA MOBILE: Pausar autoplay ao clicar no slide ---
+  // Adicionado após a inicialização do portfolioSwiper
+  const portfolioSlides = document.querySelectorAll('.portfolio-swiper .swiper-slide');
+  portfolioSlides.forEach(slide => {
+    slide.addEventListener('click', function() {
+      // Verifica se é uma visualização móvel (ex: largura da tela menor que 640px,
+      // que é o breakpoint onde o layout do swiper começa a mudar no seu código)
+      // Ajuste o valor 640 conforme os breakpoints do seu Swiper/CSS, se necessário.
+      if (window.innerWidth < 640) { // Usando 640px baseado nos seus breakpoints do Swiper
+        if (portfolioSwiper && portfolioSwiper.autoplay && portfolioSwiper.autoplay.running) {
+          portfolioSwiper.autoplay.stop();
+        }
+      }
+    });
+  });
 } else {
   console.warn(
     "Container do Portfolio Swiper (.portfolio-swiper) não encontrado."
