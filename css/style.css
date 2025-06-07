@@ -130,6 +130,7 @@ body {
   color: var(--text-color);
   line-height: 1.6; /* Bom para legibilidade */
   margin: 0;
+  overflow-x: hidden; /* Adicionado para evitar barras de rolagem horizontais indesejadas */
 }
 
 header {
@@ -2246,6 +2247,7 @@ a {
     padding-bottom: 50px; /* Reduzido, pois não há mais setas ocupando espaço vertical */
     transform-style: preserve-3d; /* Necessário para transformações 3D no contêiner do Swiper */
     transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição suave para o reset do parallax */
+    overflow: hidden; /* Adicionado para conter os slides e evitar overflow que causa barras de rolagem */
 }
 
 .testimonial-swiper .swiper-slide {
