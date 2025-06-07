@@ -122,7 +122,8 @@ button {
 
 html {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 16px; /* Base font size */
+  overflow-x: hidden; /* Prevenir scroll horizontal no nível do HTML */
 }
 
 body {
@@ -954,13 +955,14 @@ h1 {
 /* Rodapé Animação de Fade In no Footer */
 .footer {
   background-color: var(--bg-color-02);
-  color: var(--main-color);
+  color: var(--text-color); /* Mantido text-color, ajuste se preferir --main-color */
   text-align: center;
-  padding: 20px 30px; /* Padding base para telas maiores (horizontal ajustado) */
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 15px 10px; /* Padding interno base para o conteúdo do footer */
+  box-sizing: border-box; /* Garante que o padding não aumente as dimensões totais */
   opacity: 0; /* Começa invisível, aparece com o scroll */
   transition: opacity 1s ease-in-out; /* Efeito de transição */
   z-index: 998;
@@ -1014,12 +1016,14 @@ body.scrolled .footer {
   display: flex; /* Para centralizar o ícone */
   align-items: center;
   justify-content: center;
+  bottom: 20px; /* Posição base, será ajustada para ficar acima do Tawk.to se necessário */
+  right: 20px;  /* Posição base */
   cursor: pointer;
-  z-index: 999; /* Acima do footer (998), mas abaixo de modais/header (1000+) */
+  z-index: 1000; /* Acima do footer e tawk.to, mas abaixo do menu hamburguer (1001) */
   opacity: 0;
   visibility: hidden;
   transform: translateY(30px); /* Começa um pouco abaixo para efeito de subida */
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease, background-color 0.3s ease;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
@@ -1181,12 +1185,17 @@ a {
     flex-direction: column;
     gap: 1.2rem;
   }
+  body { /* Ajuste para telas XS */
+    /* Footer height ~50px + Tawk.to height ~60px + space ~10px = ~120px */
+    padding-bottom: 120px;
+  }
 
   .btn-cv {
     display: column; /* Deveria ser flex ou grid, mas mantendo para consistência com o original se for intencional */
     align-items: center;
     justify-content: center;
     gap: 5px;
+    /* pointer-events: auto; */ /* Removido daqui, já está no .btn-cv global */
   }
 
   .home-img,
@@ -1194,7 +1203,6 @@ a {
     width: 80%;
     max-width: 80%;
   }
-
   .home-content,
   .about-content {
     width: 100%;
@@ -1221,15 +1229,14 @@ a {
   }
 
   .footer {
-    padding: 15px 10px; /* Padding ajustado para XS */
+    padding: 10px 10px; /* Padding interno do footer */
   }
   .footer p {
     font-size: 0.8rem;
   }
-
   .back-to-top {
-    /* Altura do footer (XS) ~71px (considerando 2 linhas de texto com <br>). 71px + 15px (espaço) = 86px */
-    bottom: 86px;
+    /* Se Tawk.to estiver no canto inferior direito (~60-70px de altura) */
+    bottom: 85px; /* (Altura Tawk.to + 15px de espaço) */
     right: 15px;
     width: 40px;
     height: 40px;
@@ -1285,6 +1292,10 @@ a {
     max-width: 65%;
   }
 
+  body { /* Ajuste para telas SM */
+    /* Footer height ~55px + Tawk.to height ~60px + space ~10px = ~125px */
+    padding-bottom: 125px;
+  }
   h1 {
     font-size: 2rem;
   }
@@ -1309,15 +1320,13 @@ a {
   }
 
   .footer {
-    padding: 18px 15px; /* Padding ajustado para SM */
+    padding: 12px 15px; /* Padding interno do footer */
   }
   .footer p {
     font-size: 0.9rem;
   }
-
   .back-to-top {
-    /* Altura do footer (SM) ~82px. 82px + 15px (espaço) = 97px */
-    bottom: 97px;
+    bottom: 90px; /* (Altura Tawk.to + 20px de espaço) */
     right: 20px;
     width: 45px;
     height: 45px;
@@ -1340,6 +1349,10 @@ a {
     display: none;
   }
 
+  body { /* Ajuste para telas MD */
+    /* Footer height ~60px + Tawk.to height ~60px + space ~15px = ~135px */
+    padding-bottom: 135px;
+  }
   h1 {
     font-size: 2.4rem;
   }
@@ -1386,15 +1399,14 @@ a {
   }
 
   .footer {
-    padding: 20px 20px; /* Padding ajustado para MD */
+    padding: 15px 20px; /* Padding interno do footer */
   }
   .footer p {
     font-size: 1rem;
   }
-
   .back-to-top {
-    /* Altura do footer (MD) ~91px. 91px + 15px (espaço) = 106px */
-    bottom: 106px;
+    bottom: 90px; /* (Altura Tawk.to + 20px de espaço) */
+    right: 20px;
     width: 50px;
     height: 50px;
     font-size: 24px;
@@ -1421,6 +1433,10 @@ a {
     gap: 10px;
   }
 
+  body { /* Ajuste para telas LG */
+    /* Footer height ~65px + Tawk.to height ~60px + space ~15px = ~140px */
+    padding-bottom: 140px;
+  }
   h1 {
     font-size: 2.8rem;
   }
@@ -1434,15 +1450,15 @@ a {
   }
 
   .footer {
-    padding: 20px 25px; /* Padding ajustado para LG */
+    padding: 18px 25px; /* Padding interno do footer */
   }
   .footer p {
     font-size: 1.1rem;
   }
-
   .back-to-top {
-    /* Altura do footer (LG) ~96px. 96px + 15px (espaço) = 111px */
-    bottom: 111px;
+    /* (Altura Tawk.to + 25px de espaço) */
+    bottom: 95px;
+    right: 25px;
   }
 }
 
@@ -1453,6 +1469,10 @@ a {
     max-width: 25%;
   }
 
+  body { /* Ajuste para telas XL */
+    /* Footer height ~70px + Tawk.to height ~60px + space ~20px = ~150px */
+    padding-bottom: 150px;
+  }
   .home-content h1 {
     font-size: 2.7rem;
   }
@@ -1486,15 +1506,15 @@ a {
   }
 
   .footer {
-    padding: 20px 30px; /* Padding ajustado para XL (igual ao base) */
+    padding: 20px 30px; /* Padding interno do footer */
   }
   .footer p {
     font-size: 1.2rem;
   }
-
   .back-to-top {
-    /* Altura do footer (XL) ~101px. 101px + 15px (espaço) = 116px */
-    bottom: 116px;
+    /* (Altura Tawk.to + 25px de espaço) */
+    bottom: 95px;
+    right: 30px;
   }
 }
 /* /Media queries */
