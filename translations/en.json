@@ -47,7 +47,7 @@
   "send": "Send",
   "about-me": "About Me",
   "texto-paragrafo-contact-section": "Hello, I'm Diogo. A Software Enginner, with a passion for developing innovative solutions that solve complex problems and enhance user experience. I have solid knowledge in software development, with a focus on:",
-  "footer": "&copy; 2025 by &lt;/Diogo Ataide Silva&gt;. All rights reserved.",
+  "footer": "Made with <span class=\"heartbeat\">♥</span> by Diogo Ataide Silva • Turning ideas into code • © {YEAR}",
   "texto-paragrafo-web-development": "As a web developer, I offer complete and customized solutions to meet your online needs,from creating institutional websites to complex systems. Combining skills in design, programming and optimization, I always aim to deliver functional, responsive products with a great user experience. My services include:",
   "what-do-i-do": "What do I do?",
   "what-do-i-do-paragrafo1": "Website and Blog Development: Creation of modern, functional and easy-to-navigate websites, with a focus on responsive design and optimization for different devices.",

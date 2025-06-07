@@ -127,8 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Configuração Inicial de Idioma (será tratada pela nova lógica abaixo) ---
   // setLanguage("en"); // REMOVIDO - A nova lógica de idioma cuidará disso.
 
+  // Atualizar o ano no rodapé
+  const currentYearSpan = document.getElementById("currentYear"); // Corrigido para 'currentYear'
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+  }
   // ==========================================================================
-  // LÓGICA DE IDIOMA (Consolidada e Corrigida)
+  // LÓGICA DE IDIOMA
   // ==========================================================================
   const languageButtons = document.querySelectorAll(".language-switcher");
   let activeLanguage = localStorage.getItem("selectedLanguage") || "pt"; // Padrão 'pt'
@@ -686,6 +691,7 @@ document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está
             avatar: "https://placehold.co/100x100/00eeff/1f242d?text=MC" // Substitua pela URL real
         }
         // Para adicionar um novo depoimento, basta adicionar um novo objeto aqui.
+        // Localize as imagens: Certifique-se de que as imagens reais dos avatares estejam em alguma pasta dentro do seu projeto (por exemplo, uma pasta img/avatars/).
         // Exemplo:
         // {
         //     text: "Novo depoimento incrível sobre o trabalho.",
