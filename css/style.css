@@ -6,13 +6,13 @@
   --bg-color-02: #323946;
   --color-00: #0000001a;
 
-  /* Extra colors */
+  /* Extra colors 
   --color-01: #999999;
   --color-02: #009539;
   --color-03: #7950f2;
   --color-04: #c00000;
   --color-05: #232323; 
-}
+}*/
 
 /* Estilo do ícone olá (hero) */
 .wave {
@@ -55,6 +55,7 @@
 :root {
   /* Cores principais do tema */
   --main-color: #00eeff;
+  --main-color-rgb: 0, 238, 255; /* Adicionado para uso em rgba() */
   --text-color: #ffffff;
   --bg-color-01: #1f242d;
   --bg-color-02: #323946;
@@ -2197,4 +2198,266 @@ a {
   /* Garante que a imagem fique sobre outros elementos se necessário durante a animação */
   position: relative;
   z-index: 1;
+}
+
+/* Em /css/style.css */
+
+/* Testimonials Section - REFINADO */
+.testimonials {
+    padding: 80px 5% 100px; /* Aumentar padding vertical, manter responsivo lateral */
+    background-color: var(--bg-color-01); /* Fundo consistente com outras seções escuras */
+    text-align: center;
+    position: relative;
+    /* overflow: hidden;  Comentado ou removido para permitir que o efeito parallax não seja cortado */
+    perspective: 1500px; /* Adiciona perspectiva para o efeito parallax na seção inteira */
+}
+
+.testimonials h2 {
+    margin-bottom: 4.5rem; /* Mais espaço abaixo do título */
+    font-size: 2.6rem; /* Ajuste fino no tamanho do título */
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.testimonials h2 span {
+    color: var(--main-color);
+}
+
+/* Linha decorativa abaixo do título da seção de depoimentos (se não estiver global) */
+.testimonials h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -15px; /* Ajustar posição da linha */
+    transform: translateX(-50%);
+    width: 120px; /* Linha um pouco maior */
+    height: 5px;  /* Linha mais espessa */
+    background-color: var(--main-color);
+    border-radius: 3px;
+}
+
+
+.testimonial-swiper {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px; /* Reduzido, pois não há mais setas ocupando espaço vertical */
+    transform-style: preserve-3d; /* Necessário para transformações 3D no contêiner do Swiper */
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição suave para o reset do parallax */
+}
+
+.testimonial-swiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: auto; 
+    box-sizing: border-box;
+    perspective: 1200px; /* Adiciona perspectiva para o efeito 3D no card */
+    padding: 10px 0; /* Adiciona um pouco de padding vertical para o efeito 3D não cortar */
+}
+
+.testimonial-box {
+    transform-style: preserve-3d; /* Necessário para transformações 3D */
+    background: #2c333f; /* Um pouco mais claro que o bg-color-02 para leve destaque */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    padding: 30px 35px; /* Mais padding interno */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), /* Sombra base mais suave */
+                0 0 0 1px rgba(255, 255, 255, 0.05); /* Borda interna sutil para definição */
+    text-align: left;
+    width: 100%;
+    max-width: 500px; /* Aumentar um pouco a largura máxima do card */
+    margin: 0 10px; /* Margem lateral entre os cards, ajuste se usar spaceBetween alto */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    min-height: 280px; /* Altura mínima para consistência, ajuste conforme o conteúdo */
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center; /* Alinha avatar e ícone de citação verticalmente */
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho do depoimento */
+}
+
+.testimonial-avatar {
+    width: 70px; /* Tamanho do avatar */
+    height: 70px;
+    border-radius: 50%; /* Avatar circular */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    margin-right: 20px; /* Espaço entre o avatar e o ícone de citação */
+    border: 3px solid var(--main-color); /* Borda com a cor principal */
+    box-shadow: 0 0 10px rgba(var(--main-color-rgb), 0.3);
+}
+
+/* Ajusta a margem do ícone de citação, já que o avatar está antes dele */
+.testimonial-header .testimonial-quote-icon {
+    margin-bottom: 0; /* Remove a margem inferior original, pois está no flex */
+}
+.testimonial-box:hover {
+    transform: translateY(-10px) scale(1.03) rotateY(8deg) rotateX(2deg); /* Efeito 3D no hover */
+    box-shadow: 0 12px 35px rgba(var(--main-color-rgb), 0.25), /* Sombra principal mais pronunciada com a cor do tema */
+                0 0 0 2px var(--main-color); /* Borda de destaque no hover */
+}
+
+.testimonial-quote-icon {
+    font-size: 2.5rem; /* Ícone de citação maior */
+    color: var(--main-color);
+    /* margin-bottom: 20px;  Movido para .testimonial-header */
+    opacity: 0.8;
+}
+
+.swiper-slide:not(.swiper-slide-active) .testimonial-box {
+    /* Opcional: Reduzir um pouco a opacidade dos cards não ativos se quiser mais foco no ativo */
+    /* opacity: 0.75; */
+}
+
+.testimonial-text {
+    font-size: 1.05rem; /* Ligeiramente maior para melhor leitura */
+    line-height: 1.75;
+    color: #e0e0e0; /* Cor do texto um pouco mais clara */
+    margin-bottom: 25px;
+    font-style: italic;
+    flex-grow: 1; /* Faz o texto ocupar o espaço disponível */
+}
+.testimonial-footer {
+    margin-top: auto; /* Empurra o rodapé (autor e cargo) para baixo */
+    padding-top: 15px; /* Espaço acima do nome do autor */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil acima do autor */
+}
+
+.testimonial-author {
+    font-size: 1.15rem;
+    font-weight: 700; /* Mais destaque para o autor */
+    color: #fff;
+    margin-bottom: 7px;
+    /* margin-top: auto; Movido para .testimonial-footer */
+}
+
+.testimonial-role {
+    font-size: 0.95rem;
+    color: #b0b0b0; /* Cor do cargo um pouco mais clara */
+    font-weight: 500;
+}
+
+/* Animação de entrada para os elementos do card quando o slide se torna ativo */
+.testimonial-box .testimonial-quote-icon,
+.testimonial-box .testimonial-text,
+.testimonial-box .testimonial-author,
+.testimonial-box .testimonial-header /* Animando o header como um bloco */ {
+    opacity: 0;
+    transform: translateY(25px); /* Começam um pouco abaixo */
+    transition-property: opacity, transform;
+    transition-duration: 0.55s; /* Duração da animação de entrada */
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1); /* Easing suave */
+}
+/* Animação para o cabeçalho (avatar + ícone) */
+.swiper-slide-active .testimonial-box .testimonial-header {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.25s; /* Delay para o ícone */
+}
+/* Os delays dos outros elementos podem precisar de ajuste se o header animar como um todo */
+.swiper-slide-active .testimonial-box .testimonial-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s; /* Delay para o texto */
+}
+.swiper-slide-active .testimonial-box .testimonial-author {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.55s; /* Delay para o autor */
+}
+.swiper-slide-active .testimonial-box .testimonial-role {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.65s; /* Delay para o cargo */
+}
+
+/* Ajuste para a animação de entrada do rodapé */
+.swiper-slide-active .testimonial-box .testimonial-footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.55s; /* Ajuste o delay conforme necessário, deve ser após o texto */
+}
+
+/* Esconder Setas de Navegação */
+.testimonial-swiper .swiper-button-next,
+.testimonial-swiper .swiper-button-prev {
+    display: none !important;
+}
+
+/* Estilização da Paginação (Bullets) do Swiper de Testemunhos */
+.testimonial-swiper .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.4); /* Cor base mais sutil */
+    opacity: 1; /* Opacidade total, a cor controla a visibilidade */
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important; /* Ajustar espaçamento */
+    transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease;
+    border-radius: 50%; /* Garante que sejam circulares */
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+    transform: scale(1.3);
+    width: 12px; /* Bullet ativo um pouco maior */
+}
+
+/* Hover para bullets da paginação (apenas em dispositivos com mouse) */
+@media (hover: hover) and (pointer: fine) {
+    .testimonial-swiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        transform: scale(1.1);
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 60px 5% 80px;
+    }
+    .testimonials h2 {
+        font-size: 2.2rem;
+        margin-bottom: 3.5rem;
+    }
+    .testimonials h2::after {
+        width: 100px;
+        height: 4px;
+        bottom: -10px;
+    }
+    .testimonial-box {
+        padding: 25px 20px;
+        max-width: 90%; /* Permite que o card ocupe mais espaço */
+        min-height: auto; /* Altura mínima automática em telas menores */
+    }
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    .testimonial-author {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+    .testimonial-author {
+        font-size: 1rem;
+    }
+    .testimonial-role {
+        font-size: 0.85rem;
+    }
+    .testimonial-swiper .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px !important;
+    }
+    .testimonial-swiper .swiper-pagination-bullet-active {
+        width: 10px;
+    }
 }

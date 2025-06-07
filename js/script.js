@@ -660,4 +660,199 @@ document.addEventListener("DOMContentLoaded", () => {
   // A função mascaraTelefone já está definida globalmente neste arquivo.
 });
 // Fim do código para o formulário de contato
+
+// ==========================================================================
+// Testimonials Swiper Initialization
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está carregado
+    const testimonials = [
+        {
+            text: "Trabalhar com o Diogo foi uma experiência fantástica. Suas habilidades técnicas e dedicação ao projeto foram excepcionais. Altamente recomendado!",
+            author: "Ana Silva",
+            role: "Gerente de Projetos, Soluções Tech",
+            avatar: "https://placehold.co/100x100/00eeff/1f242d?text=AS" // Substitua pela URL real
+            // Adicione a chave 'translateKeyText', 'translateKeyAuthor', 'translateKeyRole' se for traduzir dinamicamente
+        },
+        {
+            text: "A aplicação web que o Diogo desenvolveu para nós superou todas as expectativas. É intuitiva, rápida e melhorou significativamente nosso fluxo de trabalho.",
+            author: "Carlos Pereira",
+            role: "Diretor de Operações, Designs Criativos Co.",
+            avatar: "https://placehold.co/100x100/00eeff/1f242d?text=CP" // Substitua pela URL real
+        },
+        {
+            text: "Profissionalismo exemplar e um olhar atento aos detalhes. O Diogo entregou um produto de alta qualidade dentro do prazo.",
+            author: "Mariana Costa",
+            role: "CEO, Inovações Digitais",
+            avatar: "https://placehold.co/100x100/00eeff/1f242d?text=MC" // Substitua pela URL real
+        }
+        // Para adicionar um novo depoimento, basta adicionar um novo objeto aqui.
+        // Exemplo:
+        // {
+        //     text: "Novo depoimento incrível sobre o trabalho.",
+        //     author: "Cliente Satisfeito",
+        //     role: "Empreendedor",
+        //     avatar: "url_da_imagem_do_avatar.jpg"
+        // }
+    ];
+
+    const testimonialWrapper = document.getElementById('testimonial-wrapper');
+    if (testimonialWrapper) {
+        testimonials.forEach(testimonial => {
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+            // Você pode adicionar atributos data-translate aqui se os textos dos depoimentos também precisarem de tradução
+            slide.innerHTML = `
+                <div class="testimonial-box">
+                    <div class="testimonial-header">
+                        <img src="${testimonial.avatar}" alt="Avatar de ${testimonial.author}" class="testimonial-avatar">
+                        <i class="fas fa-quote-left testimonial-quote-icon"></i>
+                    </div>
+                    <p class="testimonial-text">"${testimonial.text}"</p>
+                    <div class="testimonial-footer">
+                        <h4 class="testimonial-author">${testimonial.author}</h4>
+                        <p class="testimonial-role">${testimonial.role}</p>
+                    </div>
+                </div>
+            `;
+            testimonialWrapper.appendChild(slide);
+        });
+
+        const testimonialSwiperInstance = new Swiper('.testimonial-swiper', { // Salva a instância
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            grabCursor: true,
+            speed: 1200, // Aumenta a velocidade da transição para mais suavidade (em ms)
+            autoplay: {
+                delay: 4000, // Diminui o tempo para uma rotação mais frequente
+                disableOnInteraction: false, // Continua o autoplay após interação manual
+                pauseOnMouseEnter: true,    // Pausa quando o mouse entra no contêiner do Swiper
+            },
+            pagination: {
+                el: '.testimonial-swiper-pagination', // Seletor único para paginação
+                clickable: true,
+            },
+            navigation: false, // Desabilita as setas de navegação
+            breakpoints: { // Responsividade
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 2.5, // Mostrar parte do próximo para incentivar a rolagem/descoberta
+                    spaceBetween: 40
+                }
+            }
+        });
+        console.log("Testimonial Swiper inicializado.");
+    } else {
+        console.warn("Container do Testimonial Swiper (#testimonial-wrapper) não encontrado.");
+    }
+});
+
+// ==========================================================================
+// Testimonials Parallax Mouse Effect
+// ==========================================================================
+// Este bloco também inicializa o data-attribute para o scroll parallax
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonialsSection = document.querySelector('.testimonials');
+    const testimonialSwiperContainer = testimonialsSection ? testimonialsSection.querySelector('.testimonial-swiper') : null;
+
+    if (testimonialsSection && testimonialSwiperContainer) {
+        const parallaxIntensityMouse = 8; // Quão forte o efeito parallax do MOUSE será.
+                                     // Valores menores = mais sutil.
+        // Inicializa o data-attribute que será usado pelo scroll parallax e lido aqui
+        testimonialSwiperContainer.dataset.scrollTranslateY = 0;
+
+        testimonialsSection.addEventListener('mousemove', (e) => {
+            const rect = testimonialsSection.getBoundingClientRect();
+            // Calcula a posição do mouse relativa ao centro da seção de depoimentos
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+ 
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+ 
+            // Normaliza a posição do mouse (de -1 a 1)
+            const deltaX = (x - centerX) / centerX;
+            const deltaY = (y - centerY) / centerY;
+ 
+            const rotateY = deltaX * parallaxIntensityMouse;
+            const rotateX = -deltaY * parallaxIntensityMouse;
+
+            // Lê o valor do translateY definido pelo parallax de scroll
+            const scrollTranslateY = parseFloat(testimonialSwiperContainer.dataset.scrollTranslateY || 0);
+
+            testimonialSwiperContainer.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(0.98) translateY(${scrollTranslateY}px)`;
+
+            // Armazena a última posição do mouse para o scroll parallax poder "simular" um mousemove
+            testimonialsSection.lastHoverClientX = e.clientX;
+            testimonialsSection.lastHoverClientY = e.clientY;
+        });
+ 
+        testimonialsSection.addEventListener('mouseleave', () => {
+            const scrollTranslateY = parseFloat(testimonialSwiperContainer.dataset.scrollTranslateY || 0);
+            testimonialSwiperContainer.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1) translateY(${scrollTranslateY}px)`;
+        });
+    }
+});
+// ======================================================================================================
+
+// ==========================================================================
+// Testimonials Scroll Parallax Effect (NOVO)
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonialsSection = document.querySelector('.testimonials');
+    const testimonialSwiperContainer = testimonialsSection ? testimonialsSection.querySelector('.testimonial-swiper') : null;
+
+    if (testimonialsSection && testimonialSwiperContainer) {
+        const scrollParallaxIntensity = 0.1; // Intensidade do parallax de scroll. Valores entre 0.05 e 0.2 são geralmente sutis.
+
+        function applyScrollParallax() {
+            const sectionRect = testimonialsSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            let translateY = 0;
+
+            if (sectionRect.bottom >= 0 && sectionRect.top <= windowHeight) {
+                const sectionCenterY = sectionRect.top + sectionRect.height / 2;
+                const viewportCenterY = windowHeight / 2;
+                const difference = sectionCenterY - viewportCenterY;
+                translateY = difference * scrollParallaxIntensity;
+            }
+
+            testimonialSwiperContainer.dataset.scrollTranslateY = translateY.toFixed(2);
+
+            if (testimonialsSection.matches(':hover')) {
+                const lastX = testimonialsSection.lastHoverClientX || (sectionRect.left + sectionRect.width / 2);
+                const lastY = testimonialsSection.lastHoverClientY || (sectionRect.top + sectionRect.height / 2);
+                const mouseMoveEvent = new MouseEvent('mousemove', {
+                    clientX: lastX,
+                    clientY: lastY,
+                    bubbles: true,
+                    cancelable: true
+                });
+                testimonialsSection.dispatchEvent(mouseMoveEvent);
+            } else {
+                testimonialSwiperContainer.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1) translateY(${translateY}px)`;
+            }
+        }
+
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    applyScrollParallax();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        applyScrollParallax(); 
+    }
+});
 // ======================================================================================================
