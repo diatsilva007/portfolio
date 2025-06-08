@@ -673,7 +673,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Garante que o DOM está carregado
   const testimonials = [
     {
-      text: "Quero agradecer à DAS Digital Solutions pelo excelente trabalho realizado em nosso site! O resultado ficou super didático, criativo e com uma navegação fácil e intuitiva. Parabéns pela dedicação e profissionalismo. Super recomendo!",
+      text: "Quero agradecer ao Diogo Ataide pelo excelente trabalho realizado em nosso site! O resultado ficou super didático, criativo e com uma navegação fácil e intuitiva. Parabéns pela dedicação e profissionalismo. Super recomendo!",
       author: "Geisiane da Costa",
       role: "Gerente da Mega Dogão Carioca",
       avatar: "img/avatars/Geisiane-da-Costa.jpg", // Substitua pela URL real
