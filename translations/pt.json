@@ -165,5 +165,19 @@
   "mega-dogao": "🍔 Mega Dogão Carioca",
   "error-invalid-email": "Por favor, insira um e-mail válido.",
   "error-invalid-phone": "Por favor, insira um telefone válido.",
-  "error-form-invalid": "Por favor, corrija os erros no formulário."
+  "error-form-invalid": "Por favor, corrija os erros no formulário.",
+  "client-testimonials-title": "O que os Clientes <span>Dizem</span>",
+  "testimonial_geisiane_text": "Quero agradecer ao Diogo Ataide pelo excelente trabalho realizado em nosso site! O resultado ficou super didático, criativo e com uma navegação fácil e intuitiva. Parabéns pela dedicação e profissionalismo. Super recomendo!",
+  "testimonial_geisiane_author": "Geisiane da Costa",
+  "testimonial_geisiane_role": "Gerente da Mega Dogão Carioca",
+  "testimonial_geisiane_avatar_alt": "Avatar de Geisiane da Costa",
+  "testimonial_carlos_text": "A aplicação web que o Diogo desenvolveu para nós superou todas as expectativas. É intuitiva, rápida e melhorou significativamente nosso fluxo de trabalho.",
+  "testimonial_carlos_author": "Carlos Pereira",
+  "testimonial_carlos_role": "Diretor de Operações, Designs Criativos Co.",
+  "testimonial_carlos_avatar_alt": "Avatar de Carlos Pereira",
+  "testimonial_mariana_text": "Profissionalismo exemplar e um olhar atento aos detalhes. O Diogo entregou um produto de alta qualidade dentro do prazo.",
+  "testimonial_mariana_author": "Mariana Costa",
+  "testimonial_mariana_role": "CEO, Inovações Digitais",
+  "testimonial_mariana_avatar_alt": "Avatar de Mariana Costa"
+
 }

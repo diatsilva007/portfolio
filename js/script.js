@@ -91,20 +91,20 @@ function setLanguage(language) {
         if (translationValue !== undefined) {
           // Tratar placeholders de input/textarea
           if (
-            (element.tagName === "INPUT" || element.tagName === "TEXTAREA") &&
+            (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') &&
             element.placeholder &&
-            key.startsWith("form-placeholder-")
+            key.startsWith('form-placeholder-')
           ) {
             element.placeholder = translationValue;
           }
           // Tratar elementos que podem conter HTML (como o rodapé com &copy;)
-          else if (element.id === "footer" && key === "footer") {
+          else if (element.id === 'footer' && key === 'footer') {
             const currentYear = new Date().getFullYear(); // Obtém o ano atual
             element.innerHTML = translationValue.replace("{YEAR}", currentYear); // Substitui {YEAR} pelo ano atual
           }
           // Tratar outros elementos com textContent
           else {
-            element.textContent = translations[key];
+            element.textContent = translationValue;
           }
         } else {
           console.warn(
@@ -112,6 +112,22 @@ function setLanguage(language) {
             element
           );
         }
+      });
+
+      // Lógica para traduzir atributos específicos (como alt, title)
+      document.querySelectorAll('[data-translate-attr-alt], [data-translate-attr-title]').forEach(element => {
+        const attrsToTranslate = ['alt', 'title']; // Adicione outros atributos se necessário
+        attrsToTranslate.forEach(attr => {
+          const attrKey = element.getAttribute(`data-translate-attr-${attr}`);
+          if (attrKey) {
+            const translationValue = translations[attrKey];
+            if (translationValue !== undefined) {
+              element.setAttribute(attr, translationValue);
+            } else {
+              console.warn(`Attribute translation key "${attrKey}" for attribute "${attr}" not found for language "${language}". Element:`, element);
+            }
+          }
+        });
       });
       // Atualizar o lang da tag <html>
       document.documentElement.lang = language === "pt" ? "pt-br" : language;
@@ -673,23 +689,34 @@ document.addEventListener("DOMContentLoaded", () => {
   // Garante que o DOM está carregado
   const testimonials = [
     {
-      text: "Quero agradecer ao Diogo Ataide pelo excelente trabalho realizado em nosso site! O resultado ficou super didático, criativo e com uma navegação fácil e intuitiva. Parabéns pela dedicação e profissionalismo. Super recomendo!",
-      author: "Geisiane da Costa",
-      role: "Gerente da Mega Dogão Carioca",
+      originalText: "Quero agradecer ao Diogo Ataide pelo excelente trabalho realizado em nosso site! O resultado ficou super didático, criativo e com uma navegação fácil e intuitiva. Parabéns pela dedicação e profissionalismo. Super recomendo!",
+      originalAuthor: "Geisiane da Costa",
+      originalRole: "Gerente da Mega Dogão Carioca",
       avatar: "img/avatars/Geisiane-da-Costa.jpg", // Substitua pela URL real
-      // Adicione a chave 'translateKeyText', 'translateKeyAuthor', 'translateKeyRole' se for traduzir dinamicamente
+      textKey: "testimonial_geisiane_text",
+      authorKey: "testimonial_geisiane_author",
+      roleKey: "testimonial_geisiane_role",
+      avatarAltKey: "testimonial_geisiane_avatar_alt"
     },
     {
-      text: "A aplicação web que o Diogo desenvolveu para nós superou todas as expectativas. É intuitiva, rápida e melhorou significativamente nosso fluxo de trabalho.",
-      author: "Carlos Pereira",
-      role: "Diretor de Operações, Designs Criativos Co.",
+      originalText: "A aplicação web que o Diogo desenvolveu para nós superou todas as expectativas. É intuitiva, rápida e melhorou significativamente nosso fluxo de trabalho.",
+      originalAuthor: "Carlos Pereira",
+      originalRole: "Diretor de Operações, Designs Criativos Co.",
       avatar: "https://placehold.co/100x100/00eeff/1f242d?text=CP", // Substitua pela URL real
+      textKey: "testimonial_carlos_text",
+      authorKey: "testimonial_carlos_author",
+      roleKey: "testimonial_carlos_role",
+      avatarAltKey: "testimonial_carlos_avatar_alt"
     },
     {
-      text: "Profissionalismo exemplar e um olhar atento aos detalhes. O Diogo entregou um produto de alta qualidade dentro do prazo.",
-      author: "Mariana Costa",
-      role: "CEO, Inovações Digitais",
+      originalText: "Profissionalismo exemplar e um olhar atento aos detalhes. O Diogo entregou um produto de alta qualidade dentro do prazo.",
+      originalAuthor: "Mariana Costa",
+      originalRole: "CEO, Inovações Digitais",
       avatar: "https://placehold.co/100x100/00eeff/1f242d?text=MC", // Substitua pela URL real
+      textKey: "testimonial_mariana_text",
+      authorKey: "testimonial_mariana_author",
+      roleKey: "testimonial_mariana_role",
+      avatarAltKey: "testimonial_mariana_avatar_alt"
     },
     // Para adicionar um novo depoimento, basta adicionar um novo objeto aqui.
     // Localize as imagens: Certifique-se de que as imagens reais dos avatares estejam em alguma pasta dentro do seu projeto (por exemplo, uma pasta img/avatars/).
@@ -697,11 +724,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // {
     //     text: "Novo depoimento incrível sobre o trabalho.",
     //     author: "Cliente Satisfeito",
-    //     role: "Empreendedor",
-    //     avatar: "url_da_imagem_do_avatar.jpg"
+    //     role: "Empreendedor", // (originalRole)
+    //     avatar: "url_da_imagem_do_avatar.jpg",
+    //     textKey: "testimonial_new_text",
+    //     authorKey: "testimonial_new_author",
+    //     roleKey: "testimonial_new_role",
+    //     avatarAltKey: "testimonial_new_avatar_alt"
     // }
   ];
-
   const testimonialWrapper = document.getElementById("testimonial-wrapper");
   if (testimonialWrapper) {
     testimonials.forEach((testimonial) => {
@@ -711,13 +741,13 @@ document.addEventListener("DOMContentLoaded", () => {
       slide.innerHTML = `
                 <div class="testimonial-box">
                     <div class="testimonial-header">
-                        <img src="${testimonial.avatar}" alt="Avatar de ${testimonial.author}" class="testimonial-avatar">
+                        <img src="${testimonial.avatar}" alt="${testimonial.originalAuthor}" class="testimonial-avatar" data-translate-attr-alt="${testimonial.avatarAltKey}">
                         <i class="fas fa-quote-left testimonial-quote-icon"></i>
                     </div>
-                    <p class="testimonial-text">"${testimonial.text}"</p>
+                    <p class="testimonial-text" data-translate="${testimonial.textKey}">"${testimonial.originalText}"</p>
                     <div class="testimonial-footer">
-                        <h4 class="testimonial-author">${testimonial.author}</h4>
-                        <p class="testimonial-role">${testimonial.role}</p>
+                        <h4 class="testimonial-author" data-translate="${testimonial.authorKey}">${testimonial.originalAuthor}</h4>
+                        <p class="testimonial-role" data-translate="${testimonial.roleKey}">${testimonial.originalRole}</p>
                     </div>
                 </div>
             `;
