@@ -2,35 +2,35 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Deve ser a primeira tag -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Idealmente logo após o charset -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Diogo Ataide</title> <!-- Importante vir cedo no head -->
     <!-- Meta Descrição (Importante para SEO) -->
-    <meta name="description"
-        content="This is my portfolio, where you can see my projects and skills as a Software Engineer.">
+    <meta name="description" content="This is my portfolio, where you can see my projects and skills as a Software Engineer.">
     <!-- Meta Palavras-chave (SEO) -->
-    <meta name="keywords"
-        content="portfolio, portfólio, desenvolvedor, developer, front-end developer, full-stack developer, software engineer, web, HTML, CSS, JavaScript, mobile, projects">
+    <meta name="keywords" content="portfolio, portfólio, desenvolvedor, developer, front-end developer, full-stack developer, software engineer, web, HTML, CSS, JavaScript, mobile, projects">
     <!-- Meta Autor -->
     <meta name="author" content="Diogo Ataide Silva">
-    <!-- Meta Tag para evitar cache (Útil para mudanças de conteúdo frequentes) -->
+    <!-- Meta Tags de Cache: Considere remover ou usar cabeçalhos HTTP no servidor para melhor controle.
+         Se mantiver, use com cautela. Para um portfólio, permitir algum cache pode ser benéfico.
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Expires" content="0"> -->
     <!-- Open Graph (para compartilhamento em redes sociais) -->
     <meta property="og:title" content="Portfolio - Diogo Ataide Silva">
     <meta property="og:description"
-        content="Check out my portfolio with incredible projects in full-stack and mobile development..">
+        content="Check out my portfolio with incredible projects in full-stack and mobile development.">
     <meta property="og:image" content="/img/profile-pic.png"> <!-- Imagem para compartilhamento -->
     <meta property="og:image:type" content="image/png" /> <!-- Imagem para compartilhamento -->
     <meta property="og:url" content="https://www.diogoataide.dev">
     <meta property="og:site_name" content="Portfolio - Diogo Ataide Silva">
     <meta property="og:type" content="website">
     <!-- Twitter Card (para Twitter) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Portfolio">
-    <meta name="twitter:description"
-        content="Check out my portfolio with incredible projects in full-stack and mobile development..">
-    <meta name="twitter:image" content="/img/profile.png"> <!-- Corrigido: Usar / e caminho relativo à raiz -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- Verifique se profile.png é a imagem correta para o Twitter -->
+    <meta name="twitter:title" content="Portfolio - Diogo Ataide Silva">
+    <meta name="twitter:description" content="Check out my portfolio with incredible projects in full-stack and mobile development.">
+    <meta name="twitter:image" content="/img/profile.png"> <!-- Caminho para a imagem do Twitter -->
     <meta name="robots" content="index, follow"> <!-- Permite indexação e segue links -->
     <!-- <meta http-equiv="refresh" content="30"> --> <!-- Atualiza a página após 30 segundos -->
     <!--Box icons-->
@@ -61,8 +61,6 @@
                 d.getElementsByTagName('head')[0].appendChild(script);
             }(document));
         };
-    </script>-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Google tag (gtag.js) Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB69SBY7ER"></script>
@@ -73,9 +71,8 @@
 
         gtag('config', 'G-SB69SBY7ER');
     </script>
-
-    <title>Portfolio - Diogo Ataide</title>
-
+    <!-- O script do WhatsApp foi comentado, remova se não for usar -->
+    </script>-->
 </head>
 
 <body>
@@ -190,7 +187,7 @@
 
         <!-- Imagem de perfil aqui -->
         <div class="home-img">
-            <img src="/img/profile.png" alt="Profile picture" class="imagem floating-image" data-aos="fade-left">
+            <img src="/img/profile.png" alt="Profile picture" class="imagem floating-image" data-aos="fade-left" loading="lazy">
             <!-- Padronizado para caminho relativo à raiz -->
         </div>
 
@@ -262,7 +259,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/Monalisa.jpg" alt="Projeto do site de um Museu Nacional" class="portfolio-image">
+                        <img src="/img/Monalisa.jpg" alt="Projeto do site de um Museu Nacional" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="Museu-Nacional">🖼️ Museu-Nacional</h4>
                             <p data-translate="texto-paragrafo-museu-nacional">
@@ -291,7 +288,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/Chalé-hotel.jpg" alt="Projeto do site de um Chalé Hotel" class="portfolio-image">
+                        <img src="/img/Chalé-hotel.jpg" alt="Projeto do site de um Chalé Hotel" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="chale-hotel">🏨 Chalé Hotel</h4>
                             <p data-translate="texto-paragrafo-chale-hotel">
@@ -320,8 +317,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/mario2.png" alt="Projeto do site do filmes do Mario Bros"
-                            class="portfolio-image">
+                        <img src="/img/mario2.png" alt="Projeto do site do filmes do Mario Bros" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="Mario-bros-movie">🍄 Site Mario Bros. Movie</h4>
                             <p data-translate="texto-paragrafo-mario-bros-movie">
@@ -351,7 +347,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/nerdflix.jpg" alt="Projeto do site do NerdFlix" class="portfolio-image">
+                        <img src="/img/nerdflix.jpg" alt="Projeto do site do NerdFlix" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="NerdFlix">🎬 NerdFlix</h4>
                             <p data-translate="texto-paragrafo-nerdflix">
@@ -381,8 +377,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/boleto-bot.jpg" alt="Bot de lembrete de boletos via WhatsApp"
-                            class="portfolio-image">
+                        <img src="/img/boleto-bot.jpg" alt="Bot de lembrete de boletos via WhatsApp" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="boleto-bot">🤖 boleto-bot</h4>
                             <p data-translate="texto-paragrafo-boleto-bot">
@@ -408,8 +403,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/conecta-dados3.jpg"
-                            alt="Aplicação web ConectaDados para lista de tarefas (to-do list)" class="portfolio-image">
+                        <img src="/img/conecta-dados3.jpg" alt="Aplicação web ConectaDados para lista de tarefas (to-do list)" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="ConectaDados">📊 ConectaDados</h4>
                             <p data-translate="texto-paragrafo-conectadados">
@@ -437,8 +431,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/mecanic.jpeg" alt="Protótipo de site para uma oficina mecânica"
-                            class="portfolio-image">
+                        <img src="/img/mecanic.jpeg" alt="Protótipo de site para uma oficina mecânica" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="machine-shop">🏭 machine-shop</h4>
                             <p data-translate="texto-paragrafo-machine-shop">
@@ -470,8 +463,7 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up"> <!-- data-aos pode ser ajustado/removido -->
-                        <img src="/img/burguer.jpg" alt="Aplicação web para uma lanchonete fictícia"
-                            class="portfolio-image">
+                        <img src="/img/burguer.jpg" alt="Aplicação web para uma lanchonete fictícia" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="mega-dogao">🍔 Mega Dogão carioca</h4>
                             <p data-translate="texto-paragrafo-mega-dogao">
@@ -503,8 +495,7 @@
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up">
-                        <img src="/img/barberdev;.png" alt="Projeto Landing Page para Barbearia BarberDev"
-                            class="portfolio-image">
+                        <img src="/img/barberdev;.png" alt="Projeto Landing Page para Barbearia BarberDev" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="landing-page-barberdev">Landing Page - BarberDev; ✂️</h4>
                             <p data-translate="texto-paragrafo6">
@@ -533,8 +524,7 @@
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up">
-                        <img src="/img/dietaAI.png" alt="Projeto aplicativo móvel Dieta.AI para acompanhamento de dieta"
-                            class="portfolio-image">
+                        <img src="/img/dietaAI.png" alt="Projeto aplicativo móvel Dieta.AI para acompanhamento de dieta" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="dieta-AIapp">❤️ Dieta.AI app 📲</h4>
                             <p data-translate="texto-paragrafo7">
@@ -559,8 +549,7 @@
                 <!-- Slide 4 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up">
-                        <img src="/img/finans.png" alt="Projeto website de gerenciamento financeiro Finans"
-                            class="portfolio-image">
+                        <img src="/img/finans.png" alt="Projeto website de gerenciamento financeiro Finans" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="finans-website">Finans website 🪙</h4>
                             <p data-translate="texto-paragrafo8">
@@ -589,8 +578,7 @@
                 <!-- Slide 5 -->
                 <div class="swiper-slide">
                     <div class="portfolio-box" data-aos="fade-up">
-                        <img src="/img/spotify2.jpg" alt="Projeto clone da página web do Spotify"
-                            class="portfolio-image">
+                        <img src="/img/spotify2.jpg" alt="Projeto clone da página web do Spotify" class="portfolio-image" loading="lazy">
                         <div class="portfolio-layer">
                             <h4 data-translate="spotify-clone">Spotify clone project 🎵</h4>
                             <p data-translate="texto-paragrafo9">
@@ -657,7 +645,7 @@
     <!-- About section -->
     <section class="about" id="about">
         <div class="about-img" data-aos="fade-right" data-aos-delay="200">
-            <img src="/img/profile.png" alt="About me" class="imagem floating-image">
+            <img src="/img/profile.png" alt="About me" class="imagem floating-image" loading="lazy">
             <!-- Padronizado para caminho relativo à raiz -->
         </div>
 
