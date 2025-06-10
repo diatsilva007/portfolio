@@ -718,6 +718,56 @@ document.addEventListener("DOMContentLoaded", () => {
       roleKey: "testimonial_mariana_role",
       avatarAltKey: "testimonial_mariana_avatar_alt"
     },
+    {
+      originalText: "A experiência de trabalhar com o Diogo foi incrível. Ele não só atendeu às nossas necessidades, mas também trouxe ideias inovadoras que melhoraram nosso projeto.",
+      originalAuthor: "Roberto Silva",
+      originalRole: "Gerente de Projetos, Tech Solutions",
+      avatar: "https://placehold.co/100x100/00eeff/1f242d?text=RS", // Substitua pela URL real
+      textKey: "testimonial_roberto_text",
+      authorKey: "testimonial_roberto_author",
+      roleKey: "testimonial_roberto_role",
+      avatarAltKey: "testimonial_roberto_avatar_alt"
+    },
+    {
+      originalText: "O Diogo é um profissional excepcional. Sua capacidade de entender nossas necessidades e transformá-las em soluções práticas foi impressionante.",
+      originalAuthor: "Ana Oliveira",
+      originalRole: "Coordenadora de Marketing, Agência Criativa",
+      avatar: "https://placehold.co/100x100/00eeff/1f242d?text=AO", // Substitua pela URL real
+      textKey: "testimonial_ana_text",
+      authorKey: "testimonial_ana_author",
+      roleKey: "testimonial_ana_role",
+      avatarAltKey: "testimonial_ana_avatar_alt"
+    },
+    {
+      originalText: "A dedicação e o profissionalismo do Diogo foram fundamentais para o sucesso do nosso projeto. Ele superou nossas expectativas em todos os aspectos.",
+      originalAuthor: "Lucas Santos",
+      originalRole: "Fundador, Startups Inovadoras",
+      avatar: "https://placehold.co/100x100/00eeff/1f242d?text=LS", // Substitua pela URL real
+      textKey: "testimonial_lucas_text",
+      authorKey: "testimonial_lucas_author",
+      roleKey: "testimonial_lucas_role",
+      avatarAltKey: "testimonial_lucas_avatar_alt"
+    },
+    {
+      originalText: "A colaboração com o Diogo foi uma experiência enriquecedora. Ele trouxe uma nova perspectiva ao nosso projeto e ajudou a transformá-lo em algo realmente especial.",
+      originalAuthor: "Fernanda Lima",
+      originalRole: "Designer Gráfico, Estúdio Criativo",
+      avatar: "https://placehold.co/100x100/00eeff/1f242d?text=FL", // Substitua pela URL real
+      textKey: "testimonial_fernanda_text",
+      authorKey: "testimonial_fernanda_author",
+      roleKey: "testimonial_fernanda_role",
+      avatarAltKey: "testimonial_fernanda_avatar_alt"
+    },
+    {
+      originalText: "O Diogo é um desenvolvedor talentoso e comprometido. Sua atenção aos detalhes e sua capacidade de resolver problemas foram cruciais para o sucesso do nosso projeto.",
+      originalAuthor: "Gustavo Almeida",
+      originalRole: "CTO, Soluções Tecnológicas",
+      avatar: "https://placehold.co/100x100/00eeff/1f242d?text=GA", // Substitua pela URL real
+      textKey: "testimonial_gustavo_text",
+      authorKey: "testimonial_gustavo_author",
+      roleKey: "testimonial_gustavo_role",
+      avatarAltKey: "testimonial_gustavo_avatar_alt"
+    },
     // Para adicionar um novo depoimento, basta adicionar um novo objeto aqui.
     // Localize as imagens: Certifique-se de que as imagens reais dos avatares estejam em alguma pasta dentro do seu projeto (por exemplo, uma pasta img/avatars/).
     // Exemplo:
