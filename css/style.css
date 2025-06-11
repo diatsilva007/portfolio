@@ -1868,12 +1868,27 @@ a {
     line-height: 1;
     position: relative; /* Para garantir que o ícone fique sobre o ::before */
     z-index: 1;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Atualiza a transição para incluir transform e text-shadow com duração e easing consistentes */
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                text-shadow 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social-icon-link:hover i,
 .social-icon-link:focus-visible i {
-    transform: scale(1.08); /* Ícone aumenta um pouco mais */
+    /* Ajusta o transform para um efeito 3D mais pronunciado */
+    transform: perspective(200px) scale(1.15) translateZ(15px) rotateY(-10deg);
+    /* Adiciona text-shadow para o efeito de rastro/sombra 3D no ícone */
+    text-shadow: 
+        /* Camadas para profundidade */
+        0 1px 0px rgba(0,0,0,0.1), /* Sombra sutil logo abaixo */
+        1px 1px 0px rgba(0,0,0,0.08),
+        2px 2px 0px rgba(0,0,0,0.06),
+        3px 3px 0px rgba(0,0,0,0.04),
+        4px 4px 0px rgba(0,0,0,0.02),
+        /* Brilho sutil com a cor principal para destacar */
+        0 0 8px rgba(var(--main-color-rgb), 0.3),
+        /* Sombra projetada mais escura para contraste */
+        2px 4px 5px rgba(0,0,0,0.2);
 }
 
 /* Cores de fundo específicas de cada rede social */
